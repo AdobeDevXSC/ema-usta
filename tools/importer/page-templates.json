@@ -1,0 +1,124 @@
+{
+  "templates": [
+    {
+      "name": "play-page",
+      "urls": [
+        "https://www.usta.com/en/home/play.html"
+      ],
+      "description": "USTA Play landing page with activities, programs, and resources for playing tennis",
+      "blocks": [
+        {
+          "name": "hero-landing",
+          "instances": [
+            "#container-1b53a43ea8"
+          ]
+        },
+        {
+          "name": "form",
+          "instances": [
+            ".v-lead-generation-wrapper"
+          ]
+        },
+        {
+          "name": "cards-icon",
+          "instances": [
+            "#aa-default-national_play_get_in_the_game"
+          ]
+        },
+        {
+          "name": "columns-feature",
+          "instances": [
+            "#container-36d8db448f",
+            "#container-cf58c1a9d4",
+            "#container-f498b06250"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "name": "Hero",
+          "selector": "#container-1b53a43ea8",
+          "style": null,
+          "blocks": [
+            "hero-landing"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-2",
+          "name": "Location Prompt",
+          "selector": ".cmp-experiencefragment--local-content",
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            "#text-de4f0fe635 p",
+            "#sharelocationbutton_large_not-fixed-width"
+          ]
+        },
+        {
+          "id": "section-3",
+          "name": "Lead Generation Form",
+          "selector": ".v-lead-generation-wrapper",
+          "style": null,
+          "blocks": [
+            "form"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-4",
+          "name": "Get in the Game",
+          "selector": "#aa-default-national_play_get_in_the_game",
+          "style": null,
+          "blocks": [
+            "cards-icon"
+          ],
+          "defaultContent": [
+            "#text-fb7006ecfb h2"
+          ]
+        },
+        {
+          "id": "section-5",
+          "name": "Tennis for All",
+          "selector": "#container-36d8db448f .container.responsivegrid:first-child",
+          "style": null,
+          "blocks": [
+            "columns-feature"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-6",
+          "name": "Youth Tennis",
+          "selector": "#container-36d8db448f",
+          "style": "gold",
+          "blocks": [
+            "columns-feature"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-7",
+          "name": "College Tennis",
+          "selector": "#container-cf58c1a9d4",
+          "style": null,
+          "blocks": [
+            "columns-feature"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-8",
+          "name": "Adult Tennis",
+          "selector": "#container-f498b06250",
+          "style": "gold",
+          "blocks": [
+            "columns-feature"
+          ],
+          "defaultContent": []
+        }
+      ]
+    }
+  ]
+}

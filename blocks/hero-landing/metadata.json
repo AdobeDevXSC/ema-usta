@@ -1,0 +1,38 @@
+{
+  "variantName": "hero-landing",
+  "baseBlock": "hero",
+  "version": "1.0.0",
+  "created": "2026-04-07T18:21:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.usta.com/en/home/play.html",
+    "originPage": "USTA Play landing page",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "minimal",
+    "purpose": "landing-hero",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "heading + subtitle",
+    "buttonCount": 0,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "landing pages with background images",
+      "category pages with hero banners",
+      "promotional pages"
+    ],
+    "notSuitableFor": [
+      "blog posts without images",
+      "text-heavy content pages"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["content/en/home/play"],
+    "reuseCount": 1,
+    "lastUsed": "2026-04-07T18:21:00.000Z"
+  }
+}

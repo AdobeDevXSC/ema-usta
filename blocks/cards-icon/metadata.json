@@ -1,0 +1,38 @@
+{
+  "variantName": "cards-icon",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-04-07T18:21:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.usta.com/en/home/play.html",
+    "originPage": "USTA Play landing page",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "feature-icons",
+    "imagePattern": "icon"
+  },
+  "contentPattern": {
+    "structure": "icon + heading + description + CTA",
+    "buttonCount": 1,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "feature listing sections with icons",
+      "service overview grids",
+      "category navigation cards"
+    ],
+    "notSuitableFor": [
+      "photo-heavy card grids",
+      "blog article listings"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["content/en/home/play"],
+    "reuseCount": 1,
+    "lastUsed": "2026-04-07T18:21:00.000Z"
+  }
+}
