@@ -1,0 +1,38 @@
+{
+  "variantName": "columns-feature",
+  "baseBlock": "columns",
+  "version": "1.0.0",
+  "created": "2026-04-07T18:21:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.usta.com/en/home/play.html",
+    "originPage": "USTA Play landing page",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "feature-highlight",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "image + heading + paragraph + CTA",
+    "buttonCount": 1,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "feature highlight sections with image and text",
+      "program descriptions with photos",
+      "content sections with side-by-side image and text"
+    ],
+    "notSuitableFor": [
+      "multi-column data comparisons",
+      "text-only side-by-side layouts"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["content/en/home/play"],
+    "reuseCount": 1,
+    "lastUsed": "2026-04-07T18:21:00.000Z"
+  }
+}

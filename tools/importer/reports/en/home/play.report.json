@@ -1,0 +1,16 @@
+{
+  "status": "success",
+  "url": "https://www.usta.com/en/home/play.html",
+  "path": "en/home/play",
+  "timestamp": "2026-04-07T18:35:04.418Z",
+  "title": "Play",
+  "template": "play-page",
+  "blocks": [
+    "hero-landing",
+    "form",
+    "cards-icon",
+    "columns-feature",
+    "columns-feature",
+    "columns-feature"
+  ]
+}
