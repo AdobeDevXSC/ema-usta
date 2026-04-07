@@ -1,0 +1,99 @@
+/* Cards Icon – centered icon cards in a 4-column grid (USTA "Get in the Game" style) */
+.cards-icon-container {
+  background-color: #fff;
+}
+
+.cards-icon > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+.cards-icon > ul > li {
+  background-color: #fff;
+  text-align: center;
+  border: none;
+  padding: 16px 12px;
+}
+
+.cards-icon .cards-icon-card-image {
+  line-height: 0;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.cards-icon .cards-icon-card-image picture {
+  display: flex;
+  justify-content: center;
+}
+
+.cards-icon > ul > li img {
+  width: 80px;
+  height: 80px;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+}
+
+.cards-icon .cards-icon-card-body {
+  margin: 0;
+}
+
+.cards-icon .cards-icon-card-body h5 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 8px 0;
+  color: var(--text-color);
+}
+
+.cards-icon .cards-icon-card-body p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #555;
+  margin: 0 0 16px;
+}
+
+.cards-icon .cards-icon-card-body p:last-child {
+  margin-bottom: 0;
+}
+
+.cards-icon .cards-icon-card-body a {
+  display: inline-block;
+  padding: 10px 24px;
+  border: 2px solid #000;
+  color: #000;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: background-color 0.2s, color 0.2s;
+  border-radius: 0;
+  background: transparent;
+}
+
+.cards-icon .cards-icon-card-body a:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+@media (width >= 600px) {
+  .cards-icon > ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (width >= 900px) {
+  .cards-icon > ul {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+
+  .cards-icon > ul > li img {
+    width: 100px;
+    height: 100px;
+  }
+}
