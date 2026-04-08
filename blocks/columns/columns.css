@@ -84,7 +84,8 @@
   }
 
   .columns > div > div {
-    flex: 1;
+    flex: 0 0 50%;
+    width: 50%;
     order: unset;
   }
 
@@ -93,10 +94,10 @@
     flex-direction: column;
     justify-content: center;
     padding: 48px;
+    box-sizing: border-box;
   }
 
   .columns > div > .columns-img-col {
-    flex: 1;
     min-height: 380px;
   }
 

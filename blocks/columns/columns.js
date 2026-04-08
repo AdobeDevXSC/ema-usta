@@ -4,8 +4,9 @@ export default function decorate(block) {
   // Check last row for a background color value (e.g. "#ffcb05" or "gold")
   const lastRow = rows[rows.length - 1];
   const lastRowText = lastRow?.textContent?.trim();
-  if (lastRowText && (lastRowText.startsWith('#') || lastRowText.startsWith('rgb'))) {
-    block.style.backgroundColor = lastRowText;
+  const colorValue = lastRowText?.replace(/;$/, '');
+  if (colorValue && (colorValue.startsWith('#') || colorValue.startsWith('rgb'))) {
+    block.style.backgroundColor = colorValue;
     lastRow.remove();
   }
 
