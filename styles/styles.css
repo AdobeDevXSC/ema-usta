@@ -288,3 +288,34 @@ main .section.gold .columns-feature-wrapper {
   padding: 0;
 }
 
+/* Download USTA App section (highlight) */
+main .section.highlight .default-content-wrapper {
+  text-align: center;
+}
+
+main .section.highlight .default-content-wrapper p {
+  font-family: var(--body-font-family);
+  font-size: 18px;
+  color: #333;
+  margin: 0 0 24px;
+}
+
+main .section.highlight .default-content-wrapper ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+main .section.highlight .default-content-wrapper ul li {
+  line-height: 0;
+}
+
+main .section.highlight .default-content-wrapper ul img {
+  height: 48px;
+  width: auto;
+}
+
