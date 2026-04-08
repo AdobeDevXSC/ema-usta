@@ -317,8 +317,10 @@ header .nav-brand {
 }
 
 .nav-brand .default-content-wrapper img {
-  width: 237px;
+  width: 160px;
   height: auto;
+  max-height: 36px;
+  object-fit: contain;
 }
 
 /* ===== SECTIONS (nav links) ===== */
@@ -472,6 +474,8 @@ header nav .nav-tools > .default-content-wrapper {
 
   .nav-top-bar-inner {
     column-gap: 24px;
+    padding: 0 48px;
+    min-height: var(--nav-utility-height);
   }
 
   header nav {
@@ -530,11 +534,6 @@ header nav .nav-tools > .default-content-wrapper {
     height: 48px;
   }
 
-  .nav-top-bar-inner {
-    padding: 0 48px;
-    min-height: var(--nav-utility-height);
-  }
-
   .nav-btn {
     min-height: 34px;
     padding: 13px 30px;
@@ -545,17 +544,21 @@ header nav .nav-tools > .default-content-wrapper {
 /* ===== MOBILE ===== */
 @media (width < 900px) {
   :root {
-    --nav-height: 48px;
+    --nav-height: 64px;
     --header-height: var(--nav-height);
   }
 
-  /* Utility bar matches desktop layout; hidden here to keep a single compact header row */
   .nav-top-bar {
     display: none;
   }
 
   .nav-brand-section {
     display: none;
+  }
+
+  .nav-brand .default-content-wrapper img {
+    width: 140px;
+    max-height: 44px;
   }
 
   header nav .nav-tools {
@@ -571,4 +574,5 @@ header nav .nav-tools > .default-content-wrapper {
     text-align: center;
     box-sizing: border-box;
   }
+}
 }
