@@ -103,14 +103,14 @@
 .form .form-submit button {
   width: 100%;
   padding: 14px 28px;
-  min-height: 48px;
+  min-height: 56px;
   box-sizing: border-box;
   background-color: #7d7866;
   color: #fff;
   border: none;
   border-radius: 999px;
-  font-size: 12px;
-  font-weight: 700;
+  font-size: 18px;
+  font-weight: 900;
   letter-spacing: 1.4px;
   text-transform: uppercase;
   cursor: pointer;
