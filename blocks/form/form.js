@@ -210,12 +210,45 @@ export default async function decorate(block) {
     + 'You must be 13 years of age or older to subscribe to these communications.';
   form.append(terms);
 
-  form.addEventListener('submit', (e) => {
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
-    if (form.checkValidity()) {
-      const btn = form.querySelector('button[type="submit"]');
-      btn.textContent = 'THANK YOU!';
-      btn.disabled = true;
+    if (!form.checkValidity()) return;
+
+    const btn = form.querySelector('button[type="submit"]');
+    btn.disabled = true;
+    btn.textContent = 'SUBMITTING...';
+
+    const payload = {
+      data: {
+        email: form.querySelector('#lead-email').value,
+        zipcode: form.querySelector('#lead-zip').value,
+        timestamp: new Date().toISOString(),
+      },
+    };
+
+    try {
+      const resp = await fetch(
+        'https://admin.hlx.page/form/adobedevxsc/ema-usta/main/signup',
+        {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        },
+      );
+
+      if (resp.ok) {
+        btn.textContent = 'THANK YOU!';
+      } else {
+        throw new Error(`${resp.status}`);
+      }
+    } catch (err) {
+      // eslint-disable-next-line no-console
+      console.error('Form submission failed:', err);
+      btn.textContent = 'SOMETHING WENT WRONG';
+      setTimeout(() => {
+        btn.textContent = '* MATCH POINT TO YOU';
+        btn.disabled = false;
+      }, 3000);
     }
   });
 
