@@ -14,17 +14,19 @@
 .form .form-heading h4,
 .form .form-heading h3,
 .form .form-heading h2 {
-  font-family: Georgia, 'Times New Roman', serif;
+  font-family: var(--body-font-family);
   font-size: 32px;
   font-weight: 400;
   font-style: italic;
+  text-transform: none;
   color: #1a1a1a;
   margin: 0 0 8px;
 }
 
 .form .form-subtitle {
+  font-family: var(--body-font-family-semibold);
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 600;
   color: #1a1a1a;
   margin: 0 0 32px;
 }

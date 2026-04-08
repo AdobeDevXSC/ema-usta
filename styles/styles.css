@@ -20,8 +20,9 @@
   --link-hover-color: #000;
 
   /* fonts */
-  --body-font-family: 'Helvetica Neue', helvetica, arial, sans-serif;
-  --heading-font-family: 'Helvetica Neue', helvetica, arial, sans-serif;
+  --body-font-family: 'Graphik Regular', graphik-fallback, tahoma, sans-serif;
+  --heading-font-family: 'Graphik XXCond Bold', graphik-condensed-fallback, tahoma, sans-serif;
+  --body-font-family-semibold: 'Graphik Semibold', graphik-fallback, tahoma, sans-serif;
 
   /* body sizes */
   --body-font-size-m: 22px;
@@ -44,15 +45,15 @@
 
 /* fallback fonts */
 @font-face {
-  font-family: roboto-condensed-fallback;
-  size-adjust: 88.82%;
+  font-family: graphik-fallback;
+  size-adjust: 100%;
   src: local('Arial');
 }
 
 @font-face {
-  font-family: roboto-fallback;
-  size-adjust: 99.529%;
-  src: local('Arial');
+  font-family: graphik-condensed-fallback;
+  size-adjust: 75%;
+  src: local('Arial Narrow'), local('Arial');
 }
 
 @media (width >= 900px) {
@@ -108,13 +109,22 @@ footer .footer[data-block-status="loaded"] {
 
 h1,
 h2,
-h3,
+h3 {
+  margin-top: 0.8em;
+  margin-bottom: 0.25em;
+  font-family: var(--heading-font-family);
+  font-weight: 700;
+  line-height: 1.1;
+  scroll-margin: 40px;
+  text-transform: uppercase;
+}
+
 h4,
 h5,
 h6 {
   margin-top: 0.8em;
   margin-bottom: 0.25em;
-  font-family: var(--heading-font-family);
+  font-family: var(--body-font-family-semibold);
   font-weight: 600;
   line-height: 1.25;
   scroll-margin: 40px;
@@ -183,9 +193,9 @@ button {
   border: 2px solid #000;
   border-radius: 0;
   padding: 12px 28px;
-  font-family: var(--body-font-family);
+  font-family: var(--body-font-family-semibold);
   font-style: normal;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 13px;
   line-height: 1.25;
   text-align: center;
