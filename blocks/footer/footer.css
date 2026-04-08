@@ -1,20 +1,195 @@
+/* USTA Footer – dark background with logo, links, social, apps, copyright */
 footer {
-  background-color: var(--light-color);
-  font-size: var(--body-font-size-xs);
+  background-color: #000;
+  color: #fff;
+  font-family: var(--body-font-family);
+  font-size: 13px;
 }
 
-footer .footer > div {
-  margin: auto;
-  max-width: 1200px;
-  padding: 40px 24px 24px;
+footer a:any-link {
+  color: #fff;
+  text-decoration: none;
 }
 
-footer .footer p {
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* ===== MAIN FOOTER ===== */
+footer .footer-main {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  max-width: 1264px;
+  margin: 0 auto;
+  padding: 48px 24px 32px;
+}
+
+/* Logo */
+footer .footer-logo {
+  flex-shrink: 0;
+}
+
+footer .footer-logo img {
+  width: 160px;
+  height: auto;
+  filter: brightness(0) invert(1);
+}
+
+/* Link columns */
+footer .footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  flex: 1;
+}
+
+footer .footer-links-col ul {
+  list-style: none;
+  padding: 0;
   margin: 0;
 }
 
+footer .footer-links-col li {
+  padding: 6px 0;
+}
+
+footer .footer-links-col a {
+  font-family: var(--body-font-family-semibold);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+/* Right column: social + apps */
+footer .footer-right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Social icons */
+footer .footer-social {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+footer .footer-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  color: #fff;
+}
+
+footer .footer-social a:hover {
+  opacity: 0.7;
+  text-decoration: none;
+}
+
+footer .footer-social svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* USTA Apps */
+footer .footer-apps-label {
+  font-family: var(--body-font-family-semibold);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin: 0 0 8px;
+}
+
+footer .footer-apps-icons {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+footer .footer-apps-icons picture {
+  display: block;
+  line-height: 0;
+}
+
+footer .footer-apps-icons img {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* ===== BOTTOM BAR (copyright) ===== */
+footer .footer-bottom {
+  text-align: center;
+  padding: 24px;
+  border-top: 1px solid #333;
+  max-width: 1264px;
+  margin: 0 auto;
+}
+
+footer .footer-bottom p {
+  margin: 0;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  color: #999;
+}
+
+footer .footer-bottom img {
+  width: 48px;
+  height: auto;
+  margin: 0 auto 12px;
+  display: block;
+}
+
+/* ===== DESKTOP ===== */
 @media (width >= 900px) {
-  footer .footer > div {
-    padding: 40px 32px 24px;
+  footer .footer-main {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 48px;
+    padding: 56px 48px 40px;
+  }
+
+  footer .footer-links {
+    flex-direction: row;
+    gap: 48px;
+  }
+
+  footer .footer-right {
+    margin-left: auto;
+    align-items: flex-end;
+  }
+
+  footer .footer-social {
+    justify-content: flex-end;
+  }
+
+  footer .footer-apps-icons img {
+    width: 56px;
+    height: 56px;
+  }
+
+  footer .footer-bottom {
+    padding: 32px 48px;
+  }
+}
+
+/* ===== MOBILE ===== */
+@media (width < 900px) {
+  footer .footer-main {
+    padding: 32px 24px 24px;
+  }
+
+  footer .footer-links {
+    gap: 8px;
+  }
+
+  footer .footer-apps-icons {
+    justify-content: flex-start;
   }
 }
