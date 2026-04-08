@@ -100,13 +100,26 @@ export default async function decorate(block) {
     footerMain.append(rightCol);
   }
 
-  // Second section or remaining content: copyright
+  // Second section: shield icon + copyright
   if (sections[1]) {
-    footerBottom.append(sections[1]);
+    const secondSection = sections[1];
+    // Extract shield icon image
+    const shieldPic = secondSection.querySelector('picture');
+    if (shieldPic) {
+      footerBottom.append(shieldPic);
+    }
+    // Extract copyright text
+    const paragraphs = secondSection.querySelectorAll('p');
+    paragraphs.forEach((p) => {
+      if (!p.querySelector('picture') && p.textContent.trim()) {
+        const copy = document.createElement('p');
+        copy.textContent = p.textContent.trim();
+        footerBottom.append(copy);
+      }
+    });
   } else {
-    // Fallback copyright
     const copy = document.createElement('p');
-    copy.textContent = `© ${new Date().getFullYear()} USTA ALL RIGHTS RESERVED`;
+    copy.textContent = `\u00A9 ${new Date().getFullYear()} USTA ALL RIGHTS RESERVED`;
     footerBottom.append(copy);
   }
 
