@@ -37,10 +37,10 @@
   --heading-font-size-s: 24px;
   --heading-font-size-xs: 22px;
 
-  /* nav heights */
-  --nav-height: 56px;
+  /* nav heights (header block refines mobile <900px) */
+  --nav-height: 48px;
   --breadcrumbs-height: 34px;
-  --header-height: 96px;
+  --header-height: 48px;
 }
 
 /* fallback fonts */
@@ -70,6 +70,10 @@
     --heading-font-size-m: 22px;
     --heading-font-size-s: 20px;
     --heading-font-size-xs: 18px;
+
+    /* primary nav bar; header block adds utility row → total in header.css */
+    --nav-height: 84px;
+    --header-height: 132px;
   }
 }
 
@@ -315,7 +319,7 @@ main .section.app-store .default-content-wrapper p {
   font-family: var(--body-font-family);
   font-size: 18px;
   color: #333;
-  margin: 0 0 24px;
+  margin: 0 0 1rem;
 }
 
 main .section.app-store .default-content-wrapper ul {

@@ -21,14 +21,14 @@ header {
 
 .nav-top-bar-inner {
   box-sizing: border-box;
-  max-width: 1264px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 20px;
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
   column-gap: 16px;
-  min-height: 40px;
+  min-height: var(--nav-utility-height, 44px);
 }
 
 .nav-top-bar-left {
@@ -180,11 +180,11 @@ header nav {
     'hamburger brand tools' var(--nav-height)
     'sections sections sections' 1fr / auto 1fr auto;
   align-items: center;
-  gap: 0 16px;
+  gap: 0 var(--nav-bar-column-gap, 16px);
   margin: auto;
-  max-width: 1264px;
+  max-width: 1400px;
   height: var(--nav-height);
-  padding: 0 24px;
+  padding: 0 20px;
   font-family: var(--body-font-family);
   border-bottom: 1px solid #e5e5e5;
   background-color: var(--background-color);
@@ -289,8 +289,10 @@ header .nav-brand {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  gap: 2px;
+  gap: 4px;
   line-height: 1;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-brand-link {
@@ -312,6 +314,11 @@ header .nav-brand {
   letter-spacing: 0.5px;
   color: var(--text-color);
   white-space: nowrap;
+}
+
+.nav-brand .default-content-wrapper img {
+  width: 237px;
+  height: auto;
 }
 
 /* ===== SECTIONS (nav links) ===== */
@@ -342,7 +349,7 @@ header nav .nav-sections ul > li {
   text-transform: uppercase;
   color: var(--text-color);
   cursor: pointer;
-  padding: 8px 0;
+  padding: 10px 0;
 }
 
 header nav .nav-sections ul > li a:any-link {
@@ -365,7 +372,7 @@ header nav .nav-sections ul > li.nav-active {
 /* Dropdown arrow for nav items — gray unless active (blue) */
 header nav .nav-sections ul > li.nav-drop {
   position: relative;
-  padding-right: 16px;
+  padding-right: 18px;
 }
 
 header nav .nav-sections ul > li.nav-drop::after {
@@ -384,71 +391,95 @@ header nav .nav-sections ul > li.nav-active.nav-drop::after {
   border-top-color: #1a6fbf;
 }
 
-/* ===== TOOLS (JOIN / SIGN IN) ===== */
+/* ===== TOOLS (JOIN / SIGN IN) — rectangular, sharp corners, thin border ===== */
 header nav .nav-tools {
   grid-area: tools;
   display: flex;
-  align-items: center;
-  gap: 8px;
+  align-items: stretch;
+  gap: var(--nav-tools-gap, 10px);
+  flex-shrink: 0;
+  margin: 0;
+  padding: 0;
+}
+
+header nav .nav-tools > .default-content-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
 }
 
 .nav-btn {
-  display: inline-block;
-  padding: 8px 20px;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 11px 22px;
   font-family: var(--body-font-family-semibold);
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 600;
-  letter-spacing: 0.5px;
+  letter-spacing: 1.2px;
   text-transform: uppercase;
   text-decoration: none;
   cursor: pointer;
   white-space: nowrap;
-  transition: background-color 0.2s, color 0.2s;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
   border-radius: 0;
+  line-height: 1;
 }
 
 .nav-btn-outline {
-  border: 2px solid #000;
-  background: transparent;
+  border: 1px solid #000;
+  background: #fff;
   color: #000;
 }
 
 .nav-btn-outline:hover {
   background: #000;
   color: #fff;
+  border-color: #000;
   text-decoration: none;
 }
 
 .nav-btn-filled {
-  border: 2px solid #000;
+  border: 1px solid #000;
   background: #000;
-  color: #fff;
+  color: #fff !important;
 }
 
 .nav-btn-filled:hover {
   background: #333;
   border-color: #333;
-  color: #fff;
+  color: #fff !important;
   text-decoration: none;
 }
 
 /* ===== DESKTOP ===== */
 @media (width >= 900px) {
   :root {
-    --nav-height: 56px;
-    --header-height: 96px;
+    /* Taller primary bar with room around logo, links, and tools */
+    --nav-utility-height: 48px;
+    --nav-height: 84px;
+    --header-height: calc(var(--nav-utility-height) + var(--nav-height));
+    --nav-bar-column-gap: 40px;
+    --nav-links-gap: 36px;
+    --nav-tools-gap: 12px;
   }
 
   .nav-top-bar {
     display: block;
   }
 
+  .nav-top-bar-inner {
+    column-gap: 24px;
+  }
+
   header nav {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 0 24px;
-    padding: 0 32px;
+    gap: 0 var(--nav-bar-column-gap);
+    padding: 0 48px;
   }
 
   header nav[aria-expanded='true'] {
@@ -466,6 +497,9 @@ header nav .nav-tools {
     visibility: visible;
     white-space: nowrap;
     flex: 1;
+    margin: 0;
+    padding: 0 8px;
+    min-width: 0;
   }
 
   header nav[aria-expanded='true'] .nav-sections {
@@ -475,14 +509,16 @@ header nav .nav-tools {
   header nav .nav-sections ul {
     display: flex;
     align-items: center;
-    gap: 24px;
+    justify-content: flex-start;
+    gap: var(--nav-links-gap);
     margin: 0;
+    padding: 0;
   }
 
   header nav .nav-sections .default-content-wrapper > ul > li {
     flex: 0 1 auto;
     position: relative;
-    padding: 0;
+    padding: 4px 0;
   }
 
   header nav .nav-tools {
@@ -491,18 +527,26 @@ header nav .nav-tools {
 
   .nav-logo,
   .nav-brand-link img {
-    height: 40px;
+    height: 48px;
   }
 
   .nav-top-bar-inner {
-    padding: 0 32px;
+    padding: 0 48px;
+    min-height: var(--nav-utility-height);
   }
+
+  .nav-btn {
+    min-height: 34px;
+    padding: 13px 30px;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
 
 /* ===== MOBILE ===== */
 @media (width < 900px) {
   :root {
-    --header-height: 56px;
+    --nav-height: 48px;
+    --header-height: var(--nav-height);
   }
 
   /* Utility bar matches desktop layout; hidden here to keep a single compact header row */
@@ -516,12 +560,14 @@ header nav .nav-tools {
 
   header nav .nav-tools {
     flex-direction: column;
-    gap: 8px;
-    padding: 16px 0;
+    align-items: stretch;
+    gap: 10px;
+    padding: 16px 0 8px;
   }
 
   .nav-btn {
     width: 100%;
+    min-height: 44px;
     text-align: center;
     box-sizing: border-box;
   }
