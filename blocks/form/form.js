@@ -227,14 +227,11 @@ export default async function decorate(block) {
     };
 
     try {
-      const resp = await fetch(
-        'https://admin.hlx.page/form/adobedevxsc/ema-usta/main/signup',
-        {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(payload),
-        },
-      );
+      const resp = await fetch('https://main--ema-usta--adobedevxsc.aem.page/signup', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
 
       if (resp.ok) {
         btn.textContent = 'THANK YOU!';
