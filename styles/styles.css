@@ -183,27 +183,24 @@ a:hover {
   text-decoration: underline;
 }
 
-/* buttons */
+/* buttons – base (header/footer) */
 a.button:any-link,
 button {
   box-sizing: border-box;
   display: inline-block;
   max-width: 100%;
   margin: 12px 0;
-  border: 2px solid #000;
-  border-radius: 0;
-  padding: 12px 28px;
-  font-family: var(--body-font-family-semibold);
+  border: 2px solid transparent;
+  border-radius: 2.4em;
+  padding: 0.5em 1.2em;
+  font-family: var(--body-font-family);
   font-style: normal;
-  font-weight: 600;
-  font-size: 13px;
+  font-weight: 500;
   line-height: 1.25;
   text-align: center;
   text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  background-color: transparent;
-  color: #000;
+  background-color: var(--link-color);
+  color: var(--background-color);
   cursor: pointer;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -213,7 +210,7 @@ a.button:hover,
 a.button:focus,
 button:hover,
 button:focus {
-  background-color: #000;
+  background-color: var(--link-hover-color);
   color: #fff;
   cursor: pointer;
 }
@@ -229,6 +226,27 @@ button.secondary {
   background-color: unset;
   border: 2px solid currentcolor;
   color: var(--text-color);
+}
+
+/* buttons – main content area (USTA pill style) */
+main a.button:any-link {
+  border: none;
+  border-radius: 50px;
+  padding: 16px 40px;
+  font-family: var(--body-font-family-semibold);
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  background-color: #000;
+  color: #fff;
+  transition: background-color 0.2s;
+}
+
+main a.button:hover,
+main a.button:focus {
+  background-color: #333;
+  color: #fff;
 }
 
 main img {

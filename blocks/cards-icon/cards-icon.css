@@ -74,26 +74,6 @@
   margin-bottom: 0;
 }
 
-.cards-icon .cards-icon-card-body a {
-  display: inline-block;
-  padding: 10px 24px;
-  border: 2px solid #000;
-  color: #000;
-  font-size: 13px;
-  font-weight: 700;
-  text-transform: uppercase;
-  text-decoration: none;
-  letter-spacing: 1px;
-  transition: background-color 0.2s, color 0.2s;
-  border-radius: 0;
-  background: transparent;
-}
-
-.cards-icon .cards-icon-card-body a:hover {
-  background-color: #000;
-  color: #fff;
-}
-
 @media (width >= 600px) {
   .cards-icon > ul {
     grid-template-columns: repeat(2, 1fr);

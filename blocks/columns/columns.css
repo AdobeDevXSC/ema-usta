@@ -54,28 +54,6 @@
   margin: 0 0 20px;
 }
 
-.columns a.button:any-link {
-  display: inline-block;
-  padding: 12px 28px;
-  border: 2px solid #000;
-  color: #000;
-  font-size: 13px;
-  font-weight: 700;
-  text-transform: uppercase;
-  text-decoration: none;
-  letter-spacing: 1px;
-  background: transparent;
-  border-radius: 0;
-  transition: background-color 0.2s, color 0.2s;
-}
-
-.columns a.button:hover {
-  background-color: #000;
-  color: #fff;
-  text-decoration: none;
-}
-
-
 @media (width >= 900px) {
   .columns > div {
     flex-direction: row;
