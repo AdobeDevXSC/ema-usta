@@ -11,6 +11,11 @@ function toggleMenu(nav, navSections, forceExpanded = null) {
   if (button) button.setAttribute('aria-label', expanded ? 'Open navigation' : 'Close navigation');
 }
 
+/** Black circle with white down-caret (USTA Sites / Sections). */
+function topBarCaretIcon() {
+  return '<span class="nav-top-btn-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 18 18" focusable="false"><circle cx="9" cy="9" r="8" fill="#000"/><path fill="#fff" d="M5.5 6.5H12.5L9 11.5z"/></svg></span>';
+}
+
 function buildTopBar() {
   const topBar = document.createElement('div');
   topBar.className = 'nav-top-bar';
@@ -18,27 +23,33 @@ function buildTopBar() {
     <div class="nav-top-bar-inner">
       <div class="nav-top-bar-left">
         <button class="nav-top-btn" type="button">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
-          USTA Sites
+          ${topBarCaretIcon()}
+          <span>USTA Sites</span>
         </button>
         <button class="nav-top-btn" type="button">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
-          USTA Sections
+          ${topBarCaretIcon()}
+          <span>USTA Sections</span>
         </button>
       </div>
       <div class="nav-top-bar-center">
-        <div class="nav-location">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-          <input type="text" placeholder="Enter city or zip" class="nav-location-input">
-          <span class="nav-section-label">SOUTHERN CALIFORNIA</span>
+        <div class="nav-location" role="group" aria-label="Location and section">
+          <div class="nav-location-left">
+            <svg class="nav-location-pin" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/></svg>
+            <span class="nav-location-city">Anaheim, CA</span>
+            <button type="button" class="nav-location-edit" aria-label="Edit location">
+              <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/><path d="m15 5 4 4"/></svg>
+            </button>
+          </div>
+          <span class="nav-location-divider" aria-hidden="true"></span>
+          <span class="nav-location-region">SOUTHERN CALIFORNIA</span>
         </div>
       </div>
       <div class="nav-top-bar-right">
         <button class="nav-icon-btn" type="button" aria-label="Search">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
         </button>
         <button class="nav-icon-btn" type="button" aria-label="Language">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
         </button>
       </div>
     </div>
@@ -62,27 +73,13 @@ export default async function decorate(block) {
     if (section) section.classList.add(`nav-${c}`);
   });
 
-  // Brand: extract text and build logo area
+  // Brand: keep fragment markup; add layout classes only
   const navBrand = nav.querySelector('.nav-brand');
   if (navBrand) {
-    const brandLink = navBrand.querySelector('a');
-    const sectionLabel = navBrand.querySelector('p:last-child');
-    const sectionText = sectionLabel ? sectionLabel.textContent.trim() : '';
-
-    navBrand.innerHTML = '';
-    const logoLink = document.createElement('a');
-    logoLink.href = brandLink ? brandLink.href : '/';
-    logoLink.className = 'nav-brand-link';
-    logoLink.innerHTML = `
-      <img src="https://www.usta.com/content/dam/usta/logos/usta-logo.svg" alt="USTA" class="nav-logo">
-    `;
-    navBrand.append(logoLink);
-
-    if (sectionText) {
-      const sectionEl = document.createElement('span');
-      sectionEl.className = 'nav-brand-section';
-      sectionEl.textContent = sectionText;
-      navBrand.append(sectionEl);
+    navBrand.querySelectorAll('a').forEach((a) => a.classList.add('nav-brand-link'));
+    const paragraphs = navBrand.querySelectorAll('p');
+    if (paragraphs.length > 1) {
+      paragraphs[paragraphs.length - 1].classList.add('nav-brand-section');
     }
   }
 
@@ -90,12 +87,16 @@ export default async function decorate(block) {
   const navSections = nav.querySelector('.nav-sections');
   if (navSections) {
     navSections.querySelectorAll(':scope .default-content-wrapper > ul > li').forEach((item) => {
-      const link = item.querySelector('a strong');
-      if (link) {
+      const linkStrong = item.querySelector('a strong');
+      if (linkStrong) {
         item.classList.add('nav-active');
       }
-      // Add dropdown arrow for items without links (dropdown placeholders)
-      if (!item.querySelector('a') && item.textContent.trim()) {
+      const hasSubmenu = item.querySelector(':scope > ul');
+      if (hasSubmenu) {
+        item.classList.add('nav-drop');
+      } else if (!item.querySelector('a') && item.textContent.trim()) {
+        item.classList.add('nav-drop');
+      } else if (linkStrong) {
         item.classList.add('nav-drop');
       }
     });
