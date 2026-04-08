@@ -97,6 +97,11 @@
     box-sizing: border-box;
   }
 
+  .columns > div > div:not(.columns-img-col) h2 {
+    font-size: 72px;
+  }
+  
+
   .columns > div > .columns-img-col {
     min-height: 380px;
   }
