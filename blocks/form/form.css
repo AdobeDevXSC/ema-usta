@@ -1,170 +1,152 @@
-.form .field-wrapper {
-  display: grid;
-  grid-auto-flow: row;
-  align-items: center;
-}
-
-.form fieldset {
-  display: grid;
-  grid-auto-flow: row;
+/* Lead Generation Form – USTA "Game to feel the love?" style */
+.form-container {
+  background-color: #fdf5e2;
   margin: 0;
-  border: none;
   padding: 0;
 }
 
-.form form > .field-wrapper + .field-wrapper,
-.form form fieldset .field-wrapper + .field-wrapper {
-  margin-top: 24px;
+.form-container .form-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 48px 24px;
 }
 
-.form form > .selection-wrapper + .selection-wrapper,
-.form form fieldset .selection-wrapper + .selection-wrapper {
-  margin-top: 0.25em;
+.form .form-heading h4,
+.form .form-heading h3,
+.form .form-heading h2 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 32px;
+  font-weight: 400;
+  font-style: italic;
+  color: #1a1a1a;
+  margin: 0 0 8px;
 }
 
-@media (width >= 600px) {
-  .form fieldset {
-    grid-template-columns: repeat(2, auto);
-    gap: 0.25em 24px;
-  }
-
-  .form form > .selection-wrapper + .selection-wrapper,
-  .form form fieldset .field-wrapper + .field-wrapper,
-  .form form fieldset .selection-wrapper + .selection-wrapper {
-    margin-top: 0;
-  }
-}
-
-@media (width >= 900px) {
-  .form fieldset {
-    grid-template-columns: repeat(3, auto);
-  }
-}
-
-.form label,
-.form fieldset > legend {
-  margin-bottom: 0.25em;
-  font-size: var(--body-font-size-s);
+.form .form-subtitle {
+  font-size: 16px;
   font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 32px;
 }
 
-.form .selection-wrapper label {
-  margin: 0;
-  font-weight: normal;
+.form .form-input-row {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 24px;
 }
 
-.form input,
-.form select,
-.form textarea {
-  box-sizing: border-box;
+.form .form-field {
+  flex: 1;
+}
+
+.form .form-field label {
   display: block;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.form .form-required {
+  color: #1a1a1a;
+  margin-right: 2px;
+}
+
+.form .form-field input {
   width: 100%;
-  margin: 0;
-  padding: 0.5em;
-  border-radius: 4px;
-  border: 1px solid var(--dark-color);
-  background-color: var(--background-color);
-  color: var(--text-color);
-  font-size: var(--body-font-size-s);
+  box-sizing: border-box;
+  padding: 16px 14px;
+  border: 1px solid #ccc;
+  border-radius: 0;
+  font-size: 16px;
+  background: #fff;
+  color: #1a1a1a;
   transition: border-color 0.2s;
 }
 
-.form textarea {
-  resize: vertical;
+.form .form-field input:focus {
+  outline: 2px solid #1a1a1a;
+  outline-offset: -2px;
+  border-color: #1a1a1a;
 }
 
-.form input:hover,
-.form select:hover,
-.form textarea:hover {
-  border: 1px solid var(--text-color);
+.form .form-submit {
+  display: flex;
+  align-items: flex-end;
 }
 
-.form input:focus,
-.form select:focus,
-.form textarea:focus {
-  outline: 2px solid var(--link-color);
-  outline-offset: 2px;
+.form .form-submit button {
+  width: 100%;
+  padding: 16px 32px;
+  background-color: #8c7a5e;
+  color: #fff;
+  border: none;
+  border-radius: 0;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.2s;
+  margin: 0;
 }
 
-.form .selection-wrapper input {
-  width: max-content;
+.form .form-submit button:hover {
+  background-color: #6e5f49;
+  color: #fff;
 }
 
-@media (width >= 600px) {
-  .form input,
-  .form select,
-  .form textarea {
-    max-width: 50vw;
-  }
+.form .form-submit button:disabled {
+  background-color: #a89880;
+  cursor: default;
+}
 
-  .form .button {
-    max-width: max-content;
-  }
+.form .form-terms {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #333;
+  margin: 0;
+}
+
+.form .form-terms a {
+  color: #1a6fbf;
+  text-decoration: underline;
+}
+
+.form .form-terms a:hover {
+  color: #0d4f8a;
 }
 
 @media (width >= 900px) {
-  .form input,
-  .form select,
-  .form textarea {
-    max-width: 33vw;
+  .form-container .form-wrapper {
+    padding: 56px 32px;
   }
-}
 
-.form .field-wrapper.selection-wrapper {
-  grid-auto-flow: column;
-  justify-content: start;
-  gap: 1ch;
-}
+  .form .form-heading h4,
+  .form .form-heading h3,
+  .form .form-heading h2 {
+    font-size: 42px;
+  }
 
-.form label[data-required]::after {
-  content: '*';
-  color: firebrick;
-  margin-inline-start: 1ch;
-}
+  .form .form-input-row {
+    flex-direction: row;
+    gap: 16px;
+    align-items: flex-end;
+  }
 
-.form .toggle-wrapper .switch {
-  position: relative;
-  display: inline-block;
-  width: 52px;
-  height: 28px;
-}
+  .form .form-field {
+    flex: 1;
+  }
 
-.form .toggle-wrapper input {
-  opacity: 0;
-  width: 52px;
-  height: 28px;
-}
+  .form .form-submit {
+    flex: 0 0 auto;
+  }
 
-.form .toggle-wrapper .slider {
-  position: absolute;
-  cursor: pointer;
-  inset: 0;
-  border-radius: 28px;
-  background-color: var(--dark-color);
-  transition: background-color 0.2s;
-}
-
-.form .toggle-wrapper .slider::before {
-  content: '';
-  position: absolute;
-  width: 24px;
-  height: 24px;
-  top: 2px;
-  left: 2px;
-  border-radius: 50%;
-  background-color: var(--background-color);
-  transition: transform 0.2s;
-}
-
-.form .toggle-wrapper input:checked + .slider {
-  background-color: var(--link-color);
-}
-
-.form .toggle-wrapper input:focus + .slider {
-  outline: 2px solid var(--link-color);
-  outline-offset: 2px;
-}
-
-.form .toggle-wrapper input:checked + .slider::before {
-  transform: translateX(24px);
+  .form .form-submit button {
+    width: auto;
+  }
 }

@@ -1,102 +1,76 @@
-import createField from './form-fields.js';
-
-async function createForm(formHref, submitHref) {
-  const { pathname } = new URL(formHref);
-  const resp = await fetch(pathname);
-  const json = await resp.json();
-
-  const form = document.createElement('form');
-  form.dataset.action = submitHref;
-
-  const fields = await Promise.all(json.data.map((fd) => createField(fd, form)));
-  fields.forEach((field) => {
-    if (field) {
-      form.append(field);
-    }
-  });
-
-  // group fields into fieldsets
-  const fieldsets = form.querySelectorAll('fieldset');
-  fieldsets.forEach((fieldset) => {
-    form.querySelectorAll(`[data-fieldset="${fieldset.name}"`).forEach((field) => {
-      fieldset.append(field);
-    });
-  });
-
-  return form;
-}
-
-function generatePayload(form) {
-  const payload = {};
-
-  [...form.elements].forEach((field) => {
-    if (field.name && field.type !== 'submit' && !field.disabled) {
-      if (field.type === 'radio') {
-        if (field.checked) payload[field.name] = field.value;
-      } else if (field.type === 'checkbox') {
-        if (field.checked) payload[field.name] = payload[field.name] ? `${payload[field.name]},${field.value}` : field.value;
-      } else {
-        payload[field.name] = field.value;
-      }
-    }
-  });
-  return payload;
-}
-
-async function handleSubmit(form) {
-  if (form.getAttribute('data-submitting') === 'true') return;
-
-  const submit = form.querySelector('button[type="submit"]');
-  try {
-    form.setAttribute('data-submitting', 'true');
-    submit.disabled = true;
-
-    // create payload
-    const payload = generatePayload(form);
-    const response = await fetch(form.dataset.action, {
-      method: 'POST',
-      body: JSON.stringify({ data: payload }),
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
-    if (response.ok) {
-      if (form.dataset.confirmation) {
-        window.location.href = form.dataset.confirmation;
-      }
-    } else {
-      const error = await response.text();
-      throw new Error(error);
-    }
-  } catch (e) {
-    // eslint-disable-next-line no-console
-    console.error(e);
-  } finally {
-    form.setAttribute('data-submitting', 'false');
-    submit.disabled = false;
-  }
-}
-
 export default async function decorate(block) {
-  const links = [...block.querySelectorAll('a')].map((a) => a.href);
-  const formLink = links.find((link) => link.startsWith(window.location.origin) && link.endsWith('.json'));
-  const submitLink = links.find((link) => link !== formLink);
-  if (!formLink || !submitLink) return;
+  // Extract authored content
+  const heading = block.querySelector('h4, h3, h2');
+  const subtitle = block.querySelector('div:last-child');
+  const subtitleText = subtitle ? subtitle.textContent.trim() : '';
 
-  const form = await createForm(formLink, submitLink);
-  block.replaceChildren(form);
+  // Build the lead generation form
+  block.innerHTML = '';
+
+  // Heading section
+  const headingWrapper = document.createElement('div');
+  headingWrapper.className = 'form-heading';
+  if (heading) headingWrapper.append(heading);
+  if (subtitleText) {
+    const sub = document.createElement('p');
+    sub.className = 'form-subtitle';
+    sub.textContent = subtitleText;
+    headingWrapper.append(sub);
+  }
+  block.append(headingWrapper);
+
+  // Form element
+  const form = document.createElement('form');
+  form.className = 'form-lead-gen';
+
+  // Email field
+  const emailGroup = document.createElement('div');
+  emailGroup.className = 'form-field';
+  emailGroup.innerHTML = `
+    <label for="lead-email"><span class="form-required">*</span>EMAIL</label>
+    <input type="email" id="lead-email" name="email" required>
+  `;
+
+  // Zip code field
+  const zipGroup = document.createElement('div');
+  zipGroup.className = 'form-field';
+  zipGroup.innerHTML = `
+    <label for="lead-zip"><span class="form-required">*</span>ZIP/POSTAL CODE</label>
+    <input type="text" id="lead-zip" name="zipcode" required>
+  `;
+
+  // Submit button
+  const submitWrapper = document.createElement('div');
+  submitWrapper.className = 'form-submit';
+  const submitBtn = document.createElement('button');
+  submitBtn.type = 'submit';
+  submitBtn.textContent = '* MATCH POINT TO YOU';
+  submitWrapper.append(submitBtn);
+
+  // Input row
+  const inputRow = document.createElement('div');
+  inputRow.className = 'form-input-row';
+  inputRow.append(emailGroup, zipGroup, submitWrapper);
+  form.append(inputRow);
+
+  // Terms text
+  const terms = document.createElement('p');
+  terms.className = 'form-terms';
+  terms.innerHTML = '* By clicking <strong>MATCH POINT TO YOU</strong> above, you agree to our '
+    + '<a href="/en/home/about-usta/who-we-are/national/usta-terms-of-use">USTA Terms of Use</a> '
+    + 'and acknowledge that you have read our '
+    + '<a href="/en/home/about-usta/who-we-are/national/usta-privacy-policy">USTA Privacy Policy</a>. '
+    + 'You must be 13 years of age or older to subscribe to these communications.';
+  form.append(terms);
 
   form.addEventListener('submit', (e) => {
     e.preventDefault();
-    const valid = form.checkValidity();
-    if (valid) {
-      handleSubmit(form);
-    } else {
-      const firstInvalidEl = form.querySelector(':invalid:not(fieldset)');
-      if (firstInvalidEl) {
-        firstInvalidEl.focus();
-        firstInvalidEl.scrollIntoView({ behavior: 'smooth' });
-      }
+    if (form.checkValidity()) {
+      const btn = form.querySelector('button[type="submit"]');
+      btn.textContent = 'THANK YOU!';
+      btn.disabled = true;
     }
   });
+
+  block.append(form);
 }
