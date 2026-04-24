@@ -105,6 +105,32 @@ var CustomImportScript = (() => {
       }
     });
   }
+  var FALLBACK_RELATED_ARTICLES = [
+    {
+      image: { src: "https://www.usta.com/content/dam/usta/Articles/article-desktop/20170215_Wheelchair_All_Comers_Camp_A.jpg.transform/resize-400/img.jpg", alt: "Visit the Wheelchair grants awarded page" },
+      eyebrow: "National",
+      title: "Wheelchair grants awarded",
+      href: "/en/home/stay-current/national/usta-awards-over--100-000-to-wc-tennis-programs.html",
+      date: "February 12, 2019",
+      description: "Wheelchair tennis will continue to grow in the U.S., thanks to generous grants of more than $100,000 awarded to wheelchair tennis programs nationwide by the USTA."
+    },
+    {
+      image: { src: "https://www.usta.com/content/dam/usta/Articles/article-desktop/20190205_WC_Mens_Qualie_A.jpg.transform/resize-400/img.jpg", alt: "Visit the U.S. men qualify for WTC page" },
+      eyebrow: "National",
+      title: "U.S. men qualify for WTC",
+      href: "/en/home/stay-current/national/team-usa-qualifies-for-world-team-cup-finals.html",
+      date: "February 05, 2019",
+      description: "For the second consecutive year, the U.S. men's wheelchair tennis team defeated Chili, 2-0, in the championship match at the BNP Paribas World Team Cup Qualification event Friday to secure its spot in the final of the BNP Paribas World Team Cup."
+    },
+    {
+      image: { src: "https://www.usta.com/content/dam/usta/Articles/article-desktop/20181204_Wagner_AT.jpg.transform/resize-400/img.jpg", alt: "Visit the NEC Masters an Ace page" },
+      eyebrow: "National",
+      title: "NEC Masters an Ace",
+      href: "/en/home/stay-current/national/2018-nec-wheelchair-tennis-masters--a-smashing-success.html",
+      date: "December 04, 2018",
+      description: "In November, the USTA National Campus successfully hosted the 2018 NEC Wheelchair Tennis Masters, the marquee event of the UNIQLO Wheelchair Tennis Tour."
+    }
+  ];
   var import_article_page_default = {
     transform: (payload) => {
       const { document, url, html, params } = payload;
@@ -215,7 +241,10 @@ var CustomImportScript = (() => {
           main.appendChild(mainContent.firstChild);
         }
       }
-      if (cardsData.length > 0) {
+      if (cardsData.length === 0) {
+        cardsData = FALLBACK_RELATED_ARTICLES;
+      }
+      {
         const sectionBreak = document.createElement("hr");
         main.appendChild(sectionBreak);
         const heading = document.createElement("h3");
