@@ -163,6 +163,7 @@ blockquote {
 main p {
   line-height: 1.33;
   color: #000;
+  margin-bottom: 16px;
 }
 
 main ul,
@@ -324,6 +325,12 @@ main .section.highlight {
   padding: 40px 0;
 }
 
+main .section.related-articles {
+  background-color: #e8e9e0;
+  margin: 0;
+  padding: 40px 0;
+}
+
 main .section.gold {
   background-color: #f5c518;
   margin: 0;
@@ -356,10 +363,14 @@ main h1 + p em {
   color: var(--dark-color);
 }
 
-main h1 + p + * {
-  margin-top: 0;
-  padding-top: 16px;
-  border-top: 8px solid #dcdfd0;
+main h1 + p + *::before {
+  content: '';
+  display: block;
+  width: 100vw;
+  height: 8px;
+  margin-left: calc(50% - 50vw);
+  margin-bottom: 16px;
+  background-color: #dcdfd0;
 }
 
 /* Download USTA App section (app-store) */

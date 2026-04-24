@@ -2,8 +2,10 @@
   "status": "success",
   "url": "https://www.usta.com/en/home/stay-current/national/USTA-awards-wheelchair-tennis-grants.html",
   "path": "en/home/stay-current/national/usta-awards-wheelchair-tennis-grants",
-  "timestamp": "2026-04-24T21:10:38.825Z",
+  "timestamp": "2026-04-24T21:50:52.204Z",
   "title": "USTA awards new grants",
   "template": "article-page",
-  "blocks": []
+  "blocks": [
+    "cards"
+  ]
 }

@@ -1,0 +1,8 @@
+{
+  "status": "failed",
+  "url": "https://www.usta.com/en/home/stay-current/national/USTA-awards-wheelchair-tennis-grants.html",
+  "path": "en/home/stay-current/national/USTA-awards-wheelchair-tennis-grants.html",
+  "timestamp": "2026-04-24T21:49:05.428Z",
+  "error": "page.evaluate: Error: Failed to import page: cardsData is not defined\n    at eval (eval at evaluate (:290:30), <anonymous>:24:15)\n    at async <anonymous>:316:30",
+  "errorStack": "page.evaluate: Error: Failed to import page: cardsData is not defined\n    at eval (eval at evaluate (:290:30), <anonymous>:24:15)\n    at async <anonymous>:316:30\n    at processUrl (/home/node/.excat-marketplace/excat/skills/excat-content-import/scripts/run-bulk-import.js:296:31)\n    at async main (/home/node/.excat-marketplace/excat/skills/excat-content-import/scripts/run-bulk-import.js:457:22)"
+}

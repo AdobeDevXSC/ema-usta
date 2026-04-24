@@ -109,6 +109,7 @@ var CustomImportScript = (() => {
     transform: (payload) => {
       const { document, url, html, params } = payload;
       const main = document.body;
+      let cardsData = [];
       executeTransformers("beforeTransform", main, payload);
       const mainContent = main.querySelector("#mainContent");
       executeTransformers("afterTransform", main, payload);
@@ -123,6 +124,26 @@ var CustomImportScript = (() => {
         mainContent.querySelectorAll("h4").forEach((el) => {
           if (el.textContent.trim() === "Advertisement") el.remove();
         });
+        const relatedArticlesList = mainContent.querySelector(".list-core-component__wrapper, .list ul");
+        if (relatedArticlesList) {
+          relatedArticlesList.querySelectorAll(".list-core-component__item-wrapper, li").forEach((item) => {
+            const imgEl = item.querySelector("img");
+            const titleLink = item.querySelector(".list-core-component__title, a.list-core-component__title");
+            const eyebrowEl = item.querySelector(".list-core-item__eyebrow span, .list-core-item__eyebrow");
+            const dateEl = item.querySelector(".cmp-list--subtitle-date, .list-core-component__subtitle span");
+            const descEl = item.querySelector(".cmp-list--item-description, .list-core-component__content span");
+            const readMoreLink = item.querySelector(".list-core-component__more-link, a.list-core-component__more-link");
+            const card = {
+              image: imgEl ? { src: imgEl.src, alt: imgEl.alt || "" } : null,
+              eyebrow: eyebrowEl ? eyebrowEl.textContent.trim() : "",
+              title: titleLink ? titleLink.textContent.trim() : "",
+              href: titleLink ? titleLink.href || (readMoreLink ? readMoreLink.href : "") : "",
+              date: dateEl ? dateEl.textContent.trim() : "",
+              description: descEl ? descEl.textContent.trim() : ""
+            };
+            if (card.title) cardsData.push(card);
+          });
+        }
         mainContent.querySelectorAll(".list, .relatedarticles, .v-related-articles").forEach((el) => el.remove());
         mainContent.querySelectorAll("h3").forEach((h) => {
           if (h.textContent.trim() === "Related Articles") {
@@ -194,6 +215,63 @@ var CustomImportScript = (() => {
           main.appendChild(mainContent.firstChild);
         }
       }
+      if (cardsData.length > 0) {
+        const sectionBreak = document.createElement("hr");
+        main.appendChild(sectionBreak);
+        const heading = document.createElement("h3");
+        heading.textContent = "Related Articles";
+        main.appendChild(heading);
+        const rows = cardsData.map((card) => {
+          const imgCell = document.createElement("div");
+          if (card.image) {
+            const img = document.createElement("img");
+            img.src = card.image.src;
+            img.alt = card.image.alt;
+            imgCell.appendChild(img);
+          }
+          const bodyCell = document.createElement("div");
+          if (card.eyebrow) {
+            const ep = document.createElement("p");
+            ep.innerHTML = `<em>${card.eyebrow}</em>`;
+            bodyCell.appendChild(ep);
+          }
+          if (card.title) {
+            const tp = document.createElement("p");
+            if (card.href) {
+              tp.innerHTML = `<strong><a href="${card.href}">${card.title}</a></strong>`;
+            } else {
+              tp.innerHTML = `<strong>${card.title}</strong>`;
+            }
+            bodyCell.appendChild(tp);
+          }
+          if (card.date) {
+            const dp = document.createElement("p");
+            dp.textContent = card.date;
+            bodyCell.appendChild(dp);
+          }
+          if (card.description) {
+            const desc = document.createElement("p");
+            desc.textContent = card.description;
+            bodyCell.appendChild(desc);
+          }
+          if (card.href) {
+            const rp = document.createElement("p");
+            rp.innerHTML = `<a href="${card.href}">Read More</a>`;
+            bodyCell.appendChild(rp);
+          }
+          return [imgCell, bodyCell];
+        });
+        const cardsBlock = WebImporter.Blocks.createBlock(document, {
+          name: "Cards",
+          cells: rows
+        });
+        main.appendChild(cardsBlock);
+        const sectionMeta = WebImporter.Blocks.createBlock(document, {
+          name: "Section Metadata",
+          cells: { style: "related-articles" }
+        });
+        main.appendChild(sectionMeta);
+      }
       const hr = document.createElement("hr");
       main.appendChild(hr);
       WebImporter.rules.createMetadata(main, document);
@@ -208,7 +286,7 @@ var CustomImportScript = (() => {
         report: {
           title: document.title,
           template: PAGE_TEMPLATE.name,
-          blocks: []
+          blocks: cardsData.length > 0 ? ["cards"] : []
         }
       }];
     }
