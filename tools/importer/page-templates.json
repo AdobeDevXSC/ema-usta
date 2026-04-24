@@ -120,5 +120,28 @@
         }
       ]
     }
+    },
+    {
+      "name": "article-page",
+      "urls": [
+        "https://www.usta.com/en/home/stay-current/national/USTA-awards-wheelchair-tennis-grants.html"
+      ],
+      "description": "USTA article page with title, author, date, hero image, and body text",
+      "blocks": [],
+      "sections": [
+        {
+          "id": "section-1",
+          "name": "Article Content",
+          "selector": "#mainContent",
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            ".cmp-title",
+            ".cmp-image",
+            ".cmp-text"
+          ]
+        }
+      ]
+    }
   ]
 }
