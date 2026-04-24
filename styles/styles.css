@@ -313,6 +313,27 @@ main .section.gold .columns-feature-wrapper {
   padding: 0;
 }
 
+/* article headline area: eyebrow above h1, author/date below h1 */
+main p:has(+ h1) em,
+main h1 + p em {
+  font-style: normal;
+  font-family: var(--body-font-family-semibold);
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #555;
+}
+
+main p:has(+ h1) em {
+  letter-spacing: 1px;
+}
+
+main h1 + p {
+  padding-bottom: 20px;
+  border-bottom: 4px solid #dbddce;
+  margin-bottom: 20px;
+}
+
 /* Download USTA App section (app-store) */
 main .section.app-store .default-content-wrapper {
   text-align: center;
@@ -346,25 +367,5 @@ main .section.app-store .default-content-wrapper ul img {
 
 main .section.text-center > div {
   text-align: center;
-}
-
-/* article headline area: eyebrow above h1, author/date below h1 */
-main p:has(+ h1) em {
-  font-style: normal;
-  font-family: var(--body-font-family-semibold);
-  font-weight: 600;
-  font-size: 14px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: #555;
-}
-
-main h1 + p em {
-  font-style: normal;
-  font-family: var(--body-font-family-semibold);
-  font-weight: 600;
-  font-size: 14px;
-  text-transform: uppercase;
-  color: #555;
 }
 
