@@ -326,9 +326,9 @@ main .section.highlight {
 }
 
 main .section.related-articles {
-  background-color: #e8e9e0;
+  background-color: #e5e5d1;
   margin: 0;
-  padding: 40px 0;
+  padding: 40px 0 48px;
 }
 
 main .section.gold {

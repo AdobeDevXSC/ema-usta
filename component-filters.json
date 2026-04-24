@@ -17,6 +17,7 @@
       "form",
       "hero",
       "image",
+      "near-you",
       "quote",
       "search",
       "tabs",
@@ -59,6 +60,12 @@
     "components": [
       "text",
       "image"
+    ]
+  },
+  {
+    "id": "near-you",
+    "components": [
+      "near-you-item"
     ]
   },
   {

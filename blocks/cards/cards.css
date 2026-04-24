@@ -67,3 +67,361 @@
     grid-template-columns: 1fr;
   }
 }
+
+/*
+ * Related articles — section metadata class `related-articles`.
+ * (1) Default `h2`/`h3` + `ul > li` (typical AEM HTML export — not the cards block).
+ * (2) Optional `.cards` block — table-authored cards.
+ * Section shell: styles.css (`main .section.related-articles`).
+ */
+
+/* stylelint-disable no-descending-specificity -- default list + cards variant share topic; order tuned for cascade */
+
+/*
+ * Default content: heading + list (image, title link, date, excerpt + read more).
+ */
+main .section.related-articles .default-content-wrapper > :is(h2, h3) {
+  margin: 0 0 24px;
+  text-align: left;
+}
+
+main .section.related-articles .default-content-wrapper > :is(h2, h3) + ul {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media (width >= 900px) {
+  main .section.related-articles .default-content-wrapper > :is(h2, h3) + ul {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+}
+
+main .section.related-articles .default-content-wrapper > :is(h2, h3) + ul > li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: left;
+}
+
+/* Optional category (e.g. <p><em>NATIONAL</em></p>) before image */
+main .section.related-articles .default-content-wrapper > :is(h2, h3) + ul > li > p:first-of-type:has(em):not(:has(img)) {
+  margin: 0 0 8px;
+  line-height: 1.3;
+}
+
+main .section.related-articles .default-content-wrapper > :is(h2, h3) + ul > li > p:first-of-type:has(em):not(:has(img)) em {
+  font-style: normal;
+  font-family: var(--body-font-family-semibold);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #6d7278;
+}
+
+/* Featured image */
+main .section.related-articles .default-content-wrapper > :is(h2, h3) + ul > li > p:first-of-type:has(img) {
+  margin: 0 0 12px;
+  line-height: 0;
+}
+
+main .section.related-articles .default-content-wrapper > :is(h2, h3) + ul > li > p:first-of-type:has(img) a:any-link {
+  display: block;
+  line-height: 0;
+  text-decoration: none;
+}
+
+main .section.related-articles .default-content-wrapper > :is(h2, h3) + ul > li > p:first-of-type:has(img) img {
+  width: 100%;
+  display: block;
+  border-radius: 0;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+/* Category row then image on second <p> */
+main .section.related-articles .default-content-wrapper > :is(h2, h3) + ul > li > p:nth-of-type(2):has(img) {
+  margin: 0 0 12px;
+  line-height: 0;
+}
+
+main .section.related-articles .default-content-wrapper > :is(h2, h3) + ul > li > p:nth-of-type(2):has(img) a:any-link {
+  display: block;
+  line-height: 0;
+  text-decoration: none;
+}
+
+main .section.related-articles .default-content-wrapper > :is(h2, h3) + ul > li > p:nth-of-type(2):has(img) img {
+  width: 100%;
+  display: block;
+  border-radius: 0;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+/* Title link (anchor is text, not image) */
+main .section.related-articles .default-content-wrapper > :is(h2, h3) + ul > li > p:nth-of-type(2) a:any-link:not(:has(img)),
+main .section.related-articles .default-content-wrapper > :is(h2, h3) + ul > li > p:nth-of-type(3) a:any-link:not(:has(img)) {
+  font-family: var(--body-font-family-semibold);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.25;
+  text-transform: uppercase;
+  color: #000;
+  text-decoration: none;
+}
+
+main .section.related-articles .default-content-wrapper > :is(h2, h3) + ul > li > p:nth-of-type(2) a:any-link:not(:has(img)):hover,
+main .section.related-articles .default-content-wrapper > :is(h2, h3) + ul > li > p:nth-of-type(2) a:any-link:not(:has(img)):focus,
+main .section.related-articles .default-content-wrapper > :is(h2, h3) + ul > li > p:nth-of-type(3) a:any-link:not(:has(img)):hover,
+main .section.related-articles .default-content-wrapper > :is(h2, h3) + ul > li > p:nth-of-type(3) a:any-link:not(:has(img)):focus {
+  color: #000;
+  text-decoration: underline;
+}
+
+@media (width >= 900px) {
+  main .section.related-articles .default-content-wrapper > :is(h2, h3) + ul > li > p:nth-of-type(2) a:any-link:not(:has(img)),
+  main .section.related-articles .default-content-wrapper > :is(h2, h3) + ul > li > p:nth-of-type(3) a:any-link:not(:has(img)) {
+    font-size: 20px;
+  }
+}
+
+/* Date: plain paragraph (no links, no <em> category) */
+main .section.related-articles .default-content-wrapper > :is(h2, h3) + ul > li > p:nth-of-type(3):not(:has(a, em)),
+main .section.related-articles .default-content-wrapper > :is(h2, h3) + ul > li > p:nth-of-type(4):not(:has(a, em)) {
+  margin: 0 0 10px;
+  font-size: 14px;
+  line-height: 1.35;
+  color: #6d7278;
+}
+
+/* Excerpt + read more */
+main .section.related-articles .default-content-wrapper > :is(h2, h3) + ul > li > p:last-of-type {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.45;
+  color: #000;
+}
+
+main .section.related-articles .default-content-wrapper > :is(h2, h3) + ul > li > p:last-of-type a:any-link {
+  font-family: var(--body-font-family-semibold);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.3;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  color: #0357b8;
+}
+
+main .section.related-articles .default-content-wrapper > :is(h2, h3) + ul > li > p:last-of-type a:any-link:hover,
+main .section.related-articles .default-content-wrapper > :is(h2, h3) + ul > li > p:last-of-type a:any-link:focus {
+  color: #024a9e;
+}
+
+/* Undo `main a.button` pill on title + read more in default list */
+main .section.related-articles .default-content-wrapper > :is(h2, h3) + ul > li > p:nth-of-type(2) a.button:any-link:not(:has(img)),
+main .section.related-articles .default-content-wrapper > :is(h2, h3) + ul > li > p:nth-of-type(3) a.button:any-link:not(:has(img)) {
+  box-sizing: border-box;
+  display: inline;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  background-color: transparent;
+  white-space: normal;
+  font-family: var(--body-font-family-semibold);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.25;
+  text-align: left;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000;
+}
+
+main .section.related-articles .default-content-wrapper > :is(h2, h3) + ul > li > p:last-of-type a.button:any-link {
+  box-sizing: border-box;
+  display: inline;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  background-color: transparent;
+  white-space: normal;
+  font-family: var(--body-font-family-semibold);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.3;
+  text-align: left;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  color: #0357b8;
+}
+
+main .section.related-articles .default-content-wrapper > :is(h2, h3) + ul > li > p:nth-of-type(2) a.button:any-link:not(:has(img)):hover,
+main .section.related-articles .default-content-wrapper > :is(h2, h3) + ul > li > p:nth-of-type(2) a.button:any-link:not(:has(img)):focus,
+main .section.related-articles .default-content-wrapper > :is(h2, h3) + ul > li > p:nth-of-type(3) a.button:any-link:not(:has(img)):hover,
+main .section.related-articles .default-content-wrapper > :is(h2, h3) + ul > li > p:nth-of-type(3) a.button:any-link:not(:has(img)):focus {
+  background: none;
+  background-color: transparent;
+  color: #000;
+  text-decoration: underline;
+}
+
+main .section.related-articles .default-content-wrapper > :is(h2, h3) + ul > li > p:last-of-type a.button:any-link:hover,
+main .section.related-articles .default-content-wrapper > :is(h2, h3) + ul > li > p:last-of-type a.button:any-link:focus {
+  background: none;
+  background-color: transparent;
+  color: #024a9e;
+  text-decoration: underline;
+}
+
+.related-articles .cards > ul {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media (width >= 900px) {
+  .related-articles .cards > ul {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+}
+
+.related-articles .cards > ul > li {
+  background-color: transparent;
+}
+
+.related-articles .cards > ul > li img {
+  width: 100%;
+  border-radius: 0;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.related-articles .cards .cards-card-image {
+  line-height: 0;
+}
+
+.related-articles .cards .cards-card-body {
+  margin: 0;
+  padding-top: 12px;
+}
+
+.related-articles .cards .cards-card-body > p {
+  margin: 0 0 10px;
+  font-size: 16px;
+  line-height: 1.45;
+  color: #000;
+  text-align: left;
+}
+
+.related-articles .cards .cards-card-body > p:last-child {
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+/* Category (e.g. NATIONAL) — small grey caps */
+.related-articles .cards .cards-card-body > p:first-child em {
+  display: block;
+  margin-bottom: 2px;
+  font-style: normal;
+  font-family: var(--body-font-family-semibold);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  line-height: 1.3;
+  text-transform: uppercase;
+  color: #6d7278;
+}
+
+/* Title — black uppercase semibold */
+.related-articles .cards .cards-card-body p strong,
+.related-articles .cards .cards-card-body p strong a:any-link {
+  font-family: var(--body-font-family-semibold);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.25;
+  text-transform: uppercase;
+  color: #000;
+  text-decoration: none;
+}
+
+.related-articles .cards .cards-card-body p strong a:any-link:hover,
+.related-articles .cards .cards-card-body p strong a:any-link:focus {
+  color: #000;
+  text-decoration: underline;
+}
+
+/* Date — third paragraph when not the CTA row */
+.related-articles .cards .cards-card-body > p:nth-child(3):not(:last-child) {
+  margin-top: 2px;
+  font-size: 14px;
+  line-height: 1.35;
+  font-weight: 400;
+  color: #6d7278;
+}
+
+/* READ MORE: text link (blue underline); overrides main `a.button` pill. */
+.related-articles .cards .cards-card-body > p:last-child a:any-link {
+  box-sizing: border-box;
+  display: inline;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  background-color: transparent;
+  font-family: var(--body-font-family-semibold);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.3;
+  text-align: left;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  color: #0357b8;
+  white-space: normal;
+  cursor: pointer;
+  transition: color 0.15s ease;
+}
+
+.related-articles .cards .cards-card-body > p:last-child a.button:any-link:hover,
+.related-articles .cards .cards-card-body > p:last-child a.button:any-link:focus,
+.related-articles .cards .cards-card-body > p:last-child a:any-link:hover,
+.related-articles .cards .cards-card-body > p:last-child a:any-link:focus {
+  border: 0;
+  border-radius: 0;
+  background: none;
+  background-color: transparent;
+  color: #024a9e;
+  text-decoration: underline;
+}
+
+@media (width >= 900px) {
+  .related-articles .cards .cards-card-body p strong,
+  .related-articles .cards .cards-card-body p strong a:any-link {
+    font-size: 20px;
+  }
+}
+
+/* stylelint-enable no-descending-specificity */
