@@ -28,7 +28,10 @@ export default async function decorate(block) {
 
   block.textContent = '';
   const footer = document.createElement('div');
-  while (fragment.firstElementChild) footer.append(fragment.firstElementChild);
+  // Only append div elements — skip meta/script/link injected by head.html
+  [...fragment.children].forEach((child) => {
+    if (child.tagName === 'DIV') footer.append(child);
+  });
 
   // Structure: section 1 = main footer content, section 2 = copyright
   const sections = [...footer.children];

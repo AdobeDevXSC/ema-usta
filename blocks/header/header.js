@@ -65,12 +65,15 @@ export default async function decorate(block) {
   block.textContent = '';
   const nav = document.createElement('nav');
   nav.id = 'nav';
-  while (fragment.firstElementChild) nav.append(fragment.firstElementChild);
+  // Only append div elements — skip meta/script/link injected by head.html
+  [...fragment.children].forEach((child) => {
+    if (child.tagName === 'DIV') nav.append(child);
+  });
 
   const classes = ['brand', 'sections', 'tools'];
+  const navDivs = nav.querySelectorAll(':scope > div');
   classes.forEach((c, i) => {
-    const section = nav.children[i];
-    if (section) section.classList.add(`nav-${c}`);
+    if (navDivs[i]) navDivs[i].classList.add(`nav-${c}`);
   });
 
   // Brand: keep fragment markup; add layout classes only
