@@ -2,10 +2,11 @@
   "status": "success",
   "url": "https://www.usta.com/en/home/stay-current/national/USTA-league-nancy-trimble-38-teams.html",
   "path": "en/home/stay-current/national/usta-league-nancy-trimble-38-teams",
-  "timestamp": "2026-04-24T23:33:49.719Z",
+  "timestamp": "2026-04-24T23:45:59.614Z",
   "title": "Trimble is still on top",
   "template": "article-page",
   "blocks": [
+    "near-you",
     "cards"
   ]
 }

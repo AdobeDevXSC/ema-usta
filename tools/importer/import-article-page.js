@@ -76,6 +76,7 @@ export default {
 
     const main = document.body;
     let cardsData = [];
+    let nearYouTabs = [];
 
     // 1. Execute beforeTransform transformers (initial cleanup)
     executeTransformers('beforeTransform', main, payload);
@@ -88,6 +89,15 @@ export default {
 
     // 4. Article-specific cleanup
     if (mainContent) {
+      // Extract near-you tabs data before cleanup
+      const coreTabs = mainContent.querySelector('.core-tabs');
+      if (coreTabs) {
+        coreTabs.querySelectorAll('.cmp-tabs__tabpanel').forEach((panel) => {
+          const h2 = panel.querySelector('h2');
+          if (h2) nearYouTabs.push(h2.textContent.trim());
+        });
+      }
+
       // Remove social media sharing icons
       mainContent.querySelectorAll('.v-social-media-sharing, .socialmediasharing').forEach((el) => el.remove());
 
@@ -229,7 +239,31 @@ export default {
       }
     }
 
-    // 5. Build Related Articles cards block (use fallback if none found on page)
+    // 5. Build Near You block
+    {
+      const nearYouHeadings = nearYouTabs.length > 0
+        ? nearYouTabs
+        : ['Tournaments near you', 'Programs near you'];
+
+      const sectionBreak = document.createElement('hr');
+      main.appendChild(sectionBreak);
+
+      const rows = nearYouHeadings.map((heading) => {
+        const cell = document.createElement('div');
+        const p = document.createElement('p');
+        p.textContent = heading;
+        cell.appendChild(p);
+        return [cell];
+      });
+
+      const nearYouBlock = WebImporter.Blocks.createBlock(document, {
+        name: 'Near You',
+        cells: rows,
+      });
+      main.appendChild(nearYouBlock);
+    }
+
+    // 6. Build Related Articles cards block (use fallback if none found on page)
     if (cardsData.length === 0) {
       cardsData = FALLBACK_RELATED_ARTICLES;
     }
@@ -315,7 +349,7 @@ export default {
       report: {
         title: document.title,
         template: PAGE_TEMPLATE.name,
-        blocks: cardsData.length > 0 ? ['cards'] : [],
+        blocks: ['near-you', ...(cardsData.length > 0 ? ['cards'] : [])],
       },
     }];
   },

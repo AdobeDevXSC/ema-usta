@@ -136,10 +136,18 @@ var CustomImportScript = (() => {
       const { document, url, html, params } = payload;
       const main = document.body;
       let cardsData = [];
+      let nearYouTabs = [];
       executeTransformers("beforeTransform", main, payload);
       const mainContent = main.querySelector("#mainContent");
       executeTransformers("afterTransform", main, payload);
       if (mainContent) {
+        const coreTabs = mainContent.querySelector(".core-tabs");
+        if (coreTabs) {
+          coreTabs.querySelectorAll(".cmp-tabs__tabpanel").forEach((panel) => {
+            const h2 = panel.querySelector("h2");
+            if (h2) nearYouTabs.push(h2.textContent.trim());
+          });
+        }
         mainContent.querySelectorAll(".v-social-media-sharing, .socialmediasharing").forEach((el) => el.remove());
         mainContent.querySelectorAll(".core-tabs, .relatedopportunities, .textandlinkwithimage").forEach((el) => el.remove());
         mainContent.querySelectorAll('[class*="ros-ad"], .adImageComp, .ad, [id*="gpt-ad"], [id*="skipAd"]').forEach((el) => el.remove());
@@ -241,6 +249,23 @@ var CustomImportScript = (() => {
           main.appendChild(mainContent.firstChild);
         }
       }
+      {
+        const nearYouHeadings = nearYouTabs.length > 0 ? nearYouTabs : ["Tournaments near you", "Programs near you"];
+        const sectionBreak = document.createElement("hr");
+        main.appendChild(sectionBreak);
+        const rows = nearYouHeadings.map((heading) => {
+          const cell = document.createElement("div");
+          const p = document.createElement("p");
+          p.textContent = heading;
+          cell.appendChild(p);
+          return [cell];
+        });
+        const nearYouBlock = WebImporter.Blocks.createBlock(document, {
+          name: "Near You",
+          cells: rows
+        });
+        main.appendChild(nearYouBlock);
+      }
       if (cardsData.length === 0) {
         cardsData = FALLBACK_RELATED_ARTICLES;
       }
@@ -315,7 +340,7 @@ var CustomImportScript = (() => {
         report: {
           title: document.title,
           template: PAGE_TEMPLATE.name,
-          blocks: cardsData.length > 0 ? ["cards"] : []
+          blocks: ["near-you", ...cardsData.length > 0 ? ["cards"] : []]
         }
       }];
     }
