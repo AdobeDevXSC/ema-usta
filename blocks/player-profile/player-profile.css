@@ -1,0 +1,356 @@
+/* ═══════════════════════════════════════════════════════════════════
+   Player Profile block
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* ── Container / wrapper ──────────────────────────────────────────── */
+.player-profile-container {
+  margin: 0;
+  padding: 0;
+}
+
+.player-profile-container .player-profile-wrapper {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── Block root – flex row on desktop ─────────────────────────────── */
+.player-profile {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 100%;
+  min-height: 360px;
+  overflow: hidden;
+}
+
+/* ── Left: image panel ────────────────────────────────────────────── */
+.player-profile-image-panel {
+  position: relative;
+  flex: 0 0 auto;
+  overflow: hidden;
+  min-height: 260px;
+  box-sizing: border-box;
+}
+
+.player-profile-image-panel picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.player-profile-image-panel picture img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Section title overlay */
+.player-profile-section-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  pointer-events: none;
+}
+
+.player-profile-section-title {
+  font-family: var(--heading-font-family);
+  font-size: clamp(32px, 8vw, 52px);
+  font-weight: 900;
+  line-height: 1.0;
+  color: #fff;
+  text-transform: none;
+  margin: 0;
+  width: 58.33333333%;
+  background: rgb(0 0 0 / 58%);
+  padding: 20px 28px 24px;
+  box-sizing: border-box;
+}
+
+/* ── Right: content panel ─────────────────────────────────────────── */
+.player-profile-content-panel {
+  background-color: #a4ee90;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 24px 24px;
+  gap: 20px;
+  color: #1a1a1a;
+  box-sizing: border-box;
+}
+
+/* ── Welcome bar ──────────────────────────────────────────────────── */
+.player-profile-welcome-bar {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.player-profile-welcome-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.player-profile-greeting {
+  font-family: var(--heading-font-family);
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 900;
+  line-height: 1.05;
+  margin: 0;
+  color: #1a1a1a;
+  text-transform: none;
+}
+
+.player-profile-welcome-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+/* Avatar icon row */
+.player-profile-avatar-icons {
+  display: flex;
+  gap: 14px;
+}
+
+
+.player-profile-avatar-icon {
+  width: 28px;
+  height: 28px;
+  display: block;
+}
+
+
+.player-profile-manage-roles {
+  font-family: var(--body-font-family-semibold);
+  font-size: 13px;
+  font-weight: 600;
+  color: #0066cc;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  letter-spacing: 0.2px;
+  white-space: nowrap;
+}
+
+.player-profile-manage-roles:hover {
+  color: #004fa3;
+}
+
+/* ── Generic pill button ──────────────────────────────────────────── */
+.player-profile-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 22px;
+  border-radius: 999px;
+  font-family: var(--body-font-family-semibold);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+  white-space: nowrap;
+}
+
+.player-profile-btn--dark {
+  background-color: #1a1a1a;
+  color: #fff !important;
+  border: 2px solid #1a1a1a;
+}
+
+.player-profile-btn--dark:hover {
+  background-color: #333;
+  color: #fff !important;
+}
+
+/* ── User meta ────────────────────────────────────────────────────── */
+.player-profile-user-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  font-size: 20px;
+  margin: 1.2rem 0;
+}
+
+.player-profile-gender {
+  font-family: var(--body-font-family-semibold);
+  font-size: inherit;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.player-profile-location {
+  font-family: var(--body-font-family);
+  font-size: inherit;
+  font-weight: 400;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.player-profile-location strong {
+  font-family: var(--body-font-family-semibold);
+  font-weight: 600;
+}
+
+.player-profile-usta-number {
+  font-family: var(--body-font-family);
+  font-size: inherit;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.player-profile-usta-number strong {
+  font-family: var(--body-font-family-semibold);
+  font-weight: 600;
+}
+
+.player-profile-usta-number-value {
+  font-family: var(--body-font-family);
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/* ── Safe Play section ────────────────────────────────────────────── */
+.player-profile-safe-play {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.player-profile-safe-play h3,
+.player-profile-safe-play h2 {
+  font-family: var(--heading-font-family);
+  font-size: clamp(24px, 3.5vw, 34px);
+  font-weight: 900;
+  margin: 0;
+  color: #1a1a1a;
+  text-transform: none;
+}
+
+/* 2-column icon grid */
+.player-profile-courses-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 16px;
+}
+
+.player-profile-course-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.player-profile-course-icon {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.player-profile-course-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 4px;
+  box-sizing: border-box;
+  display: block;
+}
+
+.player-profile-course-label {
+  font-family: var(--body-font-family-semibold);
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  line-height: 1.3;
+  color: #1a1a1a;
+}
+
+/* ── Action buttons rows ──────────────────────────────────────────── */
+.player-profile-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 1.2rem;
+}
+
+.player-profile-actions-row {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+}
+
+.player-profile-actions-row--center {
+  justify-content: center;
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   Desktop layout (≥ 768px) – side-by-side row
+   ═══════════════════════════════════════════════════════════════════ */
+@media (width >= 768px) {
+  .player-profile {
+    flex-direction: row;
+    min-height: 420px;
+  }
+
+  .player-profile-image-panel {
+    flex: 0 0 58%;
+    min-height: unset;
+  }
+
+  .player-profile-content-panel {
+    flex: 0 0 42%;
+    padding: 24px 28px 28px;
+    gap: 16px;
+  }
+
+  .player-profile-section-title {
+    font-size: 100px;
+  }
+
+  .player-profile-greeting {
+    font-size: clamp(28px, 3vw, 42px);
+  }
+
+  .player-profile-course-label {
+    font-size: 14px;
+  }
+
+  .player-profile-courses-grid {
+    gap: 12px 20px;
+  }
+}
+
+@media (width >= 1024px) {
+  .player-profile-image-panel {
+    flex: 0 0 65%;
+  }
+
+  .player-profile-content-panel {
+    flex: 0 0 35%;
+    padding: 28px 32px 32px;
+  }
+}
