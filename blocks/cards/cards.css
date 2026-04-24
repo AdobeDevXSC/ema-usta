@@ -44,10 +44,10 @@
 
 .cards .cards-card-body p strong a,
 .cards .cards-card-body p strong {
-  font-family: var(--heading-font-family);
-  font-size: 28px;
-  font-weight: 700;
-  line-height: 1.1;
+  font-family: var(--body-font-family-semibold);
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 32px;
   text-transform: uppercase;
   color: #000;
   text-decoration: none;
@@ -59,7 +59,7 @@
   font-weight: 600;
   text-transform: uppercase;
   text-decoration: underline;
-  color: #000;
+  color: #0357b8;
 }
 
 @media (width < 900px) {
