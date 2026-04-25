@@ -9,12 +9,12 @@
   font-family: var(--body-font-family, 'Graphik', 'Arial', sans-serif);
   color: var(--text-color, #1a1a1a);
   width: 100%;
+  min-width: 0;
   margin: 0 auto;
   box-sizing: border-box;
 }
 
 /* ── Category tabs (JUNIOR | ADULT | NTRP | FAMILY | WHEELCHAIR) ───────── */
-/* Category tabs: first child of .player-rankings, above .pr-header (same blue band) */
 .pr-cat-tabs {
   width: 100%;
   background-color: #09b5f7;
@@ -82,7 +82,6 @@
   padding: 0 32px 32px;
 }
 
-/* Mixed-case, condensed heavy headline */
 .pr-title {
   font-family: var(--heading-font-family, 'GraphikXXCondensed', 'Franklin Gothic', 'Arial Narrow', 'Arial Black', sans-serif);
   font-size: clamp(40px, 5vw, 64px);
@@ -92,7 +91,7 @@
   margin: 0 0 10px;
   line-height: 0.95;
   letter-spacing: -0.01em;
-  text-transform: none; /* Mixed case as shown in desired state */
+  text-transform: none;
 }
 
 .pr-subtitle {
@@ -160,12 +159,10 @@
   color: #444;
 }
 
-/* Label variant for use on blue header background */
 .pr-filter-label--light {
   color: #000;
 }
 
-/* Header dropdowns — taller, boxier, larger text */
 .pr-filter-select {
   height: 52px;
   padding: 0 40px 0 14px;
@@ -197,10 +194,11 @@
   display: flex;
   align-items: flex-start;
   gap: 0;
+  min-width: 0;
   background-color: #fff;
 }
 
-/* ── Left column: wider search + filters (narrower than main table in flex split) */
+/* ── Left column ──────────────────────────────────────────────────────── */
 .pr-sidebar {
   flex: 0 0 32%;
   min-width: 260px;
@@ -233,7 +231,6 @@
   color: #1a1a1a;
 }
 
-/* Search input with icon */
 .pr-search-wrap {
   position: relative;
   display: flex;
@@ -280,7 +277,6 @@
   -webkit-appearance: none;
 }
 
-/* Publish date — label row + native date input */
 .pr-label-row {
   display: flex;
   align-items: center;
@@ -348,7 +344,6 @@
   border-color: #09b5f7;
 }
 
-/* Section select in sidebar (full width) */
 .pr-sidebar .pr-filter-select {
   min-width: 0;
   width: 100%;
@@ -364,7 +359,6 @@
   letter-spacing: 0.55px;
 }
 
-/* Reset All — black rectangle (not a pill) */
 .pr-btn-reset {
   width: 100%;
   min-height: 52px;
@@ -388,7 +382,7 @@
   background-color: #1a1a1a;
 }
 
-/* ── Content area (status + table + pagination) ───────────────────────── */
+/* ── Content area ─────────────────────────────────────────────────────── */
 .pr-content {
   flex: 1 1 0;
   min-width: 0;
@@ -398,7 +392,7 @@
   background: #fff;
 }
 
-/* ── Status bar (above table) ─────────────────────────────────────────── */
+/* ── Status bar ───────────────────────────────────────────────────────── */
 .pr-status {
   min-height: 26px;
   padding: 6px 12px 8px 4px;
@@ -436,9 +430,15 @@
 
 /* ── Table wrapper ────────────────────────────────────────────────────── */
 .pr-table-wrap {
+  width: 100%;
+  min-width: 0;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
   transition: opacity 0.2s;
+  max-width: 100%;
+  isolation: isolate;
+  touch-action: pan-x pan-y;
 }
 
 .pr-table-wrap--loading {
@@ -446,7 +446,7 @@
   pointer-events: none;
 }
 
-/* ── Table ─────────────────────────────────────────────────────────────── */
+/* ── Table ────────────────────────────────────────────────────────────── */
 .pr-table {
   width: 100%;
   min-width: 1230px;
@@ -454,7 +454,6 @@
   font-size: 16px;
 }
 
-/* Header row, small all-caps */
 .pr-th {
   font-family: var(--body-font-family-semibold, 'Graphik', 'Arial', sans-serif);
   font-size: 11px;
@@ -495,7 +494,6 @@
   text-align: center;
 }
 
-/* Rows: horizontal rules only; no fill colors */
 .pr-row {
   border-bottom: 1px solid #e0e0e0;
   background-color: transparent;
@@ -514,7 +512,6 @@
   border: none;
 }
 
-/* Rank columns */
 .pr-td--rank {
   text-align: center;
   font-variant-numeric: tabular-nums;
@@ -522,7 +519,6 @@
   color: #1a1a1a;
 }
 
-/* Name column — normal weight in desired state (not bold) */
 .pr-td--name {
   font-family: var(--body-font-family, 'Graphik', 'Arial', sans-serif);
   font-weight: 400;
@@ -563,7 +559,7 @@
   font-style: italic;
 }
 
-/* ── Pagination ─────────────────────────────────────────────────────── */
+/* ── Pagination ───────────────────────────────────────────────────────── */
 .pr-pagination {
   display: flex;
   flex-wrap: wrap;
@@ -625,40 +621,10 @@
    Responsive
    ═══════════════════════════════════════════════════════════════════════ */
 
-/* Narrow: stack sidebar above table */
-@media (width < 640px) {
-  .pr-body {
-    flex-direction: column;
-  }
-
-  .pr-sidebar {
-    flex: none;
-    width: 100%;
-    max-width: none;
-    border-right: none;
-    border-bottom: 1px solid #e0e0e0;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 12px;
-    align-items: flex-end;
-  }
-
-  .pr-sidebar-section {
-    flex: 1 1 160px;
-  }
-
-  .pr-btn-reset {
-    width: auto;
-    padding: 0 20px;
-    align-self: flex-end;
-  }
-
-  .pr-header-filters {
-    gap: 10px;
-  }
-
-  .pr-filter-select {
-    min-width: 130px;
+@media (width < 900px) {
+  .pr-header {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .pr-header-links {
@@ -667,20 +633,300 @@
 
   .pr-header-link {
     flex: 1 1 auto;
+    min-width: 0;
+    white-space: normal;
+    padding: 14px 16px;
+  }
+
+  .pr-header-filters {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+
+  .pr-header-filters .pr-filter-group {
+    width: 100%;
+    max-width: none;
+  }
+
+  .pr-header-filters .pr-filter-select {
+    width: 100%;
+    min-width: 0;
+    max-width: none;
   }
 
   .pr-cat-tabs__list {
-    padding: 0 12px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (width < 768px) {
+  .pr-body {
+    flex-direction: column;
+  }
+
+  /* ── Sidebar stacks vertically on mobile ── */
+  .pr-sidebar {
+    flex: none;
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+    padding: 20px 16px 24px;
+    border-right: none;
+    border-bottom: 1px solid #e0e0e0;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 20px;
+    align-items: stretch;
+  }
+
+  .pr-sidebar-section {
+    flex: none;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .pr-btn-reset {
+    width: 100%;
+    padding: 14px;
+    align-self: stretch;
+  }
+
+  .pr-header {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 24px;
+  }
+
+  .pr-cat-tabs {
+    padding-top: 20px;
+  }
+
+  .pr-cat-tabs__list {
+    padding-left: 12px;
+    padding-right: 12px;
   }
 
   .pr-cat-tab {
     font-size: 12px;
     padding: 14px 6px 12px;
   }
+
+  .pr-title {
+    font-size: clamp(28px, 9vw, 52px);
+  }
+
+  .pr-subtitle {
+    font-size: 14px;
+    margin-bottom: 18px;
+  }
+
+  .pr-content {
+    padding: 0;
+    min-width: 0;
+  }
+
+  .pr-status,
+  .pr-status--hint {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .pr-table {
+    min-width: 880px;
+    font-size: 14px;
+  }
+
+  .pr-table .pr-th,
+  .pr-table .pr-td {
+    box-sizing: border-box;
+  }
+
+  .pr-th {
+    font-size: 10px;
+    padding: 10px 6px 8px;
+    white-space: normal;
+    word-break: break-word;
+    hyphens: auto;
+  }
+
+  .pr-th--rank {
+    width: 50px;
+    min-width: 50px;
+    max-width: 50px;
+    padding-left: 4px;
+    padding-right: 4px;
+    text-align: center;
+  }
+
+  .pr-th--name {
+    min-width: 0;
+    max-width: 9rem;
+  }
+
+  .pr-th--points {
+    white-space: normal;
+    text-align: right;
+    min-width: 3.25rem;
+  }
+
+  .pr-th--loc {
+    min-width: 72px;
+    max-width: 100px;
+  }
+
+  .pr-th--loc-narrow {
+    min-width: 40px;
+  }
+
+  .pr-td {
+    padding: 12px 6px;
+    font-size: 14px;
+  }
+
+  .pr-td--rank {
+    width: 50px;
+    min-width: 50px;
+    max-width: 50px;
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+
+  .pr-td--name {
+    max-width: 9rem;
+  }
+
+  .pr-td--name .pr-player-link {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .pr-td--points {
+    font-size: 13px;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .pr-td--loc {
+    font-size: 13px;
+    max-width: 7rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .pr-td--state {
+    width: auto;
+    min-width: 2.5rem;
+  }
+
+  /* Sticky first four columns (3 ranks + name) while scrolling horizontally */
+  .pr-table thead .pr-th:nth-child(1) {
+    position: sticky;
+    left: 0;
+    z-index: 6;
+    background-color: #fff;
+    box-shadow: 1px 0 0 #c8c8c8;
+  }
+
+  .pr-table thead .pr-th:nth-child(2) {
+    position: sticky;
+    left: 50px;
+    z-index: 7;
+    background-color: #fff;
+    box-shadow: 1px 0 0 #c8c8c8;
+  }
+
+  .pr-table thead .pr-th:nth-child(3) {
+    position: sticky;
+    left: 100px;
+    z-index: 8;
+    background-color: #fff;
+    box-shadow: 1px 0 0 #c8c8c8;
+  }
+
+  .pr-table thead .pr-th:nth-child(4) {
+    position: sticky;
+    left: 150px;
+    z-index: 9;
+    min-width: 7rem;
+    max-width: 9rem;
+    background-color: #fff;
+    box-shadow: 4px 0 10px -4px rgba(0, 0, 0, 0.18);
+  }
+
+  .pr-table .pr-row > .pr-td:nth-child(1) {
+    position: sticky;
+    left: 0;
+    z-index: 4;
+    background-color: #fff;
+    box-shadow: 1px 0 0 #e0e0e0;
+  }
+
+  .pr-table .pr-row > .pr-td:nth-child(2) {
+    position: sticky;
+    left: 50px;
+    z-index: 5;
+    background-color: #fff;
+    box-shadow: 1px 0 0 #e0e0e0;
+  }
+
+  .pr-table .pr-row > .pr-td:nth-child(3) {
+    position: sticky;
+    left: 100px;
+    z-index: 6;
+    background-color: #fff;
+    box-shadow: 1px 0 0 #e0e0e0;
+  }
+
+  .pr-table .pr-row > .pr-td:nth-child(4) {
+    position: sticky;
+    left: 150px;
+    z-index: 7;
+    min-width: 7rem;
+    max-width: 9rem;
+    background-color: #fff;
+    box-shadow: 4px 0 10px -4px rgba(0, 0, 0, 0.12);
+  }
+
+  .pr-pagination {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 6px;
+    padding: 12px 12px 14px;
+  }
+
+  .pr-pagination-info {
+    flex: 1 1 100%;
+    margin-left: 0;
+    white-space: normal;
+    text-align: center;
+    padding-top: 4px;
+  }
+
+  .pr-page-btn {
+    min-height: 44px;
+    min-width: 40px;
+  }
 }
 
-@media (width >= 640px) {
+@media (width >= 768px) {
   .pr-header-filters .pr-filter-group {
     flex: 0 1 auto;
+  }
+}
+
+/* Very small phones: category tabs wrap cleanly */
+@media (width < 400px) {
+  .pr-cat-tabs__item {
+    flex: 1 1 calc(50% - 4px);
+    min-width: calc(50% - 4px);
+  }
+
+  .pr-header-link {
+    flex: 1 1 100%;
   }
 }
