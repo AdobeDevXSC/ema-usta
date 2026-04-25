@@ -4,9 +4,9 @@
  * UI pattern: https://www.usta.com/en/home/play/rankings.html
  *
  * Production (how usta.com actually loads data):
- *   The live junior rankings search is a POST to USTA’s public rankings API, e.g.:
+ *   The live junior rankings search is a POST to USTA's public rankings API, e.g.:
  *   POST https://services.usta.com/v1/dataexchange/rankings/search/public
- *   (same path is exposed via www.usta.com’s dispatcher in some setups).
+ *   (same path is exposed via www.usta.com's dispatcher in some setups).
  *   Request body matches what buildPayload() builds: { selection, pagination } with
  *   playerType, juniorListType, rankListGender, ageRestriction, list/match params,
  *   optional region, playerName, asOfDate, etc.
@@ -34,8 +34,8 @@
  *   Row 3: gender             e.g. "F"
  *   Row 4: ageGroup           e.g. "Y12"
  *
- * Block defaults (no table overrides) match usta.com: Combined National
- * Standings, Girls, 12 & Under, publish date 2026-04-22, search empty, all sections.
+ * Block defaults (no table overrides): Doubles Seeding List, Boys, 12 & Under,
+ * publish date 2026-04-22, search empty, all sections.
  */
 
 /* ─── Constants ────────────────────────────────────────────────────────────── */
@@ -125,12 +125,12 @@ const SECTIONS = [
 
 function createState(defaults) {
   return {
-    listType: defaults.listType || 'combined',
-    gender: defaults.gender || 'F',
+    listType: defaults.listType || 'doubles',   // ← changed: was 'combined'
+    gender: defaults.gender || 'M',             // ← changed: was 'F'
     ageGroup: defaults.ageGroup || 'Y12',
     section: '',
     searchName: '',
-    /** YYYY-MM-DD; compared to each mock file’s publishDate. */
+    /** YYYY-MM-DD; compared to each mock file's publishDate. */
     publishDate: defaults.publishDate ?? '2026-04-22',
     currentPage: 1,
     loading: false,
@@ -152,8 +152,8 @@ function isJuniorUrlFragment(p) {
 }
 
 const DEFAULT_JUNIOR_STATE = {
-  listType: 'combined',
-  gender: 'F',
+  listType: 'doubles',   // ← changed: was 'combined'
+  gender: 'M',           // ← changed: was 'F'
   ageGroup: 'Y12',
   section: '',
   searchName: '',
@@ -163,7 +163,7 @@ const DEFAULT_JUNIOR_STATE = {
 
 /**
  * Reads #tab=junior&junior-…; when a junior fragment is present, returns
- * a full set of filter fields (like USTA’s in-page behavior). Authored/defaults
+ * a full set of filter fields (like USTA's in-page behavior). Authored/defaults
  * are still merged by the caller (hash applies after createState(authoring)).
  * @returns {{ filterState: null | object, hadPublishInHash: boolean, ignore: boolean }}
  */
@@ -270,11 +270,7 @@ function calendarDayUTC(iso) {
   return d.toISOString().slice(0, 10);
 }
 
-/* ─── Request shape + data load -------------------------------------------------
-   buildPayload() is the same structure you would POST in production. Below, loadMockCache
-   + fetchRankings() substitute static files under jsons/ because cross-origin fetches
-   to services.usta.com are blocked (CORS) from typical dev and static site origins.
-   ---------------------------------------------------------------------------- */
+/* ─── Request shape + data load ─────────────────────────────────────────── */
 
 function buildPayload(state) {
   const listDef = LIST_TYPES.find((l) => l.value === state.listType) || LIST_TYPES[2];
@@ -349,8 +345,8 @@ async function loadMockCache(listType, gender, age) {
  * fetch(services.usta.com/.../rankings/search/public) with the same `payload` body.
  */
 async function fetchRankings(payload) {
-  const listType = payload.selection?.juniorListType ?? 'combined';
-  const gender = payload.selection?.rankListGender ?? 'F';
+  const listType = payload.selection?.juniorListType ?? 'doubles';
+  const gender = payload.selection?.rankListGender ?? 'M';
   const age = payload.selection?.ageRestriction ?? 'Y12';
 
   const { meta, players } = await loadMockCache(listType, gender, age);
@@ -370,7 +366,7 @@ async function fetchRankings(payload) {
     }
   }
 
-  // If the user picked a day that does not match this mock’s publishDate, return empty.
+  // If the user picked a day that does not match this mock's publishDate, return empty.
   const selectedDay = payload.selection?.asOfDate?.publishDate
     ? calendarDayUTC(payload.selection.asOfDate.publishDate)
     : null;
@@ -395,7 +391,6 @@ async function fetchRankings(payload) {
   const start = (page - 1) * pageSize;
   const pageData = filtered.slice(start, start + pageSize);
 
-  // Totals come only from loaded + filtered rows (name/section/publish-day filters).
   const totalResults = filtered.length;
   const totalPages = Math.max(1, Math.ceil(totalResults / pageSize));
 
@@ -445,10 +440,6 @@ function buildSelect(id, options, selectedValue, labelText, labelClass) {
 
 /* ─── Block sections ─────────────────────────────────────────────────────────── */
 
-/**
- * Category labels (Junior / Adult / NTRP / Family / Wheelchair) — static;
- * this block only implements Junior content.
- */
 function buildCategoryTabs() {
   const nav = el('nav', { class: 'pr-cat-tabs', 'aria-label': 'Tournament ranking category' });
   const list = el('ul', { class: 'pr-cat-tabs__list' });
@@ -476,8 +467,9 @@ function buildCategoryTabs() {
 
 function buildHeader(state) {
   const header = el('div', { class: 'pr-header' });
+  header.append(buildCategoryTabs());
 
-  const title = el('h2', { class: 'pr-title', text: 'JUNIOR TOURNAMENTS RANKINGS' });
+  const title = el('h2', { class: 'pr-title', text: 'Junior Tournaments Rankings' });
   const subtitle = el('p', { class: 'pr-subtitle', text: 'The National Standing Lists are published on Wednesdays.' });
 
   const links = el('div', { class: 'pr-header-links' });
@@ -497,7 +489,6 @@ function buildHeader(state) {
     links.append(el('a', linkAttrs, text));
   });
 
-  // Top-row filters live inside the blue header
   const headerFilters = el('div', { class: 'pr-header-filters' });
   headerFilters.append(
     buildSelect('pr-list-type', LIST_TYPES, state.listType, 'RANKING LIST', 'pr-filter-label pr-filter-label--light'),
@@ -522,7 +513,7 @@ function buildSidebar(state) {
     type: 'search',
     id: 'pr-search',
     class: 'pr-filter-input pr-filter-input--search',
-    placeholder: 'Search by player',
+    placeholder: 'Search by player name',
   });
   searchWrap.append(searchIcon, searchInput);
   searchSection.append(searchLabel, searchWrap);
@@ -531,7 +522,6 @@ function buildSidebar(state) {
   const filterSection = el('div', { class: 'pr-sidebar-section' });
   const filterHeading = el('p', { class: 'pr-sidebar-heading pr-sidebar-heading--filter', text: 'FILTER BY:' });
 
-  // Publish date — native datepicker; filters by list publish date in production
   const dateGroup = el('div', { class: 'pr-filter-group' });
   const dateLabelRow = el('div', { class: 'pr-label-row' });
   const dateLabel = el('label', { for: 'pr-publish-date', class: 'pr-filter-label', text: 'PUBLISH DATE' });
@@ -557,12 +547,10 @@ function buildSidebar(state) {
   });
   dateGroup.append(dateLabelRow, dateInput, dateHint);
 
-  // Section
   const sectionSelect = buildSelect('pr-section', SECTIONS, state.section, 'SECTION');
 
   filterSection.append(filterHeading, dateGroup, sectionSelect);
 
-  // Reset button
   const resetBtn = el('button', { class: 'pr-btn-reset', type: 'button', text: 'RESET ALL' });
 
   sidebar.append(searchSection, filterSection, resetBtn);
@@ -591,7 +579,6 @@ function buildTableSkeleton() {
     { text: 'DISTRICT', cls: 'pr-th--loc' },
   ].forEach(({ text, cls }) => {
     const th = el('th', { class: `pr-th ${cls}`.trim(), scope: 'col' });
-    // Allow line breaks in header text
     text.split('\n').forEach((line, i) => {
       if (i > 0) th.append(document.createElement('br'));
       th.append(document.createTextNode(line));
@@ -699,7 +686,6 @@ function renderPagination(paginationEl, state, totalResults, totalPages, onPage)
   else next.disabled = true;
   paginationEl.append(next);
 
-  // "X of Y pages" info
   const info = el('span', { class: 'pr-pagination-info', text: `${currentPage} of ${totalPages} pages` });
   paginationEl.append(info);
 }
@@ -730,7 +716,6 @@ function renderStatus(statusEl, state, total, options = {}) {
 /* ─── Block entry point ──────────────────────────────────────────────────────── */
 
 export default async function decorate(block) {
-  // Parse authored defaults from document table rows
   const rows = [...block.querySelectorAll(':scope > div')];
   const authored = {};
   rows.forEach((row) => {
@@ -751,12 +736,10 @@ export default async function decorate(block) {
     ensureTabJuniorInUrlWhenHashEmpty();
   }
 
-  // Build DOM
   block.innerHTML = '';
   block.setAttribute('role', 'region');
   block.setAttribute('aria-label', 'Junior Tournament Rankings');
 
-  const categoryNav = buildCategoryTabs();
   const header = buildHeader(state);
   const { sidebar, searchInput, dateInput, resetBtn } = buildSidebar(state);
   const statusEl = buildStatusBar();
@@ -764,21 +747,18 @@ export default async function decorate(block) {
   const tbody = tableWrap.querySelector('.pr-tbody');
   const pagination = buildPagination();
 
-  // Body = sidebar + content
   const body = el('div', { class: 'pr-body' });
   const content = el('div', { class: 'pr-content' });
   content.append(statusEl, tableWrap, pagination);
   body.append(sidebar, content);
 
-  block.append(categoryNav, header, body);
+  block.append(header, body);
 
   let debounceTimer;
-  /** Triggers re-syncing the datepicker from the loaded list when ranking/gender/age change. */
   let lastListKey = hashIn.hadPublishInHash
     ? `${state.listType}-${state.gender}-${state.ageGroup}`
     : null;
 
-  // ── Load function ─────────────────────────────────────────────────────────────
   async function load() {
     if (state.loading) return;
     state.loading = true;
@@ -793,7 +773,6 @@ export default async function decorate(block) {
       state.data = response;
       state.loading = false;
 
-      // When Ranking List / Gender / Age changes, reset the datepicker to this list’s publish date.
       const listKey = `${state.listType}-${state.gender}-${state.ageGroup}`;
       if (listKey !== lastListKey && response.publishDate) {
         lastListKey = listKey;
@@ -827,7 +806,6 @@ export default async function decorate(block) {
     }
   }
 
-  // ── Wire up filters ──────────────────────────────────────────────────────────
   function goToPageOneAndLoad() {
     state.currentPage = 1;
     load();
@@ -901,8 +879,8 @@ export default async function decorate(block) {
 
   resetBtn.addEventListener('click', () => {
     Object.assign(state, {
-      listType: 'combined',
-      gender: 'F',
+      listType: 'doubles',   // ← changed: was 'combined'
+      gender: 'M',           // ← changed: was 'F'
       ageGroup: 'Y12',
       section: '',
       searchName: '',
