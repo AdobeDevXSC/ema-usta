@@ -6,13 +6,48 @@
  *   Row 1, Cell 1 – hero background picture
  *   Row 1, Cell 2 – "Help Keep Tennis Safe!" heading, icon list, CTA link list
  *
- * Dynamic content (injected by a separate personalisation layer later):
- *   - Section name  → .player-profile-section-name
- *   - Greeting      → .player-profile-greeting
- *   - Gender        → .player-profile-gender
- *   - Location line → .player-profile-location
- *   - USTA number   → .player-profile-usta-number-value
+ * Dynamic content injected from USTA API:
+ *   GET https://services.usta.com/v1/customers/me/player/profile/extended
  */
+
+async function fetchPlayerProfile() {
+  // In production, fetch from the USTA API using the authenticated user's token:
+  // GET https://services.usta.com/v1/customers/me/player/profile/extended
+  // with Authorization: Bearer <token> sourced from the auth layer (e.g. window.adobeIMS).
+  const base = window.hlx?.codeBasePath ?? '';
+
+  try {
+    const response = await fetch(`${base}/blocks/player-profile/player-profile.mock.json`);
+    if (!response.ok) return null;
+    return await response.json();
+  } catch {
+    return null;
+  }
+}
+
+function populateProfile(block, profile) {
+  if (!profile) return;
+
+  const { firstName, gender, residencyDeclaration, uaid } = profile;
+  const { section, district, countryIso } = residencyDeclaration ?? {};
+
+  const greet = block.querySelector('.player-profile-greeting');
+  if (greet && firstName) greet.textContent = `Welcome, ${firstName}!`;
+
+  const sectionName = block.querySelector('.player-profile-section-name');
+  if (sectionName && section) sectionName.textContent = section;
+
+  const genderEl = block.querySelector('.player-profile-gender');
+  if (genderEl && gender) genderEl.textContent = gender;
+
+  const locationEl = block.querySelector('.player-profile-location');
+  if (locationEl) {
+    locationEl.innerHTML = `<strong>Section:</strong> ${section ?? '[USTA Section]'} | <strong>District:</strong> ${district ?? '[USTA District]'} |<br><strong>Nationality:</strong> ${countryIso ?? '[Nationality]'}`;
+  }
+
+  const ustaNum = block.querySelector('.player-profile-usta-number-value');
+  if (ustaNum && uaid) ustaNum.textContent = uaid;
+}
 
 function buildAvatarIcons() {
   const wrap = document.createElement('div');
@@ -54,7 +89,7 @@ function buildWelcomeBar() {
 
   const manageRoles = document.createElement('a');
   manageRoles.className = 'player-profile-manage-roles';
-  manageRoles.href = '#';
+  manageRoles.href = 'https://www.usta.com/en/home/myaccount/profile.html#user-roles-section&tab=personalization';
   manageRoles.textContent = 'Manage Roles';
   right.append(manageRoles);
 
@@ -139,7 +174,7 @@ function buildActions(ul) {
   return wrap;
 }
 
-export default function decorate(block) {
+export default async function decorate(block) {
   const row = block.firstElementChild;
   if (!row) return;
 
@@ -190,4 +225,8 @@ export default function decorate(block) {
 
   block.innerHTML = '';
   block.append(imagePanel, contentPanel);
+
+  /* ── Fetch & populate ───────────────────────────────────────────── */
+  const profile = await fetchPlayerProfile();
+  populateProfile(block, profile);
 }
