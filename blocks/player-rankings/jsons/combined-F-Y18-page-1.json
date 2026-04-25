@@ -1,0 +1,503 @@
+{
+  "catalogId": "JUNIOR_NULL_F_STANDING_Y18_UNDER_NULL_NULL_NULL",
+  "publishDate": "2026-04-22T09:31:06.772Z",
+  "displayLabel": "Girls' 18 National Standings List (combined)",
+  "listType": "STANDING",
+  "playerType": "JUNIOR",
+  "rankListGender": "F",
+  "rankListGenderModifier": null,
+  "playerLevel": "NULL",
+  "ageRestriction": "Y18",
+  "ageRestrictionModifier": "UNDER",
+  "matchFormat": null,
+  "matchFormatType": null,
+  "familyCategory": null,
+  "data": [
+    {
+      "name": "Carlota Moreno",
+      "uaid": "2010731693",
+      "city": "Knoxville",
+      "state": "TN",
+      "trend": "no change",
+      "points": 14930,
+      "rank": {
+        "national": 1,
+        "section": 1,
+        "district": 1
+      },
+      "section": {
+        "name": "Southern"
+      },
+      "district": {
+        "name": "Tennessee"
+      },
+      "pointsRecord": {
+        "singlesPoints": 10200,
+        "doublesPoints": 11476,
+        "bonusPoints": 3009
+      }
+    },
+    {
+      "name": "Ellery Mendell",
+      "uaid": "2010701293",
+      "city": "Watkinsville",
+      "state": "GA",
+      "trend": "no change",
+      "points": 12531,
+      "rank": {
+        "national": 2,
+        "section": 2,
+        "district": 1
+      },
+      "section": {
+        "name": "Southern"
+      },
+      "district": {
+        "name": "Georgia"
+      },
+      "pointsRecord": {
+        "singlesPoints": 9300,
+        "doublesPoints": 2768,
+        "bonusPoints": 2816
+      }
+    },
+    {
+      "name": "Calla McGill",
+      "uaid": "2010594297",
+      "city": "Alexandria",
+      "state": "VA",
+      "trend": "no change",
+      "points": 10193,
+      "rank": {
+        "national": 3,
+        "section": 1,
+        "district": 1
+      },
+      "section": {
+        "name": "Mid-Atlantic"
+      },
+      "district": {
+        "name": "Virginia"
+      },
+      "pointsRecord": {
+        "singlesPoints": 6578,
+        "doublesPoints": 5700,
+        "bonusPoints": 2760
+      }
+    },
+    {
+      "name": "Jordyn Hazelitt",
+      "uaid": "2010870157",
+      "city": "Henderson",
+      "state": "NV",
+      "trend": "no change",
+      "points": 9553,
+      "rank": {
+        "national": 4,
+        "section": 1,
+        "district": 1
+      },
+      "section": {
+        "name": "Intermountain"
+      },
+      "district": {
+        "name": "Nevada"
+      },
+      "pointsRecord": {
+        "singlesPoints": 5625,
+        "doublesPoints": 9285,
+        "bonusPoints": 2535
+      }
+    },
+    {
+      "name": "Alyson Shannon",
+      "uaid": "2010710802",
+      "city": "Plano",
+      "state": "TX",
+      "trend": "no change",
+      "points": 9341,
+      "rank": {
+        "national": 5,
+        "section": 1,
+        "district": 1
+      },
+      "section": {
+        "name": "Texas"
+      },
+      "district": {
+        "name": "Member"
+      },
+      "pointsRecord": {
+        "singlesPoints": 5850,
+        "doublesPoints": 5325,
+        "bonusPoints": 2692
+      }
+    },
+    {
+      "name": "Kristina Liutova",
+      "uaid": "2018131102",
+      "city": "Redmond",
+      "state": "WA",
+      "trend": "no change",
+      "points": 9073,
+      "rank": {
+        "national": 6,
+        "section": 1,
+        "district": 1
+      },
+      "section": {
+        "name": "Pacific NW"
+      },
+      "district": {
+        "name": "Northwest Washington"
+      },
+      "pointsRecord": {
+        "singlesPoints": 8565,
+        "doublesPoints": 0,
+        "bonusPoints": 508
+      }
+    },
+    {
+      "name": "Carrie-Anne Hoo",
+      "uaid": "2010917989",
+      "city": "Brooklyn",
+      "state": "NY",
+      "trend": "no change",
+      "points": 8873,
+      "rank": {
+        "national": 7,
+        "section": 1,
+        "district": 1
+      },
+      "section": {
+        "name": "Eastern"
+      },
+      "district": {
+        "name": "Metropolitan Region"
+      },
+      "pointsRecord": {
+        "singlesPoints": 5885,
+        "doublesPoints": 7665,
+        "bonusPoints": 1838
+      }
+    },
+    {
+      "name": "Sun Xinran",
+      "uaid": "2018982085",
+      "city": "Bradenton",
+      "state": "FL",
+      "trend": "no change",
+      "points": 8011,
+      "rank": {
+        "national": 8,
+        "section": 1,
+        "district": 1
+      },
+      "section": {
+        "name": "Florida"
+      },
+      "district": {
+        "name": "Region 5"
+      },
+      "pointsRecord": {
+        "singlesPoints": 6660,
+        "doublesPoints": 5400,
+        "bonusPoints": 541
+      }
+    },
+    {
+      "name": "Yilin Chen",
+      "uaid": "2010516389",
+      "city": "San Diego",
+      "state": "CA",
+      "trend": "no change",
+      "points": 7623,
+      "rank": {
+        "national": 9,
+        "section": 1,
+        "district": 1
+      },
+      "section": {
+        "name": "Southern California"
+      },
+      "district": {
+        "name": "San Diego"
+      },
+      "pointsRecord": {
+        "singlesPoints": 5438,
+        "doublesPoints": 1603,
+        "bonusPoints": 1945
+      }
+    },
+    {
+      "name": "Thara Gowda",
+      "uaid": "2010598270",
+      "city": "Rochester Hills",
+      "state": "MI",
+      "trend": "no change",
+      "points": 7517,
+      "rank": {
+        "national": 10,
+        "section": 1,
+        "district": 1
+      },
+      "section": {
+        "name": "Midwest"
+      },
+      "district": {
+        "name": "S.E. Michigan"
+      },
+      "pointsRecord": {
+        "singlesPoints": 5244,
+        "doublesPoints": 2385,
+        "bonusPoints": 1915
+      }
+    },
+    {
+      "name": "Lauren Nolan",
+      "uaid": "2010835832",
+      "city": "Little Elm",
+      "state": "TX",
+      "trend": "no change",
+      "points": 7503,
+      "rank": {
+        "national": 11,
+        "section": 2,
+        "district": 2
+      },
+      "section": {
+        "name": "Texas"
+      },
+      "district": {
+        "name": "Member"
+      },
+      "pointsRecord": {
+        "singlesPoints": 4515,
+        "doublesPoints": 10140,
+        "bonusPoints": 1467
+      }
+    },
+    {
+      "name": "Lyla Messler",
+      "uaid": "2010884597",
+      "city": "Largo",
+      "state": "FL",
+      "trend": "no change",
+      "points": 7466,
+      "rank": {
+        "national": 12,
+        "section": 2,
+        "district": 1
+      },
+      "section": {
+        "name": "Florida"
+      },
+      "district": {
+        "name": "Region 3"
+      },
+      "pointsRecord": {
+        "singlesPoints": 5666,
+        "doublesPoints": 2160,
+        "bonusPoints": 1476
+      }
+    },
+    {
+      "name": "Allison Wang",
+      "uaid": "2017129919",
+      "city": "San Jose",
+      "state": "CA",
+      "trend": "no change",
+      "points": 7432,
+      "rank": {
+        "national": 13,
+        "section": 1,
+        "district": 1
+      },
+      "section": {
+        "name": "Northern California"
+      },
+      "district": {
+        "name": "Northern California"
+      },
+      "pointsRecord": {
+        "singlesPoints": 5830,
+        "doublesPoints": 2348,
+        "bonusPoints": 1250
+      }
+    },
+    {
+      "name": "Alanna Ingalsbe",
+      "uaid": "2010853248",
+      "city": "Tucson",
+      "state": "AZ",
+      "trend": "no change",
+      "points": 7334,
+      "rank": {
+        "national": 14,
+        "section": 1,
+        "district": 1
+      },
+      "section": {
+        "name": "Southwest"
+      },
+      "district": {
+        "name": "Southern Arizona"
+      },
+      "pointsRecord": {
+        "singlesPoints": 5738,
+        "doublesPoints": 3413,
+        "bonusPoints": 1084
+      }
+    },
+    {
+      "name": "Ava Beltran",
+      "uaid": "2010795479",
+      "city": "Liberty",
+      "state": "MO",
+      "trend": "no change",
+      "points": 7129,
+      "rank": {
+        "national": 15,
+        "section": 1,
+        "district": 1
+      },
+      "section": {
+        "name": "Missouri Valley"
+      },
+      "district": {
+        "name": "Heart of America"
+      },
+      "pointsRecord": {
+        "singlesPoints": 5183,
+        "doublesPoints": 3273,
+        "bonusPoints": 1455
+      }
+    },
+    {
+      "name": "Armira Kockinis",
+      "uaid": "2017103861",
+      "city": "LA Habra Heights",
+      "state": "CA",
+      "trend": "no change",
+      "points": 6944,
+      "rank": {
+        "national": 16,
+        "section": 2,
+        "district": 1
+      },
+      "section": {
+        "name": "Southern California"
+      },
+      "district": {
+        "name": "Southern California"
+      },
+      "pointsRecord": {
+        "singlesPoints": 4557,
+        "doublesPoints": 3522,
+        "bonusPoints": 1859
+      }
+    },
+    {
+      "name": "Carolina Castro",
+      "uaid": "2010639894",
+      "city": "Stevensville",
+      "state": "MD",
+      "trend": "no change",
+      "points": 6930,
+      "rank": {
+        "national": 17,
+        "section": 2,
+        "district": 1
+      },
+      "section": {
+        "name": "Mid-Atlantic"
+      },
+      "district": {
+        "name": "Maryland"
+      },
+      "pointsRecord": {
+        "singlesPoints": 4309,
+        "doublesPoints": 6953,
+        "bonusPoints": 1578
+      }
+    },
+    {
+      "name": "Skye Madatali",
+      "uaid": "2010560444",
+      "city": "Saint Louis",
+      "state": "MO",
+      "trend": "no change",
+      "points": 6889,
+      "rank": {
+        "national": 18,
+        "section": 2,
+        "district": 1
+      },
+      "section": {
+        "name": "Missouri Valley"
+      },
+      "district": {
+        "name": "St. Louis"
+      },
+      "pointsRecord": {
+        "singlesPoints": 4451,
+        "doublesPoints": 5730,
+        "bonusPoints": 1578
+      }
+    },
+    {
+      "name": "Janae Preston",
+      "uaid": "2017212529",
+      "city": "Henderson",
+      "state": "NV",
+      "trend": "no change",
+      "points": 6851,
+      "rank": {
+        "national": 19,
+        "section": 2,
+        "district": 2
+      },
+      "section": {
+        "name": "Intermountain"
+      },
+      "district": {
+        "name": "Nevada"
+      },
+      "pointsRecord": {
+        "singlesPoints": 5225,
+        "doublesPoints": 2205,
+        "bonusPoints": 1295
+      }
+    },
+    {
+      "name": "Valerie Shue",
+      "uaid": "2017090836",
+      "city": "South Salem",
+      "state": "NY",
+      "trend": "no change",
+      "points": 6723,
+      "rank": {
+        "national": 20,
+        "section": 2,
+        "district": 1
+      },
+      "section": {
+        "name": "Eastern"
+      },
+      "district": {
+        "name": "Southern Region"
+      },
+      "pointsRecord": {
+        "singlesPoints": 5100,
+        "doublesPoints": 0,
+        "bonusPoints": 1623
+      }
+    }
+  ],
+  "pagination": {
+    "currentPage": 1,
+    "pageSize": 20,
+    "totalPages": 500,
+    "totalResults": 10000
+  }
+}

@@ -1,0 +1,640 @@
+/* ═══════════════════════════════════════════════════════════════════════
+   player-rankings block (styles for player-rankings.js)
+   Sibling folder: jsons/ (JSON)
+   USTA ref: https://www.usta.com/en/home/play/rankings.html
+   ═══════════════════════════════════════════════════════════════════════ */
+
+/* ── Root — constrained width, centered; sidebar + table split inside .pr-body ─ */
+.player-rankings {
+  font-family: var(--body-font-family, 'Graphik', 'Arial', sans-serif);
+  color: var(--text-color, #1a1a1a);
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* ── Category tabs (JUNIOR | ADULT | NTRP | FAMILY | WHEELCHAIR) ───────── */
+.pr-cat-tabs {
+  width: 100%;
+  margin: 0 0 4px;
+}
+
+.pr-cat-tabs__list {
+  list-style: none;
+  margin: 0 0 12px;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 0 1.5rem;
+}
+
+@media (width >= 500px) {
+  .pr-cat-tabs__list {
+    gap: 0 2.25rem;
+  }
+}
+
+.pr-cat-tabs__item {
+  margin: 0;
+  padding: 0;
+}
+
+.pr-cat-tab {
+  display: inline-block;
+  font-family: var(--body-font-family-semibold, 'Graphik', 'Arial', sans-serif);
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.35px;
+  text-transform: uppercase;
+  color: #1a1a1a;
+  text-decoration: none;
+  padding: 6px 0 8px;
+  line-height: 1;
+  border-bottom: 4px solid transparent;
+  box-sizing: border-box;
+  transition: border-color 0.12s, color 0.12s;
+}
+
+.pr-cat-tab--active {
+  border-bottom-color: #1a1a1a;
+  cursor: default;
+}
+
+/* ── Header (blue band) ───────────────────────────────────────────────── */
+.pr-header {
+  background-color: #09b5f7;
+  padding: 28px 32px 24px;
+}
+
+/* USTA: heavy condensed all-caps headline (matches in-page “JUNIOR TOURNAMENTS RANKINGS”) */
+.pr-title {
+  font-family: var(--heading-font-family, 'GraphikXXCondensed', 'Franklin Gothic', 'Arial Narrow', 'Arial Black', sans-serif);
+  font-size: clamp(32px, 4.2vw, 48px);
+  font-weight: 900;
+  font-stretch: condensed;
+  color: #000;
+  margin: 0 0 8px;
+  line-height: 0.95;
+  letter-spacing: 0.02em;
+  text-transform: none;
+}
+
+.pr-subtitle {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #000;
+  margin: 0 0 20px;
+}
+
+/* Pill buttons row */
+.pr-header-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.pr-header-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 9px 20px;
+  background-color: #000;
+  color: #fff !important;
+  font-family: var(--body-font-family-semibold, 'Graphik', 'Arial', sans-serif);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  text-decoration: none !important;
+  border-radius: 999px;
+  transition: background-color 0.15s;
+  white-space: nowrap;
+}
+
+.pr-header-link:hover {
+  background-color: #333;
+}
+
+/* Filters inside the blue header */
+.pr-header-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 24px;
+  align-items: flex-end;
+}
+
+/* Filter group used both in header and sidebar */
+.pr-filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+
+.pr-filter-label {
+  font-family: var(--body-font-family-semibold, 'Graphik', 'Arial', sans-serif);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: #444;
+}
+
+/* Label variant for use on blue header background */
+.pr-filter-label--light {
+  color: #000;
+}
+
+.pr-filter-select {
+  height: 40px;
+  padding: 0 32px 0 10px;
+  border: 1px solid #bbb;
+  border-radius: 3px;
+  font-family: var(--body-font-family, 'Graphik', 'Arial', sans-serif);
+  font-size: 14px;
+  color: #1a1a1a;
+  background-color: #fff;
+  min-width: 160px;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' fill='none'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23333' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  cursor: pointer;
+  transition: border-color 0.15s;
+}
+
+.pr-filter-select:focus {
+  outline: 2px solid #09b5f7;
+  outline-offset: 1px;
+  border-color: #09b5f7;
+}
+
+/* ── Body = sidebar + content ─────────────────────────────────────────── */
+.pr-body {
+  display: flex;
+  align-items: flex-start;
+  gap: 0;
+  background-color: #fff;
+}
+
+/* ── Left column: wider search + filters (narrower than main table in flex split) */
+.pr-sidebar {
+  flex: 0 0 32%;
+  min-width: 260px;
+  max-width: 380px;
+  padding: 24px 22px 28px;
+  border-right: 1px solid #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  box-sizing: border-box;
+}
+
+.pr-sidebar-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.pr-sidebar-heading {
+  font-family: var(--body-font-family-semibold, 'Graphik', 'Arial', sans-serif);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.55px;
+  text-transform: uppercase;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.pr-sidebar-heading--filter {
+  color: #444;
+}
+
+/* Search input with icon */
+.pr-search-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.pr-search-icon {
+  position: absolute;
+  left: 9px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+}
+
+.pr-filter-input--search {
+  width: 100%;
+  height: 40px;
+  padding: 0 12px 0 32px;
+  border: 1px solid #bbb;
+  border-radius: 3px;
+  font-family: var(--body-font-family, 'Graphik', 'Arial', sans-serif);
+  font-size: 15px;
+  color: #1a1a1a;
+  background-color: #fff;
+  box-sizing: border-box;
+  transition: border-color 0.15s;
+}
+
+.pr-filter-input--search:focus {
+  outline: 2px solid #09b5f7;
+  outline-offset: 1px;
+  border-color: #09b5f7;
+}
+
+.pr-filter-input--search[type='search']::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+/* Publish date — label row + native date input */
+.pr-label-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.pr-info-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #333;
+  border-radius: 50%;
+  background: #fff;
+  color: #1a1a1a;
+  font-size: 10px;
+  font-style: italic;
+  font-weight: 700;
+  font-family: Georgia, 'Times New Roman', serif;
+  line-height: 1;
+  cursor: help;
+  flex-shrink: 0;
+}
+
+.pr-info-btn:hover,
+.pr-info-btn:focus-visible {
+  background: #1a1a1a;
+  color: #fff;
+  outline: none;
+}
+
+.pr-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.pr-date-input {
+  width: 100%;
+  height: 40px;
+  padding: 0 8px;
+  border: 1px solid #bbb;
+  border-radius: 3px;
+  font-family: var(--body-font-family, 'Graphik', 'Arial', sans-serif);
+  font-size: 15px;
+  color: #1a1a1a;
+  background-color: #fff;
+  box-sizing: border-box;
+  transition: border-color 0.15s;
+}
+
+.pr-date-input:focus {
+  outline: 2px solid #09b5f7;
+  outline-offset: 1px;
+  border-color: #09b5f7;
+}
+
+/* Section select in sidebar (full width) + match larger sidebar type scale */
+.pr-sidebar .pr-filter-select {
+  min-width: 0;
+  width: 100%;
+  min-height: 40px;
+  font-size: 15px;
+}
+
+.pr-sidebar .pr-filter-label {
+  font-size: 12px;
+}
+
+/* Reset All — black rectangle (not a pill) */
+.pr-btn-reset {
+  width: 100%;
+  min-height: 48px;
+  height: auto;
+  padding: 10px 14px;
+  border-radius: 0;
+  background-color: #000;
+  color: #fff;
+  font-family: var(--body-font-family-semibold, 'Graphik', 'Arial', sans-serif);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.55px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.15s;
+  margin-top: 2px;
+}
+
+.pr-btn-reset:hover {
+  background-color: #1a1a1a;
+}
+
+/* ── Content area (status + table + pagination) ───────────────────────── */
+.pr-content {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 0 4px 0 0;
+  background: #fff;
+}
+
+/* ── Status bar (above table) ─────────────────────────────────────────── */
+.pr-status {
+  min-height: 26px;
+  padding: 6px 12px 8px 4px;
+  font-size: 14px;
+  color: #555;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pr-status--error {
+  color: #c00;
+}
+
+.pr-status--hint {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.4;
+  padding: 4px 12px 2px 4px;
+}
+
+.pr-spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #e0e0e0;
+  border-top-color: #09b5f7;
+  border-radius: 50%;
+  animation: pr-spin 0.7s linear infinite;
+}
+
+@keyframes pr-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ── Table wrapper ────────────────────────────────────────────────────── */
+.pr-table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  transition: opacity 0.2s;
+}
+
+.pr-table-wrap--loading {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+/* ── Table — search results: larger type for scannability ─────────────── */
+.pr-table {
+  width: 100%;
+  min-width: 1230px;
+  border-collapse: collapse;
+  font-size: 16px;
+}
+
+/* Header row, small all-caps */
+.pr-th {
+  font-family: var(--body-font-family-semibold, 'Graphik', 'Arial', sans-serif);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.45px;
+  text-transform: uppercase;
+  text-align: left;
+  color: #3d3d3d;
+  padding: 12px 10px 10px;
+  white-space: nowrap;
+  background-color: transparent;
+  border-bottom: 1px solid #c8c8c8;
+  line-height: 1.25;
+  vertical-align: bottom;
+}
+
+.pr-th--rank {
+  text-align: center;
+  width: 68px;
+}
+
+.pr-th--name {
+  min-width: 160px;
+}
+
+.pr-th--points {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.pr-th--loc {
+  min-width: 100px;
+  max-width: 140px;
+}
+
+.pr-th--loc-narrow {
+  min-width: 44px;
+  text-align: center;
+}
+
+/* Rows: horizontal rules only; no fill colors */
+.pr-row {
+  border-bottom: 1px solid #e0e0e0;
+  background-color: transparent;
+}
+
+.pr-row:last-child {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.pr-td {
+  padding: 14px 11px;
+  color: #1a1a1a;
+  vertical-align: middle;
+  font-size: 16px;
+  line-height: 1.4;
+  border: none;
+}
+
+/* Rank columns – plain black, centered, no color accent */
+.pr-td--rank {
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+  width: 68px;
+  color: #1a1a1a;
+}
+
+.pr-td--name {
+  font-family: var(--body-font-family-semibold, 'Graphik', 'Arial', sans-serif);
+  font-weight: 700;
+}
+
+.pr-td--points {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.pr-td--loc {
+  max-width: 160px;
+  font-size: 15px;
+}
+
+.pr-td--state {
+  text-align: center;
+  font-size: 15px;
+  white-space: nowrap;
+  width: 3.25rem;
+}
+
+.pr-player-link {
+  color: #1a1a1a;
+  text-decoration: none;
+}
+
+.pr-player-link:hover {
+  text-decoration: underline;
+}
+
+.pr-no-results {
+  text-align: center;
+  padding: 48px 24px;
+  color: #888;
+  font-size: 17px;
+  line-height: 1.5;
+  font-style: italic;
+}
+
+/* ── Pagination ─────────────────────────────────────────────────────── */
+.pr-pagination {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+  padding: 12px 8px 10px 4px;
+  border-top: 1px solid #e0e0e0;
+  background: #fff;
+  font-size: 14px;
+}
+
+.pr-page-btn {
+  min-width: 32px;
+  height: 32px;
+  padding: 0 6px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  background-color: #fff;
+  font-family: var(--body-font-family-semibold, 'Graphik', 'Arial', sans-serif);
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a1a1a;
+  cursor: pointer;
+  transition: background-color 0.12s, border-color 0.12s;
+}
+
+.pr-page-btn:hover:not(.pr-page-btn--active):not(.pr-page-btn--disabled) {
+  background-color: #f0f0f0;
+  border-color: #aaa;
+}
+
+.pr-page-btn--active {
+  background-color: #1a1a1a;
+  border-color: #1a1a1a;
+  color: #fff;
+  cursor: default;
+}
+
+.pr-page-btn--disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.pr-page-ellipsis {
+  font-size: 14px;
+  color: #888;
+  padding: 0 2px;
+  line-height: 32px;
+}
+
+.pr-pagination-info {
+  margin-left: auto;
+  font-size: 14px;
+  color: #555;
+  white-space: nowrap;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   Responsive
+   ═══════════════════════════════════════════════════════════════════════ */
+
+/* Narrow: stack sidebar above table */
+@media (width < 640px) {
+  .pr-body {
+    flex-direction: column;
+  }
+
+  .pr-sidebar {
+    flex: none;
+    width: 100%;
+    max-width: none;
+    border-right: none;
+    border-bottom: 1px solid #e0e0e0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: flex-end;
+  }
+
+  .pr-sidebar-section {
+    flex: 1 1 160px;
+  }
+
+  .pr-btn-reset {
+    width: auto;
+    padding: 0 20px;
+    align-self: flex-end;
+  }
+
+  .pr-header-filters {
+    gap: 10px;
+  }
+
+  .pr-filter-select {
+    min-width: 130px;
+  }
+}
+
+@media (width >= 640px) {
+  .pr-header-filters .pr-filter-group {
+    flex: 0 1 auto;
+  }
+}

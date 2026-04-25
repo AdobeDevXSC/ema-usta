@@ -1,0 +1,503 @@
+{
+  "catalogId": "JUNIOR_NULL_M_SEEDING_Y12_UNDER_DOUBLES_INDIVIDUAL_NULL",
+  "publishDate": "2026-04-22T10:04:12.773Z",
+  "displayLabel": "Boys' 12 National Seeding List (Doubles)",
+  "listType": "SEEDING",
+  "playerType": "JUNIOR",
+  "rankListGender": "M",
+  "rankListGenderModifier": null,
+  "playerLevel": "NULL",
+  "ageRestriction": "Y12",
+  "ageRestrictionModifier": "UNDER",
+  "matchFormat": "DOUBLES",
+  "matchFormatType": "INDIVIDUAL",
+  "familyCategory": null,
+  "data": [
+    {
+      "name": "John Benedict",
+      "uaid": "2018534334",
+      "city": "Apex",
+      "state": "NC",
+      "trend": "no change",
+      "points": 3728,
+      "rank": {
+        "national": 61,
+        "section": 9,
+        "district": 4
+      },
+      "section": {
+        "name": "Southern"
+      },
+      "district": {
+        "name": "North Carolina"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 3728,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "William Zhang",
+      "uaid": "2018851224",
+      "city": "Paramus",
+      "state": "NJ",
+      "trend": "up",
+      "points": 3698,
+      "rank": {
+        "national": 62,
+        "section": 6,
+        "district": 3
+      },
+      "section": {
+        "name": "Eastern"
+      },
+      "district": {
+        "name": "New Jersey Region"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 3698,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Vansh Trivedi",
+      "uaid": "2018224804",
+      "city": "Austin",
+      "state": "TX",
+      "trend": "no change",
+      "points": 3698,
+      "rank": {
+        "national": 63,
+        "section": 3,
+        "district": 3
+      },
+      "section": {
+        "name": "Texas"
+      },
+      "district": {
+        "name": "Member"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 3698,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Alexander Yang",
+      "uaid": "2019267792",
+      "city": "Cupertino",
+      "state": "CA",
+      "trend": "down",
+      "points": 3638,
+      "rank": {
+        "national": 64,
+        "section": 5,
+        "district": 5
+      },
+      "section": {
+        "name": "Northern California"
+      },
+      "district": {
+        "name": "Northern California"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 3638,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Wolfgang Wistorf",
+      "uaid": "2018674504",
+      "city": "Las Vegas",
+      "state": "NV",
+      "trend": "no change",
+      "points": 3623,
+      "rank": {
+        "national": 65,
+        "section": 1,
+        "district": 1
+      },
+      "section": {
+        "name": "Intermountain"
+      },
+      "district": {
+        "name": "Nevada"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 3623,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Colin Pental",
+      "uaid": "2018392345",
+      "city": "Trumbull",
+      "state": "CT",
+      "trend": "down",
+      "points": 3600,
+      "rank": {
+        "national": 66,
+        "section": 2,
+        "district": 2
+      },
+      "section": {
+        "name": "New England"
+      },
+      "district": {
+        "name": "Connecticut"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 3600,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Marcelo Lopez",
+      "uaid": "2018723863",
+      "city": "Guaynabo",
+      "state": "PR",
+      "trend": "no change",
+      "points": 3600,
+      "rank": {
+        "national": 67,
+        "section": 2,
+        "district": 2
+      },
+      "section": {
+        "name": "Caribbean"
+      },
+      "district": {
+        "name": "Puerto Rico"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 3600,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Arnav Nadikatla",
+      "uaid": "2018359252",
+      "city": "Herndon",
+      "state": "VA",
+      "trend": "no change",
+      "points": 3593,
+      "rank": {
+        "national": 68,
+        "section": 6,
+        "district": 3
+      },
+      "section": {
+        "name": "Mid-Atlantic"
+      },
+      "district": {
+        "name": "Virginia"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 3593,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Daishin Reddy",
+      "uaid": "2018418908",
+      "city": "Atlanta",
+      "state": "GA",
+      "trend": "no change",
+      "points": 3593,
+      "rank": {
+        "national": 69,
+        "section": 10,
+        "district": 2
+      },
+      "section": {
+        "name": "Southern"
+      },
+      "district": {
+        "name": "Georgia"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 3593,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Nestor Machado",
+      "uaid": "2018119361",
+      "city": "Coral Gables",
+      "state": "FL",
+      "trend": "no change",
+      "points": 3496,
+      "rank": {
+        "national": 70,
+        "section": 9,
+        "district": 5
+      },
+      "section": {
+        "name": "Florida"
+      },
+      "district": {
+        "name": "Region 8"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 3496,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Roman Gabriel",
+      "uaid": "2018399451",
+      "city": "Santa Monica",
+      "state": "CA",
+      "trend": "no change",
+      "points": 3489,
+      "rank": {
+        "national": 71,
+        "section": 12,
+        "district": 12
+      },
+      "section": {
+        "name": "Southern California"
+      },
+      "district": {
+        "name": "Southern California"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 3489,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Doruk Comakci",
+      "uaid": "2019907009",
+      "city": "Westfield",
+      "state": "NJ",
+      "trend": "no change",
+      "points": 3485,
+      "rank": {
+        "national": 72,
+        "section": 7,
+        "district": 4
+      },
+      "section": {
+        "name": "Eastern"
+      },
+      "district": {
+        "name": "New Jersey Region"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 3485,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Vihaan Reddy Mereddy",
+      "uaid": "2018456003",
+      "city": "Prosper",
+      "state": "TX",
+      "trend": "up",
+      "points": 3473,
+      "rank": {
+        "national": 73,
+        "section": 4,
+        "district": 4
+      },
+      "section": {
+        "name": "Texas"
+      },
+      "district": {
+        "name": "Member"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 3473,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Louis Xu",
+      "uaid": "2018270398",
+      "city": "Great Falls",
+      "state": "VA",
+      "trend": "no change",
+      "points": 3467,
+      "rank": {
+        "national": 74,
+        "section": 7,
+        "district": 4
+      },
+      "section": {
+        "name": "Mid-Atlantic"
+      },
+      "district": {
+        "name": "Virginia"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 3467,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Landon Sen",
+      "uaid": "2018628876",
+      "city": "Tulsa",
+      "state": "OK",
+      "trend": "no change",
+      "points": 3420,
+      "rank": {
+        "national": 75,
+        "section": 4,
+        "district": 1
+      },
+      "section": {
+        "name": "Missouri Valley"
+      },
+      "district": {
+        "name": "Oklahoma"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 3420,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Aarav Agrawal",
+      "uaid": "2018544793",
+      "city": "Foster City",
+      "state": "CA",
+      "trend": "no change",
+      "points": 3398,
+      "rank": {
+        "national": 76,
+        "section": 6,
+        "district": 6
+      },
+      "section": {
+        "name": "Northern California"
+      },
+      "district": {
+        "name": "Northern California"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 3398,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Teddy Tang",
+      "uaid": "2018857266",
+      "city": "Springfield",
+      "state": "MO",
+      "trend": "no change",
+      "points": 3360,
+      "rank": {
+        "national": 77,
+        "section": 5,
+        "district": 1
+      },
+      "section": {
+        "name": "Missouri Valley"
+      },
+      "district": {
+        "name": "Missouri"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 3360,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Matthew Zheng",
+      "uaid": "2018576917",
+      "city": "Scarsdale",
+      "state": "NY",
+      "trend": "down",
+      "points": 3353,
+      "rank": {
+        "national": 78,
+        "section": 8,
+        "district": 1
+      },
+      "section": {
+        "name": "Eastern"
+      },
+      "district": {
+        "name": "Southern Region"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 3353,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Aiden Zhang",
+      "uaid": "2018575063",
+      "city": "Mc Lean",
+      "state": "VA",
+      "trend": "no change",
+      "points": 3327,
+      "rank": {
+        "national": 79,
+        "section": 8,
+        "district": 5
+      },
+      "section": {
+        "name": "Mid-Atlantic"
+      },
+      "district": {
+        "name": "Virginia"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 3327,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Aiden Li",
+      "uaid": "2018588861",
+      "city": "Grapevine",
+      "state": "TX",
+      "trend": "no change",
+      "points": 3318,
+      "rank": {
+        "national": 80,
+        "section": 5,
+        "district": 5
+      },
+      "section": {
+        "name": "Texas"
+      },
+      "district": {
+        "name": "Member"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 3318,
+        "bonusPoints": 0
+      }
+    }
+  ],
+  "pagination": {
+    "currentPage": 4,
+    "pageSize": 20,
+    "totalPages": 92,
+    "totalResults": 1829
+  }
+}

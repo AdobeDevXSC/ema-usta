@@ -1,0 +1,503 @@
+{
+  "catalogId": "JUNIOR_NULL_M_SEEDING_Y12_UNDER_SINGLES_NULL_NULL",
+  "publishDate": "2026-04-22T09:16:12.648Z",
+  "displayLabel": "Boys' 12 National Seeding List",
+  "listType": "SEEDING",
+  "playerType": "JUNIOR",
+  "rankListGender": "M",
+  "rankListGenderModifier": null,
+  "playerLevel": "NULL",
+  "ageRestriction": "Y12",
+  "ageRestrictionModifier": "UNDER",
+  "matchFormat": "SINGLES",
+  "matchFormatType": null,
+  "familyCategory": null,
+  "data": [
+    {
+      "name": "Dmitriy Flyam",
+      "uaid": "2018145725",
+      "city": "Hallandale Beach",
+      "state": "FL",
+      "trend": "no change",
+      "points": 15563,
+      "rank": {
+        "national": 1,
+        "section": 1,
+        "district": 1
+      },
+      "section": {
+        "name": "Florida"
+      },
+      "district": {
+        "name": "Region 8"
+      },
+      "pointsRecord": {
+        "singlesPoints": 10875,
+        "doublesPoints": 0,
+        "bonusPoints": 4688
+      }
+    },
+    {
+      "name": "Thomas Gamble",
+      "uaid": "2018772393",
+      "city": "Newport Beach",
+      "state": "CA",
+      "trend": "no change",
+      "points": 11161,
+      "rank": {
+        "national": 2,
+        "section": 1,
+        "district": 1
+      },
+      "section": {
+        "name": "Southern California"
+      },
+      "district": {
+        "name": "Southern California"
+      },
+      "pointsRecord": {
+        "singlesPoints": 7635,
+        "doublesPoints": 0,
+        "bonusPoints": 3526
+      }
+    },
+    {
+      "name": "Yifan Nie",
+      "uaid": "2019647323",
+      "city": "Great Neck",
+      "state": "NY",
+      "trend": "no change",
+      "points": 10362,
+      "rank": {
+        "national": 3,
+        "section": 1,
+        "district": 1
+      },
+      "section": {
+        "name": "Eastern"
+      },
+      "district": {
+        "name": "Long Island Region"
+      },
+      "pointsRecord": {
+        "singlesPoints": 6781,
+        "doublesPoints": 0,
+        "bonusPoints": 3581
+      }
+    },
+    {
+      "name": "William Zhang",
+      "uaid": "2018851224",
+      "city": "Paramus",
+      "state": "NJ",
+      "trend": "no change",
+      "points": 9460,
+      "rank": {
+        "national": 4,
+        "section": 2,
+        "district": 1
+      },
+      "section": {
+        "name": "Eastern"
+      },
+      "district": {
+        "name": "New Jersey Region"
+      },
+      "pointsRecord": {
+        "singlesPoints": 6758,
+        "doublesPoints": 0,
+        "bonusPoints": 2702
+      }
+    },
+    {
+      "name": "Novak Masteller",
+      "uaid": "2018462095",
+      "city": "Holland",
+      "state": "MI",
+      "trend": "no change",
+      "points": 9177,
+      "rank": {
+        "national": 5,
+        "section": 1,
+        "district": 1
+      },
+      "section": {
+        "name": "Midwest"
+      },
+      "district": {
+        "name": "Western Michigan"
+      },
+      "pointsRecord": {
+        "singlesPoints": 6585,
+        "doublesPoints": 0,
+        "bonusPoints": 2592
+      }
+    },
+    {
+      "name": "Aaron Peng",
+      "uaid": "2018472477",
+      "city": "Sugar Land",
+      "state": "TX",
+      "trend": "no change",
+      "points": 8971,
+      "rank": {
+        "national": 6,
+        "section": 1,
+        "district": 1
+      },
+      "section": {
+        "name": "Texas"
+      },
+      "district": {
+        "name": "Member"
+      },
+      "pointsRecord": {
+        "singlesPoints": 5985,
+        "doublesPoints": 0,
+        "bonusPoints": 2986
+      }
+    },
+    {
+      "name": "Miguel Valencia",
+      "uaid": "2017366294",
+      "city": "Pinecrest",
+      "state": "FL",
+      "trend": "no change",
+      "points": 8900,
+      "rank": {
+        "national": 7,
+        "section": 2,
+        "district": 2
+      },
+      "section": {
+        "name": "Florida"
+      },
+      "district": {
+        "name": "Region 8"
+      },
+      "pointsRecord": {
+        "singlesPoints": 5700,
+        "doublesPoints": 0,
+        "bonusPoints": 3200
+      }
+    },
+    {
+      "name": "William Zhou",
+      "uaid": "2018824112",
+      "city": "Glendale",
+      "state": "CA",
+      "trend": "no change",
+      "points": 8650,
+      "rank": {
+        "national": 8,
+        "section": 2,
+        "district": 2
+      },
+      "section": {
+        "name": "Southern California"
+      },
+      "district": {
+        "name": "Southern California"
+      },
+      "pointsRecord": {
+        "singlesPoints": 5124,
+        "doublesPoints": 0,
+        "bonusPoints": 3526
+      }
+    },
+    {
+      "name": "Milan Nair",
+      "uaid": "2017338183",
+      "city": "Alpharetta",
+      "state": "GA",
+      "trend": "no change",
+      "points": 8607,
+      "rank": {
+        "national": 9,
+        "section": 1,
+        "district": 1
+      },
+      "section": {
+        "name": "Southern"
+      },
+      "district": {
+        "name": "Georgia"
+      },
+      "pointsRecord": {
+        "singlesPoints": 5597,
+        "doublesPoints": 0,
+        "bonusPoints": 3010
+      }
+    },
+    {
+      "name": "Jesse Goldman",
+      "uaid": "2018532154",
+      "city": "Paradise Valley",
+      "state": "AZ",
+      "trend": "no change",
+      "points": 8403,
+      "rank": {
+        "national": 10,
+        "section": 1,
+        "district": 1
+      },
+      "section": {
+        "name": "Southwest"
+      },
+      "district": {
+        "name": "Central Arizona"
+      },
+      "pointsRecord": {
+        "singlesPoints": 6150,
+        "doublesPoints": 0,
+        "bonusPoints": 2253
+      }
+    },
+    {
+      "name": "Jaden Joyner",
+      "uaid": "2019045108",
+      "city": "WOODLAND HILLS",
+      "state": "CA",
+      "trend": "no change",
+      "points": 8250,
+      "rank": {
+        "national": 11,
+        "section": 3,
+        "district": 3
+      },
+      "section": {
+        "name": "Southern California"
+      },
+      "district": {
+        "name": "Southern California"
+      },
+      "pointsRecord": {
+        "singlesPoints": 5130,
+        "doublesPoints": 0,
+        "bonusPoints": 3120
+      }
+    },
+    {
+      "name": "Zephyr Zwicker",
+      "uaid": "2018814894",
+      "city": "Princeton",
+      "state": "NJ",
+      "trend": "no change",
+      "points": 8054,
+      "rank": {
+        "national": 12,
+        "section": 1,
+        "district": 1
+      },
+      "section": {
+        "name": "Middle States"
+      },
+      "district": {
+        "name": "New Jersey"
+      },
+      "pointsRecord": {
+        "singlesPoints": 5745,
+        "doublesPoints": 0,
+        "bonusPoints": 2309
+      }
+    },
+    {
+      "name": "Samuel Hartley",
+      "uaid": "2018455018",
+      "city": "Charlottesville",
+      "state": "VA",
+      "trend": "no change",
+      "points": 7846,
+      "rank": {
+        "national": 13,
+        "section": 1,
+        "district": 1
+      },
+      "section": {
+        "name": "Mid-Atlantic"
+      },
+      "district": {
+        "name": "Virginia"
+      },
+      "pointsRecord": {
+        "singlesPoints": 5198,
+        "doublesPoints": 0,
+        "bonusPoints": 2648
+      }
+    },
+    {
+      "name": "Keanu Agbulos",
+      "uaid": "2018197064",
+      "city": "Port Saint Lucie",
+      "state": "FL",
+      "trend": "no change",
+      "points": 7468,
+      "rank": {
+        "national": 14,
+        "section": 3,
+        "district": 1
+      },
+      "section": {
+        "name": "Florida"
+      },
+      "district": {
+        "name": "Region 6"
+      },
+      "pointsRecord": {
+        "singlesPoints": 4775,
+        "doublesPoints": 0,
+        "bonusPoints": 2693
+      }
+    },
+    {
+      "name": "Vihaan Reddy Mereddy",
+      "uaid": "2018456003",
+      "city": "Prosper",
+      "state": "TX",
+      "trend": "no change",
+      "points": 6960,
+      "rank": {
+        "national": 15,
+        "section": 2,
+        "district": 2
+      },
+      "section": {
+        "name": "Texas"
+      },
+      "district": {
+        "name": "Member"
+      },
+      "pointsRecord": {
+        "singlesPoints": 4809,
+        "doublesPoints": 0,
+        "bonusPoints": 2151
+      }
+    },
+    {
+      "name": "Zachary Burunov",
+      "uaid": "2018478649",
+      "city": "Hollywood",
+      "state": "FL",
+      "trend": "no change",
+      "points": 6874,
+      "rank": {
+        "national": 16,
+        "section": 4,
+        "district": 3
+      },
+      "section": {
+        "name": "Florida"
+      },
+      "district": {
+        "name": "Region 8"
+      },
+      "pointsRecord": {
+        "singlesPoints": 4229,
+        "doublesPoints": 0,
+        "bonusPoints": 2645
+      }
+    },
+    {
+      "name": "Arnav Nadikatla",
+      "uaid": "2018359252",
+      "city": "Herndon",
+      "state": "VA",
+      "trend": "no change",
+      "points": 6529,
+      "rank": {
+        "national": 17,
+        "section": 2,
+        "district": 2
+      },
+      "section": {
+        "name": "Mid-Atlantic"
+      },
+      "district": {
+        "name": "Virginia"
+      },
+      "pointsRecord": {
+        "singlesPoints": 3635,
+        "doublesPoints": 0,
+        "bonusPoints": 2894
+      }
+    },
+    {
+      "name": "Aiden Zhang",
+      "uaid": "2018575063",
+      "city": "Mc Lean",
+      "state": "VA",
+      "trend": "no change",
+      "points": 6520,
+      "rank": {
+        "national": 18,
+        "section": 3,
+        "district": 3
+      },
+      "section": {
+        "name": "Mid-Atlantic"
+      },
+      "district": {
+        "name": "Virginia"
+      },
+      "pointsRecord": {
+        "singlesPoints": 4277,
+        "doublesPoints": 0,
+        "bonusPoints": 2243
+      }
+    },
+    {
+      "name": "Aleksander Denisov",
+      "uaid": "2018260444",
+      "city": "Redmond",
+      "state": "WA",
+      "trend": "no change",
+      "points": 6379,
+      "rank": {
+        "national": 19,
+        "section": 1,
+        "district": 1
+      },
+      "section": {
+        "name": "Pacific NW"
+      },
+      "district": {
+        "name": "Northwest Washington"
+      },
+      "pointsRecord": {
+        "singlesPoints": 3990,
+        "doublesPoints": 0,
+        "bonusPoints": 2389
+      }
+    },
+    {
+      "name": "Benedict Zhong",
+      "uaid": "2018621533",
+      "city": "Irvine",
+      "state": "CA",
+      "trend": "no change",
+      "points": 6132,
+      "rank": {
+        "national": 20,
+        "section": 4,
+        "district": 4
+      },
+      "section": {
+        "name": "Southern California"
+      },
+      "district": {
+        "name": "Southern California"
+      },
+      "pointsRecord": {
+        "singlesPoints": 4002,
+        "doublesPoints": 0,
+        "bonusPoints": 2130
+      }
+    }
+  ],
+  "pagination": {
+    "currentPage": 1,
+    "pageSize": 20,
+    "totalPages": 384,
+    "totalResults": 7664
+  }
+}

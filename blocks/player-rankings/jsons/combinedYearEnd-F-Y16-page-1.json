@@ -1,0 +1,503 @@
+{
+  "catalogId": "JUNIOR_NULL_F_YEAR_END_Y16_UNDER_NULL_NULL_NULL",
+  "publishDate": "2026-01-20T17:39:54.270Z",
+  "displayLabel": "Girls' 16 Final Ranking (Combined)",
+  "listType": "YEAR_END",
+  "playerType": "JUNIOR",
+  "rankListGender": "F",
+  "rankListGenderModifier": null,
+  "playerLevel": "NULL",
+  "ageRestriction": "Y16",
+  "ageRestrictionModifier": "UNDER",
+  "matchFormat": "NULL",
+  "matchFormatType": "NULL",
+  "familyCategory": null,
+  "data": [
+    {
+      "name": "Sylvana Jalbert",
+      "uaid": "2017340275",
+      "city": "Mount Airy",
+      "state": "MD",
+      "trend": "no change",
+      "points": 12434,
+      "rank": {
+        "national": 1,
+        "section": 1,
+        "district": 1
+      },
+      "section": {
+        "name": "Mid-Atlantic"
+      },
+      "district": {
+        "name": "Maryland"
+      },
+      "pointsRecord": {
+        "singlesPoints": 8790,
+        "doublesPoints": 8588,
+        "bonusPoints": 2356
+      }
+    },
+    {
+      "name": "Julia Seversen",
+      "uaid": "2010870898",
+      "city": "Trabuco Canyon",
+      "state": "CA",
+      "trend": "no change",
+      "points": 11213,
+      "rank": {
+        "national": 2,
+        "section": 1,
+        "district": 1
+      },
+      "section": {
+        "name": "Southern California"
+      },
+      "district": {
+        "name": "Southern California"
+      },
+      "pointsRecord": {
+        "singlesPoints": 7431,
+        "doublesPoints": 7410,
+        "bonusPoints": 2670
+      }
+    },
+    {
+      "name": "Shristi Selvan",
+      "uaid": "2017125158",
+      "city": "Laurel",
+      "state": "MD",
+      "trend": "no change",
+      "points": 10739,
+      "rank": {
+        "national": 3,
+        "section": 2,
+        "district": 2
+      },
+      "section": {
+        "name": "Mid-Atlantic"
+      },
+      "district": {
+        "name": "Maryland"
+      },
+      "pointsRecord": {
+        "singlesPoints": 7913,
+        "doublesPoints": 4500,
+        "bonusPoints": 2151
+      }
+    },
+    {
+      "name": "Vanessa Kruse",
+      "uaid": "2017195119",
+      "city": "Saint Augustine",
+      "state": "FL",
+      "trend": "no change",
+      "points": 9903,
+      "rank": {
+        "national": 4,
+        "section": 1,
+        "district": 1
+      },
+      "section": {
+        "name": "Florida"
+      },
+      "district": {
+        "name": "Region 2"
+      },
+      "pointsRecord": {
+        "singlesPoints": 6990,
+        "doublesPoints": 6135,
+        "bonusPoints": 1993
+      }
+    },
+    {
+      "name": "Olivia Lin",
+      "uaid": "2018501488",
+      "city": "Lexington",
+      "state": "MA",
+      "trend": "no change",
+      "points": 9560,
+      "rank": {
+        "national": 5,
+        "section": 1,
+        "district": 1
+      },
+      "section": {
+        "name": "New England"
+      },
+      "district": {
+        "name": "Eastern Massachusetts"
+      },
+      "pointsRecord": {
+        "singlesPoints": 7425,
+        "doublesPoints": 3128,
+        "bonusPoints": 1666
+      }
+    },
+    {
+      "name": "Avita Beitler",
+      "uaid": "2018790809",
+      "city": "Scandia",
+      "state": "MN",
+      "trend": "no change",
+      "points": 8644,
+      "rank": {
+        "national": 6,
+        "section": 1,
+        "district": 1
+      },
+      "section": {
+        "name": "Northern"
+      },
+      "district": {
+        "name": "Member"
+      },
+      "pointsRecord": {
+        "singlesPoints": 6690,
+        "doublesPoints": 990,
+        "bonusPoints": 1805
+      }
+    },
+    {
+      "name": "Anastasiya Muravia",
+      "uaid": "2018286408",
+      "city": "Boynton Beach",
+      "state": "FL",
+      "trend": "no change",
+      "points": 8438,
+      "rank": {
+        "national": 7,
+        "section": 2,
+        "district": 1
+      },
+      "section": {
+        "name": "Florida"
+      },
+      "district": {
+        "name": "Region 6"
+      },
+      "pointsRecord": {
+        "singlesPoints": 6708,
+        "doublesPoints": 1316,
+        "bonusPoints": 1533
+      }
+    },
+    {
+      "name": "Elle Groslimond",
+      "uaid": "2017241813",
+      "city": "Atlanta",
+      "state": "GA",
+      "trend": "no change",
+      "points": 8400,
+      "rank": {
+        "national": 8,
+        "section": 1,
+        "district": 1
+      },
+      "section": {
+        "name": "Southern"
+      },
+      "district": {
+        "name": "Georgia"
+      },
+      "pointsRecord": {
+        "singlesPoints": 5191,
+        "doublesPoints": 7815,
+        "bonusPoints": 2037
+      }
+    },
+    {
+      "name": "Aarini Bhattacharya",
+      "uaid": "2017190941",
+      "city": "Oakton",
+      "state": "VA",
+      "trend": "no change",
+      "points": 7988,
+      "rank": {
+        "national": 9,
+        "section": 3,
+        "district": 1
+      },
+      "section": {
+        "name": "Mid-Atlantic"
+      },
+      "district": {
+        "name": "Virginia"
+      },
+      "pointsRecord": {
+        "singlesPoints": 4898,
+        "doublesPoints": 4163,
+        "bonusPoints": 2466
+      }
+    },
+    {
+      "name": "Sadira Ouyang",
+      "uaid": "2017148226",
+      "city": "Atlanta",
+      "state": "GA",
+      "trend": "no change",
+      "points": 7778,
+      "rank": {
+        "national": 10,
+        "section": 2,
+        "district": 2
+      },
+      "section": {
+        "name": "Southern"
+      },
+      "district": {
+        "name": "Georgia"
+      },
+      "pointsRecord": {
+        "singlesPoints": 4967,
+        "doublesPoints": 5748,
+        "bonusPoints": 1949
+      }
+    },
+    {
+      "name": "Kalista Papadopoulos",
+      "uaid": "2017039259",
+      "city": "Morristown",
+      "state": "NJ",
+      "trend": "no change",
+      "points": 7638,
+      "rank": {
+        "national": 11,
+        "section": 4,
+        "district": 3
+      },
+      "section": {
+        "name": "Mid-Atlantic"
+      },
+      "district": {
+        "name": "Maryland"
+      },
+      "pointsRecord": {
+        "singlesPoints": 5310,
+        "doublesPoints": 4328,
+        "bonusPoints": 1679
+      }
+    },
+    {
+      "name": "Armira Kockinis",
+      "uaid": "2017103861",
+      "city": "LA Habra Heights",
+      "state": "CA",
+      "trend": "no change",
+      "points": 7476,
+      "rank": {
+        "national": 12,
+        "section": 2,
+        "district": 2
+      },
+      "section": {
+        "name": "Southern California"
+      },
+      "district": {
+        "name": "Southern California"
+      },
+      "pointsRecord": {
+        "singlesPoints": 5288,
+        "doublesPoints": 450,
+        "bonusPoints": 2120
+      }
+    },
+    {
+      "name": "Nikol Davletshina",
+      "uaid": "2018525096",
+      "city": "Boca Raton",
+      "state": "FL",
+      "trend": "no change",
+      "points": 7461,
+      "rank": {
+        "national": 13,
+        "section": 3,
+        "district": 2
+      },
+      "section": {
+        "name": "Florida"
+      },
+      "district": {
+        "name": "Region 6"
+      },
+      "pointsRecord": {
+        "singlesPoints": 5550,
+        "doublesPoints": 275,
+        "bonusPoints": 1870
+      }
+    },
+    {
+      "name": "Sofia Basto Cabrera",
+      "uaid": "2018425835",
+      "city": "Medford",
+      "state": "NJ",
+      "trend": "no change",
+      "points": 6992,
+      "rank": {
+        "national": 14,
+        "section": 1,
+        "district": 1
+      },
+      "section": {
+        "name": "Middle States"
+      },
+      "district": {
+        "name": "New Jersey"
+      },
+      "pointsRecord": {
+        "singlesPoints": 4972,
+        "doublesPoints": 4384,
+        "bonusPoints": 1362
+      }
+    },
+    {
+      "name": "Ava Beltran",
+      "uaid": "2010795479",
+      "city": "Liberty",
+      "state": "MO",
+      "trend": "no change",
+      "points": 6983,
+      "rank": {
+        "national": 15,
+        "section": 1,
+        "district": 1
+      },
+      "section": {
+        "name": "Missouri Valley"
+      },
+      "district": {
+        "name": "Heart of America"
+      },
+      "pointsRecord": {
+        "singlesPoints": 4397,
+        "doublesPoints": 3938,
+        "bonusPoints": 1995
+      }
+    },
+    {
+      "name": "Enya Hamilton",
+      "uaid": "2010700774",
+      "city": "ADDISON",
+      "state": "TX",
+      "trend": "no change",
+      "points": 6977,
+      "rank": {
+        "national": 16,
+        "section": 1,
+        "district": 1
+      },
+      "section": {
+        "name": "Texas"
+      },
+      "district": {
+        "name": "Member"
+      },
+      "pointsRecord": {
+        "singlesPoints": 4272,
+        "doublesPoints": 7815,
+        "bonusPoints": 1533
+      }
+    },
+    {
+      "name": "Kasia Chen",
+      "uaid": "2010923900",
+      "city": "Lafayette",
+      "state": "CO",
+      "trend": "no change",
+      "points": 6851,
+      "rank": {
+        "national": 17,
+        "section": 1,
+        "district": 1
+      },
+      "section": {
+        "name": "Intermountain"
+      },
+      "district": {
+        "name": "Colorado"
+      },
+      "pointsRecord": {
+        "singlesPoints": 4538,
+        "doublesPoints": 5288,
+        "bonusPoints": 1520
+      }
+    },
+    {
+      "name": "Paige Wygodzki",
+      "uaid": "2010736786",
+      "city": "Huntington",
+      "state": "NY",
+      "trend": "no change",
+      "points": 6831,
+      "rank": {
+        "national": 18,
+        "section": 1,
+        "district": 1
+      },
+      "section": {
+        "name": "Eastern"
+      },
+      "district": {
+        "name": "Long Island Region"
+      },
+      "pointsRecord": {
+        "singlesPoints": 5400,
+        "doublesPoints": 0,
+        "bonusPoints": 1431
+      }
+    },
+    {
+      "name": "Evelynn Kwak",
+      "uaid": "2017112403",
+      "city": "Hasbrouck Heights",
+      "state": "NJ",
+      "trend": "no change",
+      "points": 6736,
+      "rank": {
+        "national": 19,
+        "section": 2,
+        "district": 1
+      },
+      "section": {
+        "name": "Eastern"
+      },
+      "district": {
+        "name": "New Jersey Region"
+      },
+      "pointsRecord": {
+        "singlesPoints": 4302,
+        "doublesPoints": 8948,
+        "bonusPoints": 1092
+      }
+    },
+    {
+      "name": "Madeline Cleary",
+      "uaid": "2017296859",
+      "city": "Moorpark",
+      "state": "CA",
+      "trend": "no change",
+      "points": 6594,
+      "rank": {
+        "national": 20,
+        "section": 3,
+        "district": 3
+      },
+      "section": {
+        "name": "Southern California"
+      },
+      "district": {
+        "name": "Southern California"
+      },
+      "pointsRecord": {
+        "singlesPoints": 4913,
+        "doublesPoints": 2478,
+        "bonusPoints": 1309
+      }
+    }
+  ],
+  "pagination": {
+    "currentPage": 1,
+    "pageSize": 20,
+    "totalPages": 140,
+    "totalResults": 2784
+  }
+}

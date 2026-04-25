@@ -1,0 +1,503 @@
+{
+  "catalogId": "JUNIOR_NULL_F_SEEDING_Y18_UNDER_DOUBLES_INDIVIDUAL_NULL",
+  "publishDate": "2026-04-22T10:01:07.760Z",
+  "displayLabel": "Girls' 18 National Seeding List (Doubles)",
+  "listType": "SEEDING",
+  "playerType": "JUNIOR",
+  "rankListGender": "F",
+  "rankListGenderModifier": null,
+  "playerLevel": "NULL",
+  "ageRestriction": "Y18",
+  "ageRestrictionModifier": "UNDER",
+  "matchFormat": "DOUBLES",
+  "matchFormatType": "INDIVIDUAL",
+  "familyCategory": null,
+  "data": [
+    {
+      "name": "Danielle Young",
+      "uaid": "2010680925",
+      "city": "Cary",
+      "state": "NC",
+      "trend": "no change",
+      "points": 11640,
+      "rank": {
+        "national": 1,
+        "section": 1,
+        "district": 1
+      },
+      "section": {
+        "name": "Southern"
+      },
+      "district": {
+        "name": "North Carolina"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 11640,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Carlota Moreno",
+      "uaid": "2010731693",
+      "city": "Knoxville",
+      "state": "TN",
+      "trend": "no change",
+      "points": 11476,
+      "rank": {
+        "national": 2,
+        "section": 2,
+        "district": 1
+      },
+      "section": {
+        "name": "Southern"
+      },
+      "district": {
+        "name": "Tennessee"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 11476,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Francie Pate",
+      "uaid": "2007103966",
+      "city": "Daniel Island",
+      "state": "SC",
+      "trend": "no change",
+      "points": 10635,
+      "rank": {
+        "national": 3,
+        "section": 3,
+        "district": 1
+      },
+      "section": {
+        "name": "Southern"
+      },
+      "district": {
+        "name": "South Carolina"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 10635,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Lauren Nolan",
+      "uaid": "2010835832",
+      "city": "Little Elm",
+      "state": "TX",
+      "trend": "no change",
+      "points": 10140,
+      "rank": {
+        "national": 4,
+        "section": 1,
+        "district": 1
+      },
+      "section": {
+        "name": "Texas"
+      },
+      "district": {
+        "name": "Member"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 10140,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Lillian Santos",
+      "uaid": "2010880043",
+      "city": "North Truro",
+      "state": "MA",
+      "trend": "no change",
+      "points": 9751,
+      "rank": {
+        "national": 5,
+        "section": 1,
+        "district": 1
+      },
+      "section": {
+        "name": "Florida"
+      },
+      "district": {
+        "name": "Region 6"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 9751,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Addy Rogin",
+      "uaid": "2010462646",
+      "city": "Moreland",
+      "state": "GA",
+      "trend": "no change",
+      "points": 9436,
+      "rank": {
+        "national": 6,
+        "section": 4,
+        "district": 1
+      },
+      "section": {
+        "name": "Southern"
+      },
+      "district": {
+        "name": "Georgia"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 9436,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Jordyn Hazelitt",
+      "uaid": "2010870157",
+      "city": "Henderson",
+      "state": "NV",
+      "trend": "no change",
+      "points": 9285,
+      "rank": {
+        "national": 7,
+        "section": 1,
+        "district": 1
+      },
+      "section": {
+        "name": "Intermountain"
+      },
+      "district": {
+        "name": "Nevada"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 9285,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Capucine Jauffret",
+      "uaid": "2010725906",
+      "city": "Wilmington",
+      "state": "DE",
+      "trend": "no change",
+      "points": 9098,
+      "rank": {
+        "national": 8,
+        "section": 1,
+        "district": 1
+      },
+      "section": {
+        "name": "Middle States"
+      },
+      "district": {
+        "name": "Delaware"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 9098,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Chloe Zigliara",
+      "uaid": "2010672076",
+      "city": "ALPHARETTA",
+      "state": "GA",
+      "trend": "no change",
+      "points": 8832,
+      "rank": {
+        "national": 9,
+        "section": 5,
+        "district": 2
+      },
+      "section": {
+        "name": "Southern"
+      },
+      "district": {
+        "name": "Georgia"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 8832,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Isabelle DeLuccia",
+      "uaid": "2010747891",
+      "city": "Livingston",
+      "state": "NJ",
+      "trend": "no change",
+      "points": 8333,
+      "rank": {
+        "national": 10,
+        "section": 1,
+        "district": 1
+      },
+      "section": {
+        "name": "Eastern"
+      },
+      "district": {
+        "name": "New Jersey Region"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 8333,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Zimora McKnight",
+      "uaid": "2010778962",
+      "city": "McKinney",
+      "state": "TX",
+      "trend": "no change",
+      "points": 7950,
+      "rank": {
+        "national": 11,
+        "section": 2,
+        "district": 2
+      },
+      "section": {
+        "name": "Texas"
+      },
+      "district": {
+        "name": "Member"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 7950,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Aya Manning",
+      "uaid": "2010613937",
+      "city": "Irving",
+      "state": "TX",
+      "trend": "no change",
+      "points": 7830,
+      "rank": {
+        "national": 12,
+        "section": 3,
+        "district": 3
+      },
+      "section": {
+        "name": "Texas"
+      },
+      "district": {
+        "name": "Member"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 7830,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Emery Combs",
+      "uaid": "2017258421",
+      "city": "Conway",
+      "state": "SC",
+      "trend": "no change",
+      "points": 7800,
+      "rank": {
+        "national": 13,
+        "section": 6,
+        "district": 2
+      },
+      "section": {
+        "name": "Southern"
+      },
+      "district": {
+        "name": "South Carolina"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 7800,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Carrie-Anne Hoo",
+      "uaid": "2010917989",
+      "city": "Brooklyn",
+      "state": "NY",
+      "trend": "no change",
+      "points": 7665,
+      "rank": {
+        "national": 14,
+        "section": 2,
+        "district": 1
+      },
+      "section": {
+        "name": "Eastern"
+      },
+      "district": {
+        "name": "Metropolitan Region"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 7665,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Girl1 Junior",
+      "uaid": "2019201008",
+      "city": null,
+      "state": null,
+      "trend": "no change",
+      "points": 7365,
+      "rank": {
+        "national": 15,
+        "section": 1,
+        "district": 1
+      },
+      "section": {
+        "name": "International"
+      },
+      "district": {
+        "name": "Member"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 7365,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Karlin Schock",
+      "uaid": "2010816328",
+      "city": "Green Bay",
+      "state": "WI",
+      "trend": "no change",
+      "points": 7013,
+      "rank": {
+        "national": 16,
+        "section": 1,
+        "district": 1
+      },
+      "section": {
+        "name": "Midwest"
+      },
+      "district": {
+        "name": "Wisconsin"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 7013,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Piper Johnson",
+      "uaid": "2010783063",
+      "city": "Atlanta",
+      "state": "GA",
+      "trend": "no change",
+      "points": 6968,
+      "rank": {
+        "national": 17,
+        "section": 7,
+        "district": 3
+      },
+      "section": {
+        "name": "Southern"
+      },
+      "district": {
+        "name": "Georgia"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 6968,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Carolina Castro",
+      "uaid": "2010639894",
+      "city": "Stevensville",
+      "state": "MD",
+      "trend": "no change",
+      "points": 6953,
+      "rank": {
+        "national": 18,
+        "section": 1,
+        "district": 1
+      },
+      "section": {
+        "name": "Mid-Atlantic"
+      },
+      "district": {
+        "name": "Maryland"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 6953,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Kennedy Drenser-Hagmann",
+      "uaid": "2010602536",
+      "city": "Bloomfield",
+      "state": "MI",
+      "trend": "no change",
+      "points": 6744,
+      "rank": {
+        "national": 19,
+        "section": 2,
+        "district": 1
+      },
+      "section": {
+        "name": "Midwest"
+      },
+      "district": {
+        "name": "S.E. Michigan"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 6744,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Alaina LiSanti",
+      "uaid": "2010653859",
+      "city": "Flemington",
+      "state": "NJ",
+      "trend": "no change",
+      "points": 6450,
+      "rank": {
+        "national": 20,
+        "section": 2,
+        "district": 1
+      },
+      "section": {
+        "name": "Middle States"
+      },
+      "district": {
+        "name": "New Jersey"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 6450,
+        "bonusPoints": 0
+      }
+    }
+  ],
+  "pagination": {
+    "currentPage": 1,
+    "pageSize": 20,
+    "totalPages": 289,
+    "totalResults": 5763
+  }
+}
