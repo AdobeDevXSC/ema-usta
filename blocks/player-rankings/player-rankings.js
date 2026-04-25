@@ -476,7 +476,6 @@ function buildCategoryTabs() {
 
 function buildHeader(state) {
   const header = el('div', { class: 'pr-header' });
-  header.append(buildCategoryTabs());
 
   const title = el('h2', { class: 'pr-title', text: 'JUNIOR TOURNAMENTS RANKINGS' });
   const subtitle = el('p', { class: 'pr-subtitle', text: 'The National Standing Lists are published on Wednesdays.' });
@@ -757,6 +756,7 @@ export default async function decorate(block) {
   block.setAttribute('role', 'region');
   block.setAttribute('aria-label', 'Junior Tournament Rankings');
 
+  const categoryNav = buildCategoryTabs();
   const header = buildHeader(state);
   const { sidebar, searchInput, dateInput, resetBtn } = buildSidebar(state);
   const statusEl = buildStatusBar();
@@ -770,7 +770,7 @@ export default async function decorate(block) {
   content.append(statusEl, tableWrap, pagination);
   body.append(sidebar, content);
 
-  block.append(header, body);
+  block.append(categoryNav, header, body);
 
   let debounceTimer;
   /** Triggers re-syncing the datepicker from the loaded list when ranking/gender/age change. */
