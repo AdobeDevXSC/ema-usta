@@ -1,0 +1,16 @@
+{
+  "selection": {
+    "playerType": "JUNIOR",
+    "ageRestrictionModifier": "UNDER",
+    "juniorListType": "doubles",
+    "rankListGender": "M",
+    "ageRestriction": "Y12",
+    "matchFormat": "DOUBLES",
+    "listType": "SEEDING",
+    "matchFormatType": "INDIVIDUAL"
+  },
+  "pagination": {
+    "pageSize": 20,
+    "currentPage": 1
+  }
+}

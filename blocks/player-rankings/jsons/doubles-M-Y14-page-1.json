@@ -1,0 +1,503 @@
+{
+  "catalogId": "JUNIOR_NULL_M_SEEDING_Y14_UNDER_DOUBLES_INDIVIDUAL_NULL",
+  "publishDate": "2026-04-22T10:03:51.918Z",
+  "displayLabel": "Boys' 14 National Seeding List (Doubles)",
+  "listType": "SEEDING",
+  "playerType": "JUNIOR",
+  "rankListGender": "M",
+  "rankListGenderModifier": null,
+  "playerLevel": "NULL",
+  "ageRestriction": "Y14",
+  "ageRestrictionModifier": "UNDER",
+  "matchFormat": "DOUBLES",
+  "matchFormatType": "INDIVIDUAL",
+  "familyCategory": null,
+  "data": [
+    {
+      "name": "Tony Xu",
+      "uaid": "2018254282",
+      "city": "Devens",
+      "state": "MA",
+      "trend": "no change",
+      "points": 10050,
+      "rank": {
+        "national": 1,
+        "section": 1,
+        "district": 1
+      },
+      "section": {
+        "name": "New England"
+      },
+      "district": {
+        "name": "Eastern Massachusetts"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 10050,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Jacques Chen",
+      "uaid": "2017374927",
+      "city": "Jericho",
+      "state": "NY",
+      "trend": "no change",
+      "points": 8640,
+      "rank": {
+        "national": 2,
+        "section": 1,
+        "district": 1
+      },
+      "section": {
+        "name": "Eastern"
+      },
+      "district": {
+        "name": "Long Island Region"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 8640,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Max D Smith",
+      "uaid": "2018273871",
+      "city": "PARKLAND",
+      "state": "FL",
+      "trend": "no change",
+      "points": 8358,
+      "rank": {
+        "national": 3,
+        "section": 1,
+        "district": 1
+      },
+      "section": {
+        "name": "Florida"
+      },
+      "district": {
+        "name": "Region 4"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 8358,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Nathan Lee",
+      "uaid": "2018434213",
+      "city": "Tustin",
+      "state": "CA",
+      "trend": "no change",
+      "points": 8160,
+      "rank": {
+        "national": 4,
+        "section": 1,
+        "district": 1
+      },
+      "section": {
+        "name": "Southern California"
+      },
+      "district": {
+        "name": "Southern California"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 8160,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "James Borchard",
+      "uaid": "2017298207",
+      "city": "Thousand Oaks",
+      "state": "CA",
+      "trend": "no change",
+      "points": 7800,
+      "rank": {
+        "national": 5,
+        "section": 2,
+        "district": 2
+      },
+      "section": {
+        "name": "Southern California"
+      },
+      "district": {
+        "name": "Southern California"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 7800,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Joshua LaTour",
+      "uaid": "2010947219",
+      "city": "Minneapolis",
+      "state": "MN",
+      "trend": "no change",
+      "points": 7530,
+      "rank": {
+        "national": 6,
+        "section": 1,
+        "district": 1
+      },
+      "section": {
+        "name": "Northern"
+      },
+      "district": {
+        "name": "Member"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 7530,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Oliver Zinaja",
+      "uaid": "2018220355",
+      "city": "BRADENTON",
+      "state": "FL",
+      "trend": "no change",
+      "points": 7463,
+      "rank": {
+        "national": 7,
+        "section": 2,
+        "district": 1
+      },
+      "section": {
+        "name": "Florida"
+      },
+      "district": {
+        "name": "Region 5"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 7463,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Tanmay Konduri",
+      "uaid": "2018149191",
+      "city": "Cupertino",
+      "state": "CA",
+      "trend": "no change",
+      "points": 7321,
+      "rank": {
+        "national": 8,
+        "section": 1,
+        "district": 1
+      },
+      "section": {
+        "name": "Northern California"
+      },
+      "district": {
+        "name": "Northern California"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 7321,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Ashton Morey",
+      "uaid": "2018152638",
+      "city": "Darien",
+      "state": "CT",
+      "trend": "no change",
+      "points": 6885,
+      "rank": {
+        "national": 9,
+        "section": 2,
+        "district": 1
+      },
+      "section": {
+        "name": "New England"
+      },
+      "district": {
+        "name": "Connecticut"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 6885,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Wyatt Markham",
+      "uaid": "2018179450",
+      "city": "Lawrence",
+      "state": "KS",
+      "trend": "no change",
+      "points": 6708,
+      "rank": {
+        "national": 10,
+        "section": 1,
+        "district": 1
+      },
+      "section": {
+        "name": "Missouri Valley"
+      },
+      "district": {
+        "name": "Heart of America"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 6708,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Jason Zhao",
+      "uaid": "2017291076",
+      "city": "Katy",
+      "state": "TX",
+      "trend": "no change",
+      "points": 6585,
+      "rank": {
+        "national": 11,
+        "section": 1,
+        "district": 1
+      },
+      "section": {
+        "name": "Texas"
+      },
+      "district": {
+        "name": "Member"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 6585,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Evaan Mohan",
+      "uaid": "2018121632",
+      "city": "Shelton",
+      "state": "CT",
+      "trend": "no change",
+      "points": 6302,
+      "rank": {
+        "national": 12,
+        "section": 3,
+        "district": 2
+      },
+      "section": {
+        "name": "New England"
+      },
+      "district": {
+        "name": "Connecticut"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 6302,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Marcus Gonzales",
+      "uaid": "2017372473",
+      "city": "Melville",
+      "state": "NY",
+      "trend": "no change",
+      "points": 6090,
+      "rank": {
+        "national": 13,
+        "section": 2,
+        "district": 2
+      },
+      "section": {
+        "name": "Eastern"
+      },
+      "district": {
+        "name": "Long Island Region"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 6090,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Ishaan Marla",
+      "uaid": "2018162184",
+      "city": "Mason",
+      "state": "OH",
+      "trend": "no change",
+      "points": 5657,
+      "rank": {
+        "national": 14,
+        "section": 1,
+        "district": 1
+      },
+      "section": {
+        "name": "Midwest"
+      },
+      "district": {
+        "name": "Ohio Valley"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 5657,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Matthew Finn",
+      "uaid": "2017059361",
+      "city": "Hagerstown",
+      "state": "MD",
+      "trend": "no change",
+      "points": 5476,
+      "rank": {
+        "national": 15,
+        "section": 1,
+        "district": 1
+      },
+      "section": {
+        "name": "Mid-Atlantic"
+      },
+      "district": {
+        "name": "Maryland"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 5476,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Nirvaan Patel",
+      "uaid": "2018502614",
+      "city": "Chandler",
+      "state": "AZ",
+      "trend": "no change",
+      "points": 5310,
+      "rank": {
+        "national": 16,
+        "section": 1,
+        "district": 1
+      },
+      "section": {
+        "name": "Southwest"
+      },
+      "district": {
+        "name": "Central Arizona"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 5310,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Alexander Anderson",
+      "uaid": "2017302122",
+      "city": "Davis",
+      "state": "CA",
+      "trend": "no change",
+      "points": 5220,
+      "rank": {
+        "national": 17,
+        "section": 2,
+        "district": 2
+      },
+      "section": {
+        "name": "Northern California"
+      },
+      "district": {
+        "name": "Northern California"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 5220,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Evan Fan",
+      "uaid": "2018551792",
+      "city": "Mason",
+      "state": "OH",
+      "trend": "no change",
+      "points": 5199,
+      "rank": {
+        "national": 18,
+        "section": 2,
+        "district": 2
+      },
+      "section": {
+        "name": "Midwest"
+      },
+      "district": {
+        "name": "Ohio Valley"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 5199,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Ambrose Alexander",
+      "uaid": "2017205012",
+      "city": "Raleigh",
+      "state": "NC",
+      "trend": "no change",
+      "points": 5140,
+      "rank": {
+        "national": 19,
+        "section": 1,
+        "district": 1
+      },
+      "section": {
+        "name": "Southern"
+      },
+      "district": {
+        "name": "North Carolina"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 5140,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Selwyn Olufemi-Owoeye",
+      "uaid": "2018171875",
+      "city": "Boca Raton",
+      "state": "FL",
+      "trend": "no change",
+      "points": 5131,
+      "rank": {
+        "national": 20,
+        "section": 3,
+        "district": 1
+      },
+      "section": {
+        "name": "Florida"
+      },
+      "district": {
+        "name": "Region 6"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 5131,
+        "bonusPoints": 0
+      }
+    }
+  ],
+  "pagination": {
+    "currentPage": 1,
+    "pageSize": 20,
+    "totalPages": 229,
+    "totalResults": 4562
+  }
+}

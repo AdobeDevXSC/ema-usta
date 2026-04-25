@@ -1,0 +1,503 @@
+{
+  "catalogId": "JUNIOR_NULL_M_SEEDING_Y12_UNDER_DOUBLES_INDIVIDUAL_NULL",
+  "publishDate": "2026-04-22T10:04:12.773Z",
+  "displayLabel": "Boys' 12 National Seeding List (Doubles)",
+  "listType": "SEEDING",
+  "playerType": "JUNIOR",
+  "rankListGender": "M",
+  "rankListGenderModifier": null,
+  "playerLevel": "NULL",
+  "ageRestriction": "Y12",
+  "ageRestrictionModifier": "UNDER",
+  "matchFormat": "DOUBLES",
+  "matchFormatType": "INDIVIDUAL",
+  "familyCategory": null,
+  "data": [
+    {
+      "name": "Fletcher Utz",
+      "uaid": "2018748119",
+      "city": "Brooklyn",
+      "state": "NY",
+      "trend": "no change",
+      "points": 4180,
+      "rank": {
+        "national": 41,
+        "section": 4,
+        "district": 2
+      },
+      "section": {
+        "name": "Eastern"
+      },
+      "district": {
+        "name": "Metropolitan Region"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 4180,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Zakaraya Shams",
+      "uaid": "2018663657",
+      "city": "Phoenix",
+      "state": "AZ",
+      "trend": "no change",
+      "points": 4155,
+      "rank": {
+        "national": 42,
+        "section": 4,
+        "district": 3
+      },
+      "section": {
+        "name": "Southwest"
+      },
+      "district": {
+        "name": "Central Arizona"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 4155,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Rehaan Desai",
+      "uaid": "2018462597",
+      "city": "Bowling Green",
+      "state": "KY",
+      "trend": "no change",
+      "points": 4133,
+      "rank": {
+        "national": 43,
+        "section": 5,
+        "district": 1
+      },
+      "section": {
+        "name": "Southern"
+      },
+      "district": {
+        "name": "Kentucky"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 4133,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Patrick Liu",
+      "uaid": "2018481986",
+      "city": "Missouri City",
+      "state": "TX",
+      "trend": "no change",
+      "points": 4096,
+      "rank": {
+        "national": 44,
+        "section": 2,
+        "district": 2
+      },
+      "section": {
+        "name": "Texas"
+      },
+      "district": {
+        "name": "Member"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 4096,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Ritwik Srinivasan",
+      "uaid": "2018692686",
+      "city": "Cupertino",
+      "state": "CA",
+      "trend": "down",
+      "points": 4065,
+      "rank": {
+        "national": 45,
+        "section": 3,
+        "district": 3
+      },
+      "section": {
+        "name": "Northern California"
+      },
+      "district": {
+        "name": "Northern California"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 4065,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Peter Shuster-Raizberg",
+      "uaid": "2017324268",
+      "city": "HILTON HEAD ISLAND",
+      "state": "SC",
+      "trend": "no change",
+      "points": 4036,
+      "rank": {
+        "national": 46,
+        "section": 6,
+        "district": 1
+      },
+      "section": {
+        "name": "Southern"
+      },
+      "district": {
+        "name": "South Carolina"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 4036,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "William Sturner",
+      "uaid": "2018663978",
+      "city": "Lake Nona",
+      "state": "FL",
+      "trend": "no change",
+      "points": 4030,
+      "rank": {
+        "national": 47,
+        "section": 7,
+        "district": 3
+      },
+      "section": {
+        "name": "Southern"
+      },
+      "district": {
+        "name": "North Carolina"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 4030,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Kevin Wang",
+      "uaid": "2019115452",
+      "city": "Redmond",
+      "state": "WA",
+      "trend": "no change",
+      "points": 4020,
+      "rank": {
+        "national": 48,
+        "section": 2,
+        "district": 2
+      },
+      "section": {
+        "name": "Pacific NW"
+      },
+      "district": {
+        "name": "Northwest Washington"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 4020,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Vincent Bizzieri",
+      "uaid": "2017177175",
+      "city": "Worth",
+      "state": "IL",
+      "trend": "no change",
+      "points": 3990,
+      "rank": {
+        "national": 49,
+        "section": 2,
+        "district": 1
+      },
+      "section": {
+        "name": "Midwest"
+      },
+      "district": {
+        "name": "Chicago"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 3990,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Aspen Thompson",
+      "uaid": "2018498923",
+      "city": "Louisville",
+      "state": "KY",
+      "trend": "no change",
+      "points": 3960,
+      "rank": {
+        "national": 50,
+        "section": 8,
+        "district": 2
+      },
+      "section": {
+        "name": "Southern"
+      },
+      "district": {
+        "name": "Kentucky"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 3960,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Francisco Perez",
+      "uaid": "2018654361",
+      "city": "Carolina",
+      "state": "PR",
+      "trend": "no change",
+      "points": 3960,
+      "rank": {
+        "national": 51,
+        "section": 1,
+        "district": 1
+      },
+      "section": {
+        "name": "Caribbean"
+      },
+      "district": {
+        "name": "Puerto Rico"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 3960,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "GAUTHAM VIGNESH SRIKANTH",
+      "uaid": "2010829749",
+      "city": "Overland Park",
+      "state": "KS",
+      "trend": "no change",
+      "points": 3945,
+      "rank": {
+        "national": 52,
+        "section": 3,
+        "district": 2
+      },
+      "section": {
+        "name": "Missouri Valley"
+      },
+      "district": {
+        "name": "Heart of America"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 3945,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Arjai Naik",
+      "uaid": "2018472159",
+      "city": "Saddle River",
+      "state": "NJ",
+      "trend": "down",
+      "points": 3945,
+      "rank": {
+        "national": 53,
+        "section": 5,
+        "district": 2
+      },
+      "section": {
+        "name": "Eastern"
+      },
+      "district": {
+        "name": "New Jersey Region"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 3945,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Morgan Pierce",
+      "uaid": "2018605976",
+      "city": "Northbrook",
+      "state": "IL",
+      "trend": "no change",
+      "points": 3924,
+      "rank": {
+        "national": 54,
+        "section": 3,
+        "district": 2
+      },
+      "section": {
+        "name": "Midwest"
+      },
+      "district": {
+        "name": "Chicago"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 3924,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Bence Leber",
+      "uaid": "2018376264",
+      "city": "Delray Beach",
+      "state": "FL",
+      "trend": "no change",
+      "points": 3920,
+      "rank": {
+        "national": 55,
+        "section": 8,
+        "district": 3
+      },
+      "section": {
+        "name": "Florida"
+      },
+      "district": {
+        "name": "Region 6"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 3920,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Andy Xu",
+      "uaid": "2018666069",
+      "city": "Sonoma",
+      "state": "CA",
+      "trend": "up",
+      "points": 3879,
+      "rank": {
+        "national": 56,
+        "section": 4,
+        "district": 4
+      },
+      "section": {
+        "name": "Northern California"
+      },
+      "district": {
+        "name": "Northern California"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 3879,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Patrick Hopkins",
+      "uaid": "2018643739",
+      "city": "Hawthorne",
+      "state": "CA",
+      "trend": "no change",
+      "points": 3870,
+      "rank": {
+        "national": 57,
+        "section": 11,
+        "district": 11
+      },
+      "section": {
+        "name": "Southern California"
+      },
+      "district": {
+        "name": "Southern California"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 3870,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Watsen Younk",
+      "uaid": "2018776341",
+      "city": "Chicago",
+      "state": "IL",
+      "trend": "no change",
+      "points": 3849,
+      "rank": {
+        "national": 58,
+        "section": 4,
+        "district": 3
+      },
+      "section": {
+        "name": "Midwest"
+      },
+      "district": {
+        "name": "Chicago"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 3849,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Alan Wang",
+      "uaid": "2018729137",
+      "city": "Bellevue",
+      "state": "WA",
+      "trend": "no change",
+      "points": 3811,
+      "rank": {
+        "national": 59,
+        "section": 3,
+        "district": 3
+      },
+      "section": {
+        "name": "Pacific NW"
+      },
+      "district": {
+        "name": "Northwest Washington"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 3811,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Justin Wang",
+      "uaid": "2018498710",
+      "city": "Bellevue",
+      "state": "WA",
+      "trend": "no change",
+      "points": 3733,
+      "rank": {
+        "national": 60,
+        "section": 4,
+        "district": 4
+      },
+      "section": {
+        "name": "Pacific NW"
+      },
+      "district": {
+        "name": "Northwest Washington"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 3733,
+        "bonusPoints": 0
+      }
+    }
+  ],
+  "pagination": {
+    "currentPage": 3,
+    "pageSize": 20,
+    "totalPages": 92,
+    "totalResults": 1829
+  }
+}
