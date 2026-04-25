@@ -18,8 +18,8 @@
 .pr-cat-tabs {
   width: 100%;
   background-color: #09b5f7;
-  margin: 0;
-  padding-top: 28px;
+  margin: 0 0 2rem 0;
+  padding-top: 0;
   box-sizing: border-box;
 }
 
@@ -53,7 +53,7 @@
   align-items: center;
   justify-content: center;
   font-family: var(--body-font-family-semibold, 'Graphik', 'Arial', sans-serif);
-  font-size: 16px;
+  font-size: 22px;
   font-weight: 800;
   letter-spacing: 0.5px;
   text-transform: uppercase;
@@ -61,7 +61,7 @@
   text-decoration: none;
   padding: 20px 12px 18px;
   line-height: 1;
-  border-top: 5px solid transparent;
+  border-top: 10px solid transparent;
   border-bottom: none;
   box-sizing: border-box;
   transition: border-color 0.12s, color 0.12s;
@@ -84,14 +84,14 @@
 
 .pr-title {
   font-family: var(--heading-font-family, 'GraphikXXCondensed', 'Franklin Gothic', 'Arial Narrow', 'Arial Black', sans-serif);
-  font-size: clamp(40px, 5vw, 64px);
+  font-size: 74px;
   font-weight: 900;
   font-stretch: condensed;
   color: #000;
   margin: 0 0 10px;
   line-height: 0.95;
   letter-spacing: -0.01em;
-  text-transform: none;
+  text-transform: capitalize;
 }
 
 .pr-subtitle {
@@ -117,9 +117,8 @@
   flex: 1 1 0;
   padding: 16px 20px;
   background-color: #000;
-  color: #fff !important;
   font-family: var(--body-font-family-semibold, 'Graphik', 'Arial', sans-serif);
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 700;
   letter-spacing: 0.5px;
   text-transform: uppercase;
@@ -128,6 +127,7 @@
   transition: background-color 0.15s;
   white-space: nowrap;
   text-align: center;
+  color: rgb(9, 181, 247) !important;
 }
 
 .pr-header-link:hover {
@@ -166,8 +166,8 @@
 .pr-filter-select {
   height: 52px;
   padding: 0 40px 0 14px;
-  border: 2px solid #000;
-  border-radius: 4px;
+  border: 1px solid #000;
+  border-radius: 0;
   font-family: var(--body-font-family, 'Graphik', 'Arial', sans-serif);
   font-size: 16px;
   color: #1a1a1a;
@@ -181,6 +181,7 @@
   background-position: right 14px center;
   cursor: pointer;
   transition: border-color 0.15s;
+  min-width: 240px;
 }
 
 .pr-filter-select:focus {
@@ -200,11 +201,10 @@
 
 /* ── Left column ──────────────────────────────────────────────────────── */
 .pr-sidebar {
-  flex: 0 0 32%;
+  flex: 0 0 26%;
   min-width: 260px;
   max-width: 380px;
   padding: 28px 24px 32px;
-  border-right: 1px solid #e0e0e0;
   display: flex;
   flex-direction: column;
   gap: 28px;
@@ -219,12 +219,12 @@
 
 .pr-sidebar-heading {
   font-family: var(--body-font-family-semibold, 'Graphik', 'Arial', sans-serif);
-  font-size: 13px;
+  font-size: 20px;
   font-weight: 700;
   letter-spacing: 0.55px;
   text-transform: uppercase;
   color: #1a1a1a;
-  margin: 0;
+  margin: 0 0 1rem 0;
 }
 
 .pr-sidebar-heading--filter {
@@ -364,11 +364,11 @@
   min-height: 52px;
   height: auto;
   padding: 14px 14px;
-  border-radius: 0;
+  border-radius: 999px;
   background-color: #000;
   color: #fff;
   font-family: var(--body-font-family-semibold, 'Graphik', 'Arial', sans-serif);
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 700;
   letter-spacing: 0.55px;
   text-transform: uppercase;
@@ -467,7 +467,7 @@
   background-color: transparent;
   border-bottom: 1px solid #c8c8c8;
   line-height: 1.25;
-  vertical-align: bottom;
+  vertical-align: middle;
 }
 
 .pr-th--rank {
@@ -476,7 +476,7 @@
 }
 
 .pr-th--name {
-  min-width: 160px;
+  min-width: 300px;
 }
 
 .pr-th--points {
@@ -507,7 +507,7 @@
   padding: 18px 11px;
   color: #1a1a1a;
   vertical-align: middle;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.4;
   border: none;
 }
@@ -531,12 +531,12 @@
 
 .pr-td--loc {
   max-width: 160px;
-  font-size: 15px;
+  font-size: 18px;
 }
 
 .pr-td--state {
   text-align: center;
-  font-size: 15px;
+  font-size: 18px;
   white-space: nowrap;
   width: 3.25rem;
 }
@@ -554,7 +554,7 @@
   text-align: center;
   padding: 48px 24px;
   color: #888;
-  font-size: 17px;
+  font-size: 18px;
   line-height: 1.5;
   font-style: italic;
 }
@@ -697,10 +697,6 @@
     padding-left: 16px;
     padding-right: 16px;
     padding-bottom: 24px;
-  }
-
-  .pr-cat-tabs {
-    padding-top: 20px;
   }
 
   .pr-cat-tabs__list {
