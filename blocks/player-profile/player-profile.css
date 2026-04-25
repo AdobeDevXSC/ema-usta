@@ -134,10 +134,11 @@
 
 .player-profile-manage-roles {
   font-family: var(--body-font-family-semibold);
-  font-size: 13px;
+  font-size: 18px;
   font-weight: 600;
-  color: #0066cc;
-  text-decoration: underline;
+  line-height: 23px;
+  color: rgb(0, 37, 193) !important;
+  text-decoration: underline !important;
   text-underline-offset: 2px;
   letter-spacing: 0.2px;
   white-space: nowrap;

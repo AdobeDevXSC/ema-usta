@@ -1,0 +1,26 @@
+{
+  "uaid": "2020405128",
+  "firstName": "Timothy",
+  "lastName": "Lee",
+  "dateOfBirth": "1950-07-13",
+  "gender": "MALE",
+  "residencyDeclaration": {
+    "countryIso": "US",
+    "zipcode": "90012",
+    "district": "Southern California",
+    "section": "Southern California"
+  },
+  "ratings": {
+    "ntrp": {},
+    "ballColorRating": null,
+    "competitionLevelBallColor": null,
+    "wtn": null
+  },
+  "suspension": {
+    "status": "None",
+    "points": 0
+  },
+  "itfTennisId": "LEE3204318",
+  "nationality": "USA",
+  "wheelchair": false
+}
