@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.usta.com/en/home/stay-current/national/2017-usta-facility-award-winners-announced.html",
+  "path": "en/home/stay-current/national/2017-usta-facility-award-winners-announced",
+  "timestamp": "2026-04-25T01:50:33.236Z",
+  "title": "USTA Facility Award winners announced for 2017",
+  "template": "article-page",
+  "blocks": [
+    "near-you",
+    "cards"
+  ]
+}

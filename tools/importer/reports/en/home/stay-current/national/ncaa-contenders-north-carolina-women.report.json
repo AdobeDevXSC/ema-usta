@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.usta.com/en/home/stay-current/national/ncaa-contenders--north-carolina-women.html",
+  "path": "en/home/stay-current/national/ncaa-contenders-north-carolina-women",
+  "timestamp": "2026-04-27T14:15:32.899Z",
+  "title": "NCAA Contenders: North Carolina",
+  "template": "article-page",
+  "blocks": [
+    "near-you",
+    "cards"
+  ]
+}

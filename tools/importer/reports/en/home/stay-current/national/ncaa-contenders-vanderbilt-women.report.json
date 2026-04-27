@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.usta.com/en/home/stay-current/national/ncaa-contenders--vanderbilt-women.html",
+  "path": "en/home/stay-current/national/ncaa-contenders-vanderbilt-women",
+  "timestamp": "2026-04-27T14:16:47.704Z",
+  "title": "NCAA Contenders: Vanderbilt University",
+  "template": "article-page",
+  "blocks": [
+    "near-you",
+    "cards"
+  ]
+}

@@ -239,26 +239,14 @@ export default {
       }
     }
 
-    // 5. Build Near You block
+    // 5. Build Near You block (placeholder for future dynamic content)
     {
-      const nearYouHeadings = nearYouTabs.length > 0
-        ? nearYouTabs
-        : ['Tournaments near you', 'Programs near you'];
-
       const sectionBreak = document.createElement('hr');
       main.appendChild(sectionBreak);
 
-      const rows = nearYouHeadings.map((heading) => {
-        const cell = document.createElement('div');
-        const p = document.createElement('p');
-        p.textContent = heading;
-        cell.appendChild(p);
-        return [cell];
-      });
-
       const nearYouBlock = WebImporter.Blocks.createBlock(document, {
         name: 'Near You',
-        cells: rows,
+        cells: [],
       });
       main.appendChild(nearYouBlock);
     }

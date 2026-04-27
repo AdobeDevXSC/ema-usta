@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.usta.com/en/home/stay-current/national/ncaa-contenders--virginia-men.html",
+  "path": "en/home/stay-current/national/ncaa-contenders-virginia-men",
+  "timestamp": "2026-04-27T14:11:57.271Z",
+  "title": "NCAA Contenders: University of Virginia",
+  "template": "article-page",
+  "blocks": [
+    "near-you",
+    "cards"
+  ]
+}

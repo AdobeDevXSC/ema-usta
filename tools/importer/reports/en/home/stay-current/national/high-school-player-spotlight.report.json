@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.usta.com/en/home/stay-current/national/high-school-player-spotlight.html",
+  "path": "en/home/stay-current/national/high-school-player-spotlight",
+  "timestamp": "2026-04-27T15:58:15.734Z",
+  "title": "High School Player Spotlight",
+  "template": "article-page",
+  "blocks": [
+    "near-you",
+    "cards"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.usta.com/en/home/stay-current/national/ntrp-player-spotlight--tennis-mafia.html",
+  "path": "en/home/stay-current/national/ntrp-player-spotlight-tennis-mafia",
+  "timestamp": "2026-04-27T13:52:18.491Z",
+  "title": "NTRP Nationals Spotlight: Tennis Mafia",
+  "template": "article-page",
+  "blocks": [
+    "near-you",
+    "cards"
+  ]
+}

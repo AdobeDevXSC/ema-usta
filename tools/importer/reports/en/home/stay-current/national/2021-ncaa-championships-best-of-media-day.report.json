@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.usta.com/en/home/stay-current/national/2021-ncaa-championships--best-of-media-day.html",
+  "path": "en/home/stay-current/national/2021-ncaa-championships-best-of-media-day",
+  "timestamp": "2026-04-27T15:11:50.501Z",
+  "title": "2021 NCAA Championships: Best of Media Day",
+  "template": "article-page",
+  "blocks": [
+    "near-you",
+    "cards"
+  ]
+}

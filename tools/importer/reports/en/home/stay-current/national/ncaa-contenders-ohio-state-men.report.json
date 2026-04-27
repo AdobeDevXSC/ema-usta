@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.usta.com/en/home/stay-current/national/ncaa-contenders--ohio-state-men.html",
+  "path": "en/home/stay-current/national/ncaa-contenders-ohio-state-men",
+  "timestamp": "2026-04-27T14:18:43.492Z",
+  "title": "NCAA Contenders: Ohio State University",
+  "template": "article-page",
+  "blocks": [
+    "near-you",
+    "cards"
+  ]
+}

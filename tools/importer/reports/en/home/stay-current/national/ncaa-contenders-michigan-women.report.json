@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.usta.com/en/home/stay-current/national/ncaa-contenders--michigan-women.html",
+  "path": "en/home/stay-current/national/ncaa-contenders-michigan-women",
+  "timestamp": "2026-04-27T14:08:42.301Z",
+  "title": "NCAA Contenders: University of Michigan",
+  "template": "article-page",
+  "blocks": [
+    "near-you",
+    "cards"
+  ]
+}

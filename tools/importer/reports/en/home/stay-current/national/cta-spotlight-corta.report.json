@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.usta.com/en/home/stay-current/national/cta-spotlight--corta.html",
+  "path": "en/home/stay-current/national/cta-spotlight-corta",
+  "timestamp": "2026-04-25T02:19:18.070Z",
+  "title": "CTA Spotlight: CORTA ",
+  "template": "article-page",
+  "blocks": [
+    "near-you",
+    "cards"
+  ]
+}

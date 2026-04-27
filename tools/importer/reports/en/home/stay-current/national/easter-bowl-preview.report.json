@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.usta.com/en/home/stay-current/national/easter-bowl-preview.html",
+  "path": "en/home/stay-current/national/easter-bowl-preview",
+  "timestamp": "2026-04-25T02:17:15.279Z",
+  "title": "Easter Bowl 2018 Preview",
+  "template": "article-page",
+  "blocks": [
+    "near-you",
+    "cards"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.usta.com/en/home/stay-current/national/college-matchday-events-coming-to-tennis-channel.html",
+  "path": "en/home/stay-current/national/college-matchday-events-coming-to-tennis-channel",
+  "timestamp": "2026-04-25T02:14:36.872Z",
+  "title": "College MatchDay Coming to Tennis Channel",
+  "template": "article-page",
+  "blocks": [
+    "near-you",
+    "cards"
+  ]
+}

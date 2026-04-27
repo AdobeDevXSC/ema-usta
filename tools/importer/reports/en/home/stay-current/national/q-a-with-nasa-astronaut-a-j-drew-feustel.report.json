@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.usta.com/en/home/stay-current/national/q-a-with-nasa-astronaut-a-j---drew--feustel.html",
+  "path": "en/home/stay-current/national/q-a-with-nasa-astronaut-a-j-drew-feustel",
+  "timestamp": "2026-04-25T02:10:00.684Z",
+  "title": "Q&A: NASA Astronaut A.J. 'Drew' Feustel",
+  "template": "article-page",
+  "blocks": [
+    "near-you",
+    "cards"
+  ]
+}
