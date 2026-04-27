@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.usta.com/en/home/stay-current/national/usta-adaptive-committee-survey-results.html",
+  "path": "en/home/stay-current/national/usta-adaptive-committee-survey-results",
+  "timestamp": "2026-04-25T02:26:49.867Z",
+  "title": "USTA Adaptive Committee: Survey Results",
+  "template": "article-page",
+  "blocks": [
+    "near-you",
+    "cards"
+  ]
+}

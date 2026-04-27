@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.usta.com/en/home/stay-current/national/usta-statement-on-the-cancellation-of-2020-wimbledon.html",
+  "path": "en/home/stay-current/national/usta-statement-on-the-cancellation-of-2020-wimbledon",
+  "timestamp": "2026-04-27T14:50:08.303Z",
+  "title": "USTA Statement on the Cancellation of 2020 Wimbledon",
+  "template": "article-page",
+  "blocks": [
+    "near-you",
+    "cards"
+  ]
+}

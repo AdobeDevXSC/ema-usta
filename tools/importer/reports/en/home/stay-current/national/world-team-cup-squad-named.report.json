@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.usta.com/en/home/stay-current/national/world-team-cup-squad-named.html",
+  "path": "en/home/stay-current/national/world-team-cup-squad-named",
+  "timestamp": "2026-04-25T02:21:12.787Z",
+  "title": "U.S. World Team Cup Teams Named",
+  "template": "article-page",
+  "blocks": [
+    "near-you",
+    "cards"
+  ]
+}

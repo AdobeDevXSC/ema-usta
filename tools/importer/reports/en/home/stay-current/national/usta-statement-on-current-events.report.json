@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.usta.com/en/home/stay-current/national/usta-statement-on-current-events.html",
+  "path": "en/home/stay-current/national/usta-statement-on-current-events",
+  "timestamp": "2026-04-27T14:53:04.559Z",
+  "title": "USTA Statement on Current Events",
+  "template": "article-page",
+  "blocks": [
+    "near-you",
+    "cards"
+  ]
+}

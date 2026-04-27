@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.usta.com/en/home/stay-current/national/the-2016-ntrp-ratings-report.html",
+  "path": "en/home/stay-current/national/the-2016-ntrp-ratings-report",
+  "timestamp": "2026-04-25T01:40:51.196Z",
+  "title": "The 2016 NTRP Ratings Report",
+  "template": "article-page",
+  "blocks": [
+    "near-you",
+    "cards"
+  ]
+}

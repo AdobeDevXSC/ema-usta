@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.usta.com/en/home/stay-current/national/the-queens-connection.html",
+  "path": "en/home/stay-current/national/the-queens-connection",
+  "timestamp": "2026-04-27T15:13:19.472Z",
+  "title": "The Queens connection",
+  "template": "article-page",
+  "blocks": [
+    "near-you",
+    "cards"
+  ]
+}

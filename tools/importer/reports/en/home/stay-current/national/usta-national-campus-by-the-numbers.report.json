@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.usta.com/en/home/stay-current/national/usta-national-campus--by-the-numbers.html",
+  "path": "en/home/stay-current/national/usta-national-campus-by-the-numbers",
+  "timestamp": "2026-04-25T01:36:12.096Z",
+  "title": "USTA National Campus: By the Numbers",
+  "template": "article-page",
+  "blocks": [
+    "near-you",
+    "cards"
+  ]
+}
