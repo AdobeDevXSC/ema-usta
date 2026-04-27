@@ -63,12 +63,6 @@
     ]
   },
   {
-    "id": "near-you",
-    "components": [
-      "near-you-item"
-    ]
-  },
-  {
     "id": "table",
     "rte": {
       "toolbar": {

@@ -254,36 +254,10 @@
           "title": "Near you",
           "id": "near-you",
           "model": "near-you",
-          "filter": "near-you",
           "plugins": {
             "da": {
               "rows": 1,
               "columns": 1
-            }
-          }
-        },
-        {
-          "title": "Near you item",
-          "id": "near-you-item",
-          "model": "near-you-item",
-          "plugins": {
-            "da": {
-              "rows": 1,
-              "columns": 1,
-              "fields": [
-                {
-                  "name": "image",
-                  "selector": "div:nth-child(1)>picture>img[src]"
-                },
-                {
-                  "name": "imageAlt",
-                  "selector": "div:nth-child(1)>picture>img[alt]"
-                },
-                {
-                  "name": "text",
-                  "selector": "div:nth-child(2)"
-                }
-              ]
             }
           }
         },
