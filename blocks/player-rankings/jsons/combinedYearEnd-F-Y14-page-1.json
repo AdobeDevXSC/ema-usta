@@ -1,0 +1,503 @@
+{
+  "catalogId": "JUNIOR_NULL_F_YEAR_END_Y14_UNDER_NULL_NULL_NULL",
+  "publishDate": "2026-01-20T17:41:04.369Z",
+  "displayLabel": "Girls' 14 Final Ranking (Combined)",
+  "listType": "YEAR_END",
+  "playerType": "JUNIOR",
+  "rankListGender": "F",
+  "rankListGenderModifier": null,
+  "playerLevel": "NULL",
+  "ageRestriction": "Y14",
+  "ageRestrictionModifier": "UNDER",
+  "matchFormat": "NULL",
+  "matchFormatType": "NULL",
+  "familyCategory": null,
+  "data": [
+    {
+      "name": "Anna Kapanadze",
+      "uaid": "2018208214",
+      "city": "Staten Island",
+      "state": "NY",
+      "trend": "no change",
+      "points": 13532,
+      "rank": {
+        "national": 1,
+        "section": 1,
+        "district": 1
+      },
+      "section": {
+        "name": "Eastern"
+      },
+      "district": {
+        "name": "Metropolitan Region"
+      },
+      "pointsRecord": {
+        "singlesPoints": 9713,
+        "doublesPoints": 3525,
+        "bonusPoints": 3290
+      }
+    },
+    {
+      "name": "Nadia Poznick",
+      "uaid": "2010925821",
+      "city": "Ann Arbor",
+      "state": "MI",
+      "trend": "no change",
+      "points": 12355,
+      "rank": {
+        "national": 2,
+        "section": 1,
+        "district": 1
+      },
+      "section": {
+        "name": "Midwest"
+      },
+      "district": {
+        "name": "S.E. Michigan"
+      },
+      "pointsRecord": {
+        "singlesPoints": 8280,
+        "doublesPoints": 8176,
+        "bonusPoints": 2849
+      }
+    },
+    {
+      "name": "Olivia Lin",
+      "uaid": "2018501488",
+      "city": "Lexington",
+      "state": "MA",
+      "trend": "no change",
+      "points": 12306,
+      "rank": {
+        "national": 3,
+        "section": 1,
+        "district": 1
+      },
+      "section": {
+        "name": "New England"
+      },
+      "district": {
+        "name": "Eastern Massachusetts"
+      },
+      "pointsRecord": {
+        "singlesPoints": 8265,
+        "doublesPoints": 4103,
+        "bonusPoints": 3426
+      }
+    },
+    {
+      "name": "Isha Manchala",
+      "uaid": "2018431145",
+      "city": "Hilton Head Island",
+      "state": "SC",
+      "trend": "no change",
+      "points": 11117,
+      "rank": {
+        "national": 4,
+        "section": 1,
+        "district": 1
+      },
+      "section": {
+        "name": "Southern"
+      },
+      "district": {
+        "name": "South Carolina"
+      },
+      "pointsRecord": {
+        "singlesPoints": 7088,
+        "doublesPoints": 10935,
+        "bonusPoints": 2389
+      }
+    },
+    {
+      "name": "Daniella Sales",
+      "uaid": "2017366026",
+      "city": "West Harrison",
+      "state": "NY",
+      "trend": "no change",
+      "points": 10903,
+      "rank": {
+        "national": 5,
+        "section": 2,
+        "district": 1
+      },
+      "section": {
+        "name": "Eastern"
+      },
+      "district": {
+        "name": "Southern Region"
+      },
+      "pointsRecord": {
+        "singlesPoints": 7485,
+        "doublesPoints": 2738,
+        "bonusPoints": 3007
+      }
+    },
+    {
+      "name": "Ava Chua",
+      "uaid": "2018149118",
+      "city": "Brooklyn",
+      "state": "NY",
+      "trend": "no change",
+      "points": 10824,
+      "rank": {
+        "national": 6,
+        "section": 3,
+        "district": 2
+      },
+      "section": {
+        "name": "Eastern"
+      },
+      "district": {
+        "name": "Metropolitan Region"
+      },
+      "pointsRecord": {
+        "singlesPoints": 6825,
+        "doublesPoints": 9158,
+        "bonusPoints": 2625
+      }
+    },
+    {
+      "name": "Natalie Frisbie",
+      "uaid": "2010772753",
+      "city": "Gallatin",
+      "state": "TN",
+      "trend": "no change",
+      "points": 10010,
+      "rank": {
+        "national": 7,
+        "section": 2,
+        "district": 1
+      },
+      "section": {
+        "name": "Southern"
+      },
+      "district": {
+        "name": "Tennessee"
+      },
+      "pointsRecord": {
+        "singlesPoints": 6293,
+        "doublesPoints": 3600,
+        "bonusPoints": 3177
+      }
+    },
+    {
+      "name": "Anna Scott Laney",
+      "uaid": "2017244215",
+      "city": "Mountain Brk",
+      "state": "AL",
+      "trend": "no change",
+      "points": 9863,
+      "rank": {
+        "national": 8,
+        "section": 3,
+        "district": 1
+      },
+      "section": {
+        "name": "Southern"
+      },
+      "district": {
+        "name": "Alabama"
+      },
+      "pointsRecord": {
+        "singlesPoints": 6465,
+        "doublesPoints": 5828,
+        "bonusPoints": 2524
+      }
+    },
+    {
+      "name": "Reese Ellingson",
+      "uaid": "2018237630",
+      "city": "Saint Paul",
+      "state": "MN",
+      "trend": "no change",
+      "points": 9306,
+      "rank": {
+        "national": 9,
+        "section": 1,
+        "district": 1
+      },
+      "section": {
+        "name": "Northern"
+      },
+      "district": {
+        "name": "Member"
+      },
+      "pointsRecord": {
+        "singlesPoints": 6638,
+        "doublesPoints": 5911,
+        "bonusPoints": 1781
+      }
+    },
+    {
+      "name": "Eugenia Alvarez",
+      "uaid": "2017340576",
+      "city": "San Antonio",
+      "state": "TX",
+      "trend": "no change",
+      "points": 9171,
+      "rank": {
+        "national": 10,
+        "section": 1,
+        "district": 1
+      },
+      "section": {
+        "name": "Texas"
+      },
+      "district": {
+        "name": "Member"
+      },
+      "pointsRecord": {
+        "singlesPoints": 5799,
+        "doublesPoints": 8813,
+        "bonusPoints": 2050
+      }
+    },
+    {
+      "name": "Oleana Zerres",
+      "uaid": "2018103589",
+      "city": "Farmingdale",
+      "state": "NJ",
+      "trend": "no change",
+      "points": 9096,
+      "rank": {
+        "national": 11,
+        "section": 1,
+        "district": 1
+      },
+      "section": {
+        "name": "Middle States"
+      },
+      "district": {
+        "name": "New Jersey"
+      },
+      "pointsRecord": {
+        "singlesPoints": 6023,
+        "doublesPoints": 7410,
+        "bonusPoints": 1961
+      }
+    },
+    {
+      "name": "Eleanor Armistead",
+      "uaid": "2018378099",
+      "city": "Leesburg",
+      "state": "VA",
+      "trend": "no change",
+      "points": 8854,
+      "rank": {
+        "national": 12,
+        "section": 1,
+        "district": 1
+      },
+      "section": {
+        "name": "Mid-Atlantic"
+      },
+      "district": {
+        "name": "Virginia"
+      },
+      "pointsRecord": {
+        "singlesPoints": 5933,
+        "doublesPoints": 7913,
+        "bonusPoints": 1734
+      }
+    },
+    {
+      "name": "Kyndall Noel",
+      "uaid": "2017331394",
+      "city": "Winston Salem",
+      "state": "NC",
+      "trend": "no change",
+      "points": 8613,
+      "rank": {
+        "national": 13,
+        "section": 4,
+        "district": 1
+      },
+      "section": {
+        "name": "Southern"
+      },
+      "district": {
+        "name": "North Carolina"
+      },
+      "pointsRecord": {
+        "singlesPoints": 4785,
+        "doublesPoints": 11550,
+        "bonusPoints": 2095
+      }
+    },
+    {
+      "name": "Christina Li",
+      "uaid": "2018237045",
+      "city": "Bradenton",
+      "state": "FL",
+      "trend": "no change",
+      "points": 8312,
+      "rank": {
+        "national": 14,
+        "section": 1,
+        "district": 1
+      },
+      "section": {
+        "name": "Florida"
+      },
+      "district": {
+        "name": "Region 5"
+      },
+      "pointsRecord": {
+        "singlesPoints": 5235,
+        "doublesPoints": 11850,
+        "bonusPoints": 1299
+      }
+    },
+    {
+      "name": "Natalia Martinez",
+      "uaid": "2010837875",
+      "city": "Elm Grove",
+      "state": "WI",
+      "trend": "no change",
+      "points": 8266,
+      "rank": {
+        "national": 15,
+        "section": 2,
+        "district": 1
+      },
+      "section": {
+        "name": "Midwest"
+      },
+      "district": {
+        "name": "Wisconsin"
+      },
+      "pointsRecord": {
+        "singlesPoints": 5025,
+        "doublesPoints": 7620,
+        "bonusPoints": 2098
+      }
+    },
+    {
+      "name": "Rebecca Wu",
+      "uaid": "2018376561",
+      "city": "Los Altos",
+      "state": "CA",
+      "trend": "no change",
+      "points": 7862,
+      "rank": {
+        "national": 16,
+        "section": 1,
+        "district": 1
+      },
+      "section": {
+        "name": "Northern California"
+      },
+      "district": {
+        "name": "Northern California"
+      },
+      "pointsRecord": {
+        "singlesPoints": 5348,
+        "doublesPoints": 5858,
+        "bonusPoints": 1635
+      }
+    },
+    {
+      "name": "Madeline Cleary",
+      "uaid": "2017296859",
+      "city": "Moorpark",
+      "state": "CA",
+      "trend": "no change",
+      "points": 7707,
+      "rank": {
+        "national": 17,
+        "section": 1,
+        "district": 1
+      },
+      "section": {
+        "name": "Southern California"
+      },
+      "district": {
+        "name": "Southern California"
+      },
+      "pointsRecord": {
+        "singlesPoints": 4770,
+        "doublesPoints": 4478,
+        "bonusPoints": 2265
+      }
+    },
+    {
+      "name": "Evija Thoresen",
+      "uaid": "2018292011",
+      "city": "Atlanta",
+      "state": "GA",
+      "trend": "no change",
+      "points": 7670,
+      "rank": {
+        "national": 18,
+        "section": 5,
+        "district": 1
+      },
+      "section": {
+        "name": "Southern"
+      },
+      "district": {
+        "name": "Georgia"
+      },
+      "pointsRecord": {
+        "singlesPoints": 4488,
+        "doublesPoints": 6923,
+        "bonusPoints": 2144
+      }
+    },
+    {
+      "name": "Reena Alavalapati",
+      "uaid": "2010791610",
+      "city": "Austin",
+      "state": "TX",
+      "trend": "no change",
+      "points": 7505,
+      "rank": {
+        "national": 19,
+        "section": 2,
+        "district": 2
+      },
+      "section": {
+        "name": "Texas"
+      },
+      "district": {
+        "name": "Member"
+      },
+      "pointsRecord": {
+        "singlesPoints": 4208,
+        "doublesPoints": 7778,
+        "bonusPoints": 2130
+      }
+    },
+    {
+      "name": "Capri Butera",
+      "uaid": "2017274538",
+      "city": "Carnegie",
+      "state": "PA",
+      "trend": "no change",
+      "points": 7498,
+      "rank": {
+        "national": 20,
+        "section": 2,
+        "district": 1
+      },
+      "section": {
+        "name": "Middle States"
+      },
+      "district": {
+        "name": "Allegheny Mountain"
+      },
+      "pointsRecord": {
+        "singlesPoints": 4277,
+        "doublesPoints": 5025,
+        "bonusPoints": 2467
+      }
+    }
+  ],
+  "pagination": {
+    "currentPage": 1,
+    "pageSize": 20,
+    "totalPages": 146,
+    "totalResults": 2902
+  }
+}

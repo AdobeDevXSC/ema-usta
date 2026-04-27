@@ -1,0 +1,503 @@
+{
+  "catalogId": "JUNIOR_NULL_M_SEEDING_Y18_UNDER_DOUBLES_INDIVIDUAL_NULL",
+  "publishDate": "2026-04-22T10:03:14.968Z",
+  "displayLabel": "Boys' 18 National Seeding List (Doubles)",
+  "listType": "SEEDING",
+  "playerType": "JUNIOR",
+  "rankListGender": "M",
+  "rankListGenderModifier": null,
+  "playerLevel": "NULL",
+  "ageRestriction": "Y18",
+  "ageRestrictionModifier": "UNDER",
+  "matchFormat": "DOUBLES",
+  "matchFormatType": "INDIVIDUAL",
+  "familyCategory": null,
+  "data": [
+    {
+      "name": "Ryan Cozad",
+      "uaid": "2010532334",
+      "city": "Alpharetta",
+      "state": "GA",
+      "trend": "no change",
+      "points": 12338,
+      "rank": {
+        "national": 1,
+        "section": 1,
+        "district": 1
+      },
+      "section": {
+        "name": "Southern"
+      },
+      "district": {
+        "name": "Georgia"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 12338,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Gavin Goode",
+      "uaid": "2010520039",
+      "city": "Raleigh",
+      "state": "NC",
+      "trend": "no change",
+      "points": 11266,
+      "rank": {
+        "national": 2,
+        "section": 2,
+        "district": 1
+      },
+      "section": {
+        "name": "Southern"
+      },
+      "district": {
+        "name": "North Carolina"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 11266,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Joseph Nau",
+      "uaid": "2010567199",
+      "city": "Brentwood",
+      "state": "CA",
+      "trend": "no change",
+      "points": 11225,
+      "rank": {
+        "national": 3,
+        "section": 1,
+        "district": 1
+      },
+      "section": {
+        "name": "Northern California"
+      },
+      "district": {
+        "name": "Northern California"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 11225,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Marcel Latak",
+      "uaid": "2010620680",
+      "city": "Darien",
+      "state": "IL",
+      "trend": "no change",
+      "points": 10650,
+      "rank": {
+        "national": 4,
+        "section": 1,
+        "district": 1
+      },
+      "section": {
+        "name": "Midwest"
+      },
+      "district": {
+        "name": "Chicago"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 10650,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "William McEwan",
+      "uaid": "2010517185",
+      "city": "Austin",
+      "state": "TX",
+      "trend": "no change",
+      "points": 8430,
+      "rank": {
+        "national": 5,
+        "section": 1,
+        "district": 1
+      },
+      "section": {
+        "name": "Texas"
+      },
+      "district": {
+        "name": "Member"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 8430,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Sutton Severance",
+      "uaid": "2010260325",
+      "city": "Daniel Island",
+      "state": "SC",
+      "trend": "no change",
+      "points": 8325,
+      "rank": {
+        "national": 6,
+        "section": 3,
+        "district": 1
+      },
+      "section": {
+        "name": "Southern"
+      },
+      "district": {
+        "name": "South Carolina"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 8325,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Andrew Johnson",
+      "uaid": "2010688342",
+      "city": "Rancho Palos Verdes",
+      "state": "CA",
+      "trend": "no change",
+      "points": 7935,
+      "rank": {
+        "national": 7,
+        "section": 1,
+        "district": 1
+      },
+      "section": {
+        "name": "Southern California"
+      },
+      "district": {
+        "name": "Southern California"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 7935,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Connor Plunkett",
+      "uaid": "2010732425",
+      "city": "Glen Head",
+      "state": "NY",
+      "trend": "no change",
+      "points": 7770,
+      "rank": {
+        "national": 8,
+        "section": 1,
+        "district": 1
+      },
+      "section": {
+        "name": "Eastern"
+      },
+      "district": {
+        "name": "Long Island Region"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 7770,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Michael Antonius",
+      "uaid": "2010868976",
+      "city": "Buffalo",
+      "state": "NY",
+      "trend": "no change",
+      "points": 7407,
+      "rank": {
+        "national": 9,
+        "section": 2,
+        "district": 1
+      },
+      "section": {
+        "name": "Eastern"
+      },
+      "district": {
+        "name": "Western Region"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 7407,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Yannik Alvarez",
+      "uaid": "2010861009",
+      "city": "Cumming",
+      "state": "GA",
+      "trend": "no change",
+      "points": 7200,
+      "rank": {
+        "national": 10,
+        "section": 4,
+        "district": 2
+      },
+      "section": {
+        "name": "Southern"
+      },
+      "district": {
+        "name": "Georgia"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 7200,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Lucas Smith",
+      "uaid": "2010576262",
+      "city": "Daniel Island",
+      "state": "SC",
+      "trend": "no change",
+      "points": 6975,
+      "rank": {
+        "national": 11,
+        "section": 5,
+        "district": 2
+      },
+      "section": {
+        "name": "Southern"
+      },
+      "district": {
+        "name": "South Carolina"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 6975,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Justin Riley Anson",
+      "uaid": "2010572196",
+      "city": "Laguna Niguel",
+      "state": "CA",
+      "trend": "no change",
+      "points": 6975,
+      "rank": {
+        "national": 12,
+        "section": 2,
+        "district": 2
+      },
+      "section": {
+        "name": "Southern California"
+      },
+      "district": {
+        "name": "Southern California"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 6975,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Yashwin Krishnakumar",
+      "uaid": "2010654740",
+      "city": "Dublin",
+      "state": "CA",
+      "trend": "no change",
+      "points": 6870,
+      "rank": {
+        "national": 13,
+        "section": 2,
+        "district": 2
+      },
+      "section": {
+        "name": "Northern California"
+      },
+      "district": {
+        "name": "Northern California"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 6870,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Tanishk Konduri",
+      "uaid": "2017031193",
+      "city": "Cupertino",
+      "state": "CA",
+      "trend": "no change",
+      "points": 6870,
+      "rank": {
+        "national": 14,
+        "section": 3,
+        "district": 3
+      },
+      "section": {
+        "name": "Northern California"
+      },
+      "district": {
+        "name": "Northern California"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 6870,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Omar Rhazali",
+      "uaid": "2010528500",
+      "city": "Stamford",
+      "state": "CT",
+      "trend": "no change",
+      "points": 6860,
+      "rank": {
+        "national": 15,
+        "section": 1,
+        "district": 1
+      },
+      "section": {
+        "name": "New England"
+      },
+      "district": {
+        "name": "Connecticut"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 6860,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "George Santalov",
+      "uaid": "2010873490",
+      "city": "Antelope",
+      "state": "CA",
+      "trend": "no change",
+      "points": 6751,
+      "rank": {
+        "national": 16,
+        "section": 4,
+        "district": 4
+      },
+      "section": {
+        "name": "Northern California"
+      },
+      "district": {
+        "name": "Northern California"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 6751,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Ilias Bouzoubaa",
+      "uaid": "2010755982",
+      "city": "San Diego",
+      "state": "CA",
+      "trend": "no change",
+      "points": 6657,
+      "rank": {
+        "national": 17,
+        "section": 3,
+        "district": 1
+      },
+      "section": {
+        "name": "Southern California"
+      },
+      "district": {
+        "name": "San Diego"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 6657,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "John Gentek",
+      "uaid": "2010738742",
+      "city": "Moorestown",
+      "state": "NJ",
+      "trend": "no change",
+      "points": 6623,
+      "rank": {
+        "national": 18,
+        "section": 1,
+        "district": 1
+      },
+      "section": {
+        "name": "Middle States"
+      },
+      "district": {
+        "name": "New Jersey"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 6623,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Darren Wei",
+      "uaid": "2010790939",
+      "city": "San Diego",
+      "state": "CA",
+      "trend": "no change",
+      "points": 6525,
+      "rank": {
+        "national": 19,
+        "section": 4,
+        "district": 2
+      },
+      "section": {
+        "name": "Southern California"
+      },
+      "district": {
+        "name": "San Diego"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 6525,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Luca Ugel",
+      "uaid": "2010658541",
+      "city": "Brooklyn",
+      "state": "NY",
+      "trend": "no change",
+      "points": 6503,
+      "rank": {
+        "national": 20,
+        "section": 3,
+        "district": 1
+      },
+      "section": {
+        "name": "Eastern"
+      },
+      "district": {
+        "name": "Metropolitan Region"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 6503,
+        "bonusPoints": 0
+      }
+    }
+  ],
+  "pagination": {
+    "currentPage": 1,
+    "pageSize": 20,
+    "totalPages": 363,
+    "totalResults": 7246
+  }
+}

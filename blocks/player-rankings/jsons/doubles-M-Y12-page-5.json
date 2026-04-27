@@ -1,0 +1,503 @@
+{
+  "catalogId": "JUNIOR_NULL_M_SEEDING_Y12_UNDER_DOUBLES_INDIVIDUAL_NULL",
+  "publishDate": "2026-04-22T10:04:12.773Z",
+  "displayLabel": "Boys' 12 National Seeding List (Doubles)",
+  "listType": "SEEDING",
+  "playerType": "JUNIOR",
+  "rankListGender": "M",
+  "rankListGenderModifier": null,
+  "playerLevel": "NULL",
+  "ageRestriction": "Y12",
+  "ageRestrictionModifier": "UNDER",
+  "matchFormat": "DOUBLES",
+  "matchFormatType": "INDIVIDUAL",
+  "familyCategory": null,
+  "data": [
+    {
+      "name": "Matias Martin Pastrana",
+      "uaid": "2018651861",
+      "city": "San Juan",
+      "state": "PR",
+      "trend": "no change",
+      "points": 3249,
+      "rank": {
+        "national": 81,
+        "section": 3,
+        "district": 3
+      },
+      "section": {
+        "name": "Caribbean"
+      },
+      "district": {
+        "name": "Puerto Rico"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 3249,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Anthony Gallo",
+      "uaid": "2018611875",
+      "city": "Corona",
+      "state": "CA",
+      "trend": "no change",
+      "points": 3240,
+      "rank": {
+        "national": 82,
+        "section": 13,
+        "district": 13
+      },
+      "section": {
+        "name": "Southern California"
+      },
+      "district": {
+        "name": "Southern California"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 3240,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Soichiro Miyamoto",
+      "uaid": "2019017707",
+      "city": "Woodinville",
+      "state": "WA",
+      "trend": "no change",
+      "points": 3226,
+      "rank": {
+        "national": 83,
+        "section": 5,
+        "district": 5
+      },
+      "section": {
+        "name": "Pacific NW"
+      },
+      "district": {
+        "name": "Northwest Washington"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 3226,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Nicolas Safarian",
+      "uaid": "2018105149",
+      "city": "Nashville",
+      "state": "TN",
+      "trend": "no change",
+      "points": 3198,
+      "rank": {
+        "national": 84,
+        "section": 11,
+        "district": 1
+      },
+      "section": {
+        "name": "Southern"
+      },
+      "district": {
+        "name": "Tennessee"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 3198,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Victor Glowacki",
+      "uaid": "2019021297",
+      "city": "Old Bridge",
+      "state": "NJ",
+      "trend": "down",
+      "points": 3159,
+      "rank": {
+        "national": 85,
+        "section": 9,
+        "district": 5
+      },
+      "section": {
+        "name": "Eastern"
+      },
+      "district": {
+        "name": "New Jersey Region"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 3159,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Luka Djordjevic",
+      "uaid": "2018948127",
+      "city": "Ashburn",
+      "state": "VA",
+      "trend": "down",
+      "points": 3150,
+      "rank": {
+        "national": 86,
+        "section": 9,
+        "district": 6
+      },
+      "section": {
+        "name": "Mid-Atlantic"
+      },
+      "district": {
+        "name": "Virginia"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 3150,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "James O'Grady",
+      "uaid": "2019156302",
+      "city": "Tempe",
+      "state": "AZ",
+      "trend": "no change",
+      "points": 3150,
+      "rank": {
+        "national": 87,
+        "section": 5,
+        "district": 4
+      },
+      "section": {
+        "name": "Southwest"
+      },
+      "district": {
+        "name": "Central Arizona"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 3150,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Nikhil Nanda",
+      "uaid": "2017298668",
+      "city": "Wayland",
+      "state": "MA",
+      "trend": "down",
+      "points": 3150,
+      "rank": {
+        "national": 88,
+        "section": 3,
+        "district": 1
+      },
+      "section": {
+        "name": "New England"
+      },
+      "district": {
+        "name": "Eastern Massachusetts"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 3150,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Arthur Lin",
+      "uaid": "2018641470",
+      "city": "Princeton Junction",
+      "state": "NJ",
+      "trend": "no change",
+      "points": 3090,
+      "rank": {
+        "national": 89,
+        "section": 1,
+        "district": 1
+      },
+      "section": {
+        "name": "Middle States"
+      },
+      "district": {
+        "name": "New Jersey"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 3090,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Cedric Chen",
+      "uaid": "2018810341",
+      "city": "Honolulu",
+      "state": "HI",
+      "trend": "no change",
+      "points": 3080,
+      "rank": {
+        "national": 90,
+        "section": 1,
+        "district": 1
+      },
+      "section": {
+        "name": "Hawaii Pacific"
+      },
+      "district": {
+        "name": "Oahu"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 3080,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Armeen Yazdi",
+      "uaid": "2018454190",
+      "city": "Superior",
+      "state": "CO",
+      "trend": "no change",
+      "points": 3080,
+      "rank": {
+        "national": 91,
+        "section": 2,
+        "district": 1
+      },
+      "section": {
+        "name": "Intermountain"
+      },
+      "district": {
+        "name": "Colorado"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 3080,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Mohnish Rayavarapu",
+      "uaid": "2018743072",
+      "city": "Suwanee",
+      "state": "GA",
+      "trend": "no change",
+      "points": 3069,
+      "rank": {
+        "national": 92,
+        "section": 12,
+        "district": 3
+      },
+      "section": {
+        "name": "Southern"
+      },
+      "district": {
+        "name": "Georgia"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 3069,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Alexander McDaniel",
+      "uaid": "2018918822",
+      "city": "Dallas",
+      "state": "TX",
+      "trend": "no change",
+      "points": 3045,
+      "rank": {
+        "national": 93,
+        "section": 6,
+        "district": 6
+      },
+      "section": {
+        "name": "Texas"
+      },
+      "district": {
+        "name": "Member"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 3045,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "WINSTON JIA",
+      "uaid": "2018604118",
+      "city": "Belmont",
+      "state": "MA",
+      "trend": "down",
+      "points": 3024,
+      "rank": {
+        "national": 94,
+        "section": 4,
+        "district": 2
+      },
+      "section": {
+        "name": "New England"
+      },
+      "district": {
+        "name": "Eastern Massachusetts"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 3024,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Luke Hedrick",
+      "uaid": "2018515170",
+      "city": "Alpharetta",
+      "state": "GA",
+      "trend": "no change",
+      "points": 3023,
+      "rank": {
+        "national": 95,
+        "section": 13,
+        "district": 4
+      },
+      "section": {
+        "name": "Southern"
+      },
+      "district": {
+        "name": "Georgia"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 3023,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Morgan Feng",
+      "uaid": "2018857931",
+      "city": "Bellevue",
+      "state": "WA",
+      "trend": "no change",
+      "points": 2997,
+      "rank": {
+        "national": 96,
+        "section": 6,
+        "district": 6
+      },
+      "section": {
+        "name": "Pacific NW"
+      },
+      "district": {
+        "name": "Northwest Washington"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 2997,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Caique Cavalcanti",
+      "uaid": "2019331406",
+      "city": "Doral",
+      "state": "FL",
+      "trend": "no change",
+      "points": 2964,
+      "rank": {
+        "national": 97,
+        "section": 10,
+        "district": 6
+      },
+      "section": {
+        "name": "Florida"
+      },
+      "district": {
+        "name": "Region 8"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 2964,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Kabir Gudavalli",
+      "uaid": "2018527323",
+      "city": "Paradise Valley",
+      "state": "AZ",
+      "trend": "no change",
+      "points": 2896,
+      "rank": {
+        "national": 98,
+        "section": 6,
+        "district": 5
+      },
+      "section": {
+        "name": "Southwest"
+      },
+      "district": {
+        "name": "Central Arizona"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 2896,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Esa Taqi",
+      "uaid": "2019076550",
+      "city": "Troy",
+      "state": "MI",
+      "trend": "no change",
+      "points": 2879,
+      "rank": {
+        "national": 99,
+        "section": 5,
+        "district": 1
+      },
+      "section": {
+        "name": "Midwest"
+      },
+      "district": {
+        "name": "S.E. Michigan"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 2879,
+        "bonusPoints": 0
+      }
+    },
+    {
+      "name": "Alejandro Pazos",
+      "uaid": "2018847940",
+      "city": "Houston",
+      "state": "TX",
+      "trend": "no change",
+      "points": 2858,
+      "rank": {
+        "national": 100,
+        "section": 7,
+        "district": 7
+      },
+      "section": {
+        "name": "Texas"
+      },
+      "district": {
+        "name": "Member"
+      },
+      "pointsRecord": {
+        "singlesPoints": 0,
+        "doublesPoints": 2858,
+        "bonusPoints": 0
+      }
+    }
+  ],
+  "pagination": {
+    "currentPage": 5,
+    "pageSize": 20,
+    "totalPages": 92,
+    "totalResults": 1829
+  }
+}
