@@ -251,6 +251,17 @@
           }
         },
         {
+          "title": "Near you",
+          "id": "near-you",
+          "model": "near-you",
+          "plugins": {
+            "da": {
+              "rows": 1,
+              "columns": 1
+            }
+          }
+        },
+        {
           "title": "Quote",
           "id": "quote",
           "model": "quote",

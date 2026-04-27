@@ -1,0 +1,158 @@
+/*
+ * Full-bleed: break out of main > .section > div (max-width: 1200px; horizontal padding).
+ * Divider: 1px line under the tab row; active tab uses a thicker black border-bottom overlapping it.
+ */
+main .near-you {
+  width: 100vw;
+  max-width: 100vw;
+  margin-left: calc(50% - 50vw);
+  box-sizing: border-box;
+}
+
+/* Tab bar — white strip, centered labels; grey rule is full viewport width in main */
+.near-you .near-you-tablist {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: clamp(32px, 8vw, 80px);
+  width: 100%;
+  padding: 0 16px;
+  overflow: visible;
+  background-color: #fff;
+  border-bottom: 1px solid #c4c6ba;
+  box-sizing: border-box;
+}
+
+/* Full-bleed 1px separator (viewport-wide), independent of tablist horizontal padding */
+main .near-you .near-you-tablist {
+  border-bottom: none;
+}
+
+main .near-you .near-you-tablist::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: 1px;
+  background-color: #c4c6ba;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/*
+ * Tab buttons: reset global `button` rules in styles.css (pill border-radius, fill, margin)
+ * so the active state is a straight bar, not a curved capsule.
+ */
+main .near-you .near-you-tab {
+  appearance: none;
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+  display: inline-block;
+  max-width: none;
+  margin: 0 0 -1px;
+  padding: 16px 4px 12px;
+  border: none;
+  border-radius: 0;
+  border-bottom: 4px solid transparent;
+  background: transparent;
+  background-color: transparent;
+  color: #000;
+  font-family: var(--body-font-family-semibold);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: unset;
+  overflow: visible;
+  white-space: nowrap;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+@media (width >= 900px) {
+  main .near-you .near-you-tab {
+    font-size: 16px;
+    padding: 20px 8px 14px;
+  }
+}
+
+main .near-you .near-you-tab:hover,
+main .near-you .near-you-tab:focus {
+  background: transparent;
+  background-color: transparent;
+  color: #000;
+}
+
+main .near-you .near-you-tab[aria-selected='true'] {
+  border-bottom-color: #000;
+}
+
+main .near-you .near-you-tab[aria-selected='true']:hover,
+main .near-you .near-you-tab[aria-selected='true']:focus {
+  background: transparent;
+  background-color: transparent;
+  color: #000;
+  border-bottom-color: #000;
+}
+
+main .near-you .near-you-tab:focus-visible {
+  outline: 2px solid #0357b8;
+  outline-offset: 2px;
+}
+
+/* Panel — full-width beige below the tab row divider */
+.near-you .near-you-panels {
+  width: 100%;
+  background-color: #e1e3d8;
+  box-sizing: border-box;
+}
+
+.near-you .near-you-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-height: 200px;
+  box-sizing: border-box;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding: 24px 24px 40px;
+  text-align: left;
+}
+
+@media (width >= 900px) {
+  .near-you .near-you-panel {
+    padding: 28px 32px 48px;
+    min-height: 220px;
+  }
+}
+
+.near-you .near-you-panel[aria-hidden='true'] {
+  display: none;
+}
+
+.near-you .near-you-panel-title {
+  margin: 0;
+  font-family: var(--heading-font-family);
+  font-size: clamp(22px, 4vw, 34px);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.near-you .near-you-panel-body {
+  margin: 0;
+  max-width: 48rem;
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size-xs, 14px);
+  font-weight: 400;
+  line-height: 1.45;
+  color: #000;
+}
