@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.usta.com/en/home/stay-current/national/2019-year-in-review.html",
+  "path": "en/home/stay-current/national/2019-year-in-review",
+  "timestamp": "2026-04-27T14:39:10.083Z",
+  "title": "U.S. Tennis: 2019 Year in Review",
+  "template": "article-page",
+  "blocks": [
+    "near-you",
+    "cards"
+  ]
+}

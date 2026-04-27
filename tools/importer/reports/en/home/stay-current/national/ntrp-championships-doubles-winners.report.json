@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.usta.com/en/home/stay-current/national/ntrp-championships--doubles-winners.html",
+  "path": "en/home/stay-current/national/ntrp-championships-doubles-winners",
+  "timestamp": "2026-04-27T14:16:33.659Z",
+  "title": "NTRP Championships: Doubles Winners",
+  "template": "article-page",
+  "blocks": [
+    "near-you",
+    "cards"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.usta.com/en/home/stay-current/national/2020-editors--picks--usta-com-national-stories.html",
+  "path": "en/home/stay-current/national/2020-editors-picks-usta-com-national-stories",
+  "timestamp": "2026-04-27T14:58:27.394Z",
+  "title": "2020 Editors' Picks: USTA.com National Stories",
+  "template": "article-page",
+  "blocks": [
+    "near-you",
+    "cards"
+  ]
+}

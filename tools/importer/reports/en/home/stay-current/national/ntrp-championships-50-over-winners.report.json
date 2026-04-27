@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.usta.com/en/home/stay-current/national/ntrp-championships--50---over-winners.html",
+  "path": "en/home/stay-current/national/ntrp-championships-50-over-winners",
+  "timestamp": "2026-04-25T02:24:54.628Z",
+  "title": "NTRP Championships: 50 & Over Winners",
+  "template": "article-page",
+  "blocks": [
+    "near-you",
+    "cards"
+  ]
+}

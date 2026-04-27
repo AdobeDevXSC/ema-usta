@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.usta.com/en/home/stay-current/national/cta-spotlight--hudson-tennis-association.html",
+  "path": "en/home/stay-current/national/cta-spotlight-hudson-tennis-association",
+  "timestamp": "2026-04-27T14:06:42.361Z",
+  "title": "CTA Spotlight: Hudson Tennis Association",
+  "template": "article-page",
+  "blocks": [
+    "near-you",
+    "cards"
+  ]
+}

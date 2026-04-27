@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.usta.com/en/home/stay-current/national/hit-your-nearest-court-and-celebrate-national-tennis-month-this-.html",
+  "path": "en/home/stay-current/national/hit-your-nearest-court-and-celebrate-national-tennis-month-this",
+  "timestamp": "2026-04-27T15:28:21.965Z",
+  "title": "Hit your nearest court and celebrate National Tennis Month this May",
+  "template": "article-page",
+  "blocks": [
+    "near-you",
+    "cards"
+  ]
+}

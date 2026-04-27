@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.usta.com/en/home/stay-current/national/ncaa-tournament-preview.html",
+  "path": "en/home/stay-current/national/ncaa-tournament-preview",
+  "timestamp": "2026-04-25T02:21:18.394Z",
+  "title": "New champs to be crowned at NCAA Tournament",
+  "template": "article-page",
+  "blocks": [
+    "near-you",
+    "cards"
+  ]
+}

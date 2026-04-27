@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.usta.com/en/home/stay-current/national/hispanic-heritage-month--player-development-coaches.html",
+  "path": "en/home/stay-current/national/hispanic-heritage-month-player-development-coaches",
+  "timestamp": "2026-04-27T13:53:29.771Z",
+  "title": "News Search",
+  "template": "article-page",
+  "blocks": [
+    "near-you",
+    "cards"
+  ]
+}

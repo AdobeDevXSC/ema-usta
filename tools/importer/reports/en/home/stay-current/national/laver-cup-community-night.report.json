@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.usta.com/en/home/stay-current/national/laver-cup-community-night.html",
+  "path": "en/home/stay-current/national/laver-cup-community-night",
+  "timestamp": "2026-04-27T13:51:52.600Z",
+  "title": "Laver Cup Family Day",
+  "template": "article-page",
+  "blocks": [
+    "near-you",
+    "cards"
+  ]
+}

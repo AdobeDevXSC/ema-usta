@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.usta.com/en/home/stay-current/national/cta-spotlight--richmond-tennis-association.html",
+  "path": "en/home/stay-current/national/cta-spotlight-richmond-tennis-association",
+  "timestamp": "2026-04-27T14:45:23.975Z",
+  "title": "CTA Spotlight: Richmond (CA) Tennis Association",
+  "template": "article-page",
+  "blocks": [
+    "near-you",
+    "cards"
+  ]
+}

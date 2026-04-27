@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.usta.com/en/home/stay-current/national/cta-spotlight--tennis-serves-others.html",
+  "path": "en/home/stay-current/national/cta-spotlight-tennis-serves-others",
+  "timestamp": "2026-04-27T14:01:27.455Z",
+  "title": "CTA Spotlight:  Tennis Serves Others",
+  "template": "article-page",
+  "blocks": [
+    "near-you",
+    "cards"
+  ]
+}
