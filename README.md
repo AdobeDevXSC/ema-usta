@@ -20,5 +20,5 @@ This specific repo has been _slightly_ modified to be compatible with DA's live 
 1. Clone your new repo to your computer.
 1. Install the AEM CLI using your terminal: `sudo npm install -g @adobe/aem-cli`
 1. Start the AEM CLI: `aem up`.
-1. Open the `{repo}` folder in your favorite code editor and buil something.
+1. Open the `ema-usta` folder in your favorite code editor and buil something.
 1. **Recommended:** Install common npm packages like linting and testing: `npm i`.
