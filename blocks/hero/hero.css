@@ -35,3 +35,72 @@
     padding: 40px 32px;
   }
 }
+
+/* Foundation hero variant */
+body.foundation .hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 500px;
+  padding: 60px 24px;
+}
+
+body.foundation .hero h1 {
+  font-size: 48px;
+  line-height: 1.1;
+  color: #fff;
+  text-transform: none;
+  margin: 0 0 16px;
+}
+
+body.foundation .hero p {
+  font-size: 16px;
+  line-height: 1.4;
+  color: #fff;
+  max-width: 600px;
+  margin: 0 0 24px;
+}
+
+body.foundation .hero .hero-body a {
+  display: inline-block;
+  background-color: #0373f3;
+  color: #fff;
+  font-family: var(--body-font-family-semibold);
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+  padding: 14px 24px;
+  border-radius: 3px;
+  border: none;
+  transition: background-color 0.2s;
+}
+
+body.foundation .hero .hero-body a:hover {
+  background-color: #025ecb;
+  color: #fff;
+}
+
+@media (width >= 900px) {
+  body.foundation .hero {
+    min-height: 700px;
+    padding: 80px 32px;
+  }
+
+  body.foundation .hero h1 {
+    font-size: 100px;
+    line-height: 110px;
+    max-width: 800px;
+  }
+
+  body.foundation .hero p {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  body.foundation .hero .hero-body a {
+    font-size: 18px;
+    padding: 14px 28px;
+  }
+}
