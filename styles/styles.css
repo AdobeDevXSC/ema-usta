@@ -279,6 +279,61 @@ main a.button:focus {
   color: #fff;
 }
 
+/* buttons – Foundation main: flat blue CTAs (rectangular, slight radius) */
+body.foundation main .button-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+body.foundation main a.button:any-link,
+body.foundation main a.button.primary:any-link {
+  margin: 0;
+  border: none;
+  border-radius: 5px;
+  padding: 15px 32px;
+  font-family: var(--body-font-family-semibold);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  background-color: #007bff;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+body.foundation main a.button.secondary:any-link {
+  margin: 0;
+  border: 2px solid #007bff;
+  border-radius: 5px;
+  padding: 13px 30px;
+  font-family: var(--body-font-family-semibold);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #007bff;
+  background-color: transparent;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+}
+
+body.foundation main a.button.primary:any-link:hover,
+body.foundation main a.button.primary:any-link:focus,
+body.foundation main a.button:not(.secondary):any-link:hover,
+body.foundation main a.button:not(.secondary):any-link:focus {
+  background-color: #0062cc;
+  color: #fff;
+}
+
+body.foundation main a.button.secondary:any-link:hover,
+body.foundation main a.button.secondary:any-link:focus {
+  background-color: rgb(0 123 255 / 8%);
+  color: #0062cc;
+  border-color: #0062cc;
+}
+
 main img {
   max-width: 100%;
   width: auto;
@@ -301,7 +356,27 @@ main > .section {
   margin: 40px 0;
 }
 
+/* Section metadata Style: border-bottom — full-bleed 15px bar (#E2F7FF) */
+main > .section.border-bottom {
+  position: relative;
+  padding-bottom: 15px;
+}
+
+main > .section.border-bottom::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 100vw;
+  height: 15px;
+  transform: translateX(-50%);
+  pointer-events: none;
+  background-color: #e2f7ff;
+}
+
 main > .section > div {
+  box-sizing: border-box;
+  width: 100%;
   max-width: 1200px;
   margin: auto;
   padding: 0 24px;
@@ -321,6 +396,18 @@ main > .section:first-of-type {
 main .section.light,
 main .section.highlight {
   background-color: var(--light-color);
+  margin: 0;
+  padding: 40px 0;
+}
+
+main .section.blue {
+  background-color: #e2f7ff;
+  margin: 0;
+  padding: 40px 0;
+}
+
+main .section.yellow {
+  background-color: #ffefbe;
   margin: 0;
   padding: 40px 0;
 }
@@ -363,7 +450,7 @@ main h1 + p em {
   color: var(--dark-color);
 }
 
-main h1 + p + *::before {
+/* main h1 + p + *::before {
   content: '';
   display: block;
   width: 100vw;
@@ -371,7 +458,7 @@ main h1 + p + *::before {
   margin-left: calc(50% - 50vw);
   margin-bottom: 16px;
   background-color: #dcdfd0;
-}
+} */
 
 /* Download USTA App section (app-store) */
 main .section.app-store .default-content-wrapper {

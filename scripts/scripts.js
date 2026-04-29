@@ -69,6 +69,35 @@ function buildAutoBlocks(main) {
 }
 
 /**
+ * Merge consecutive sibling p/div.button-container nodes when each wraps a single
+ * default <a class="button">, so one flex row / inline row can align paired CTAs.
+ * @param {Element} parent
+ */
+function mergeAdjacentButtonContainers(parent) {
+  let child = parent.firstElementChild;
+  while (child) {
+    const next = child.nextElementSibling;
+    if (
+      next
+      && child.classList.contains('button-container')
+      && next.classList.contains('button-container')
+      && child.tagName === next.tagName
+      && (child.tagName === 'P' || child.tagName === 'DIV')
+    ) {
+      const a1 = child.querySelector(':scope > a.button');
+      const a2 = next.querySelector(':scope > a.button');
+      if (a1 && a2 && child.children.length === 1 && next.children.length === 1) {
+        while (next.firstChild) child.append(next.firstChild);
+        next.remove();
+        continue;
+      }
+    }
+    mergeAdjacentButtonContainers(child);
+    child = child.nextElementSibling;
+  }
+}
+
+/**
  * Decorates all sections in a container element.
  * @param {Element} main The container element
  */
@@ -128,6 +157,7 @@ function decorateSections(main) {
 export function decorateMain(main) {
   // hopefully forward compatible button decoration
   decorateButtons(main);
+  mergeAdjacentButtonContainers(main);
   decorateIcons(main);
   buildAutoBlocks(main);
   decorateSections(main);
