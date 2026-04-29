@@ -1,0 +1,173 @@
+/* Columns stats — horizontal stat figures (e.g. impact metrics) */
+main > .section.columns-stats-container {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0;
+}
+
+main > .section.columns-stats-container:first-of-type {
+  margin-top: 0;
+}
+
+.columns-stats-container .columns-stats-wrapper {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: unset;
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.columns-stats {
+  box-sizing: border-box;
+  padding: 40px 24px;
+}
+
+.columns-stats > div:first-child {
+  display: grid;
+  grid-template-columns: repeat(var(--columns-stats-cols, 3), minmax(0, 1fr));
+  gap: 32px 24px;
+  align-items: start;
+}
+
+.columns-stats .columns-stats-item {
+  text-align: center;
+}
+
+.columns-stats .columns-stats-item > *:first-child {
+  margin-top: 0;
+}
+
+.columns-stats .columns-stats-item > *:last-child {
+  margin-bottom: 0;
+}
+
+.columns-stats .columns-stats-item h2,
+.columns-stats .columns-stats-item h3 {
+  margin: 0 0 8px;
+  font-family: var(--heading-font-family);
+  font-size: clamp(40px, 8vw, var(--heading-font-size-xxl));
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--text-color);
+}
+
+.columns-stats .columns-stats-item p {
+  margin: 0;
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size-s);
+  line-height: 1.45;
+  color: var(--dark-color);
+}
+
+@media (width >= 900px) {
+  .columns-stats {
+    padding: 56px 32px;
+  }
+
+  .columns-stats > div:first-child {
+    gap: 40px 48px;
+  }
+}
+
+@media (width < 900px) {
+  .columns-stats > div:first-child {
+    grid-template-columns: 1fr;
+  }
+
+  .columns-stats .columns-stats-item:not(:first-child) {
+    padding-top: 8px;
+    border-top: 1px solid var(--light-color);
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/* USTA Foundation — pill metrics strip (scoped)                              */
+/* -------------------------------------------------------------------------- */
+
+/* Horizontal inset comes from main > .section > div; avoid double padding here */
+body.foundation .columns-stats-container .columns-stats-wrapper {
+  max-width: unset;
+  padding: 0;
+  margin: 0 auto;
+}
+
+body.foundation .columns-stats {
+  margin: 0;
+  padding: clamp(28px, 4vw, 44px) clamp(20px, 3vw, 56px);
+  background-color: #000;
+  color: #fff;
+  border-radius: clamp(24px, 3.5vw, 40px);
+}
+
+body.foundation .columns-stats > div:first-child {
+  align-items: center;
+  justify-items: center;
+  gap: clamp(24px, 4vw, 48px) clamp(16px, 3vw, 40px);
+}
+
+body.foundation .columns-stats .columns-stats-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 22rem;
+  margin-inline: auto;
+}
+
+/* Stat figure: Graphik Regular 38px / 700 (matches design spec) */
+body.foundation .columns-stats .columns-stats-item h2,
+body.foundation .columns-stats .columns-stats-item h3,
+body.foundation .columns-stats .columns-stats-item > p:first-child strong {
+  margin: 0;
+  color: #fff;
+  font-family: var(--body-font-family);
+  font-size: 38px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: normal;
+}
+
+body.foundation .columns-stats .columns-stats-item h2,
+body.foundation .columns-stats .columns-stats-item h3 {
+  margin: 0 0 10px;
+}
+
+body.foundation .columns-stats .columns-stats-item > p:first-child {
+  margin: 0 0 10px;
+  line-height: 1;
+}
+
+/* Stat label (second row): smaller type + tracking so long labels stay one line in-column */
+body.foundation .columns-stats .columns-stats-item > p:not(:first-child) {
+  margin: 0;
+  color: #fff;
+  font-family: var(--body-font-family);
+  font-size: clamp(10px, 1.05vw, 11px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+@media (width >= 900px) {
+  body.foundation .columns-stats {
+    padding: clamp(36px, 4vw, 52px) clamp(32px, 4vw, 72px);
+  }
+
+  body.foundation .columns-stats > div:first-child {
+    gap: 32px 24px;
+  }
+}
+
+@media (width < 900px) {
+  body.foundation .columns-stats .columns-stats-item:not(:first-child) {
+    padding-top: 20px;
+    margin-top: 4px;
+    border-top: 1px solid rgb(255 255 255 / 18%);
+  }
+}

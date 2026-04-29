@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.ustafoundation.com/en/home.html",
+  "path": "en/home",
+  "timestamp": "2026-04-28T16:17:29.763Z",
+  "title": "Home",
+  "template": "foundation-home",
+  "blocks": [
+    "columns",
+    "embed",
+    "cards"
+  ]
+}
