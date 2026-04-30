@@ -5,7 +5,7 @@ header .nav-wrapper {
   background-color: var(--background-color);
   width: 100%;
   z-index: 5;
-  position: fixed;
+  position: relative;
 }
 
 header {
@@ -21,7 +21,7 @@ header {
 
 .nav-top-bar-inner {
   box-sizing: border-box;
-  max-width: 1400px;
+  max-width: 1440px;
   margin: 0 auto;
   padding: 0 20px;
   display: grid;
@@ -182,7 +182,7 @@ header nav {
   align-items: center;
   gap: 0 var(--nav-bar-column-gap, 16px);
   margin: auto;
-  max-width: 1400px;
+  max-width: 1440px;
   height: var(--nav-height);
   padding: 0 20px;
   font-family: var(--body-font-family);
@@ -305,6 +305,22 @@ header .nav-brand {
   height: 36px;
   width: auto;
   display: block;
+}
+
+/* Inline / linked SVG logos (fragment often uses <svg> instead of <img>) */
+.nav-brand-link svg,
+.nav-brand .default-content-wrapper svg {
+  height: 36px;
+  width: auto;
+  max-width: min(100%, 260px);
+  display: block;
+  flex-shrink: 0;
+}
+
+.nav-brand-link picture {
+  display: flex;
+  align-items: center;
+  line-height: 0;
 }
 
 .nav-brand-section {
@@ -484,6 +500,7 @@ header nav .nav-tools > .default-content-wrapper {
     align-items: center;
     gap: 0 var(--nav-bar-column-gap);
     padding: 0 48px;
+    overflow: visible;
   }
 
   header nav[aria-expanded='true'] {
@@ -510,7 +527,9 @@ header nav .nav-tools > .default-content-wrapper {
     align-self: unset;
   }
 
-  header nav .nav-sections ul {
+  /* Only the primary nav row is flex; nested dropdown <ul> must stay off-row */
+  header nav .nav-sections .default-content-wrapper > ul,
+  header nav .nav-sections > ul {
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -519,10 +538,71 @@ header nav .nav-tools > .default-content-wrapper {
     padding: 0;
   }
 
-  header nav .nav-sections .default-content-wrapper > ul > li {
+  header nav .nav-sections .default-content-wrapper > ul > li,
+  header nav .nav-sections > ul > li {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 6px;
     flex: 0 1 auto;
     position: relative;
     padding: 4px 0;
+  }
+
+  header nav .nav-sections ul > li.nav-drop {
+    padding-right: 0;
+  }
+
+  header nav .nav-sections,
+  header nav .nav-sections .default-content-wrapper {
+    overflow: visible;
+  }
+
+  header nav .nav-sections li > p {
+    margin: 0;
+  }
+
+  header nav .nav-sections li > ul,
+  header nav .nav-sections li > div > ul,
+  header nav .nav-sections li > p > ul {
+    display: none;
+    position: absolute;
+    top: calc(100% + 2px);
+    left: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    min-width: min(100vw - 48px, 320px);
+    margin: 0;
+    padding: 10px 0;
+    list-style: none;
+    background-color: var(--background-color);
+    box-shadow: 0 8px 24px rgb(0 0 0 / 12%);
+    z-index: 30;
+    white-space: normal;
+  }
+
+  header nav .nav-sections li:hover > ul,
+  header nav .nav-sections li:focus-within > ul,
+  header nav .nav-sections li.nav-drop.is-open > ul,
+  header nav .nav-sections li:hover > div > ul,
+  header nav .nav-sections li:focus-within > div > ul,
+  header nav .nav-sections li.nav-drop.is-open > div > ul,
+  header nav .nav-sections li:hover > p > ul,
+  header nav .nav-sections li:focus-within > p > ul,
+  header nav .nav-sections li.nav-drop.is-open > p > ul {
+    display: flex;
+  }
+
+  header nav .nav-sections li > ul a:any-link,
+  header nav .nav-sections li > div > ul a:any-link,
+  header nav .nav-sections li > p > ul a:any-link {
+    display: block;
+    padding: 10px 18px;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: none;
+    letter-spacing: 0.02em;
   }
 
   header nav .nav-tools {
@@ -534,11 +614,18 @@ header nav .nav-tools > .default-content-wrapper {
     height: 48px;
   }
 
+  .nav-brand-link svg,
+  .nav-brand .default-content-wrapper svg {
+    height: 48px;
+    max-height: 48px;
+  }
+
   .nav-btn {
     min-height: 34px;
     padding: 13px 30px;
     border-radius: 4px;
     box-sizing: border-box;
+  }
 }
 
 /* ===== MOBILE ===== */
@@ -575,4 +662,264 @@ header nav .nav-tools > .default-content-wrapper {
     box-sizing: border-box;
   }
 }
+
+/* =============================================================================
+   USTA Foundation — single bar, blue top stripe, full-width bottom rule,
+   centered primary links, blue Donate CTA. Scoped with body.foundation.
+   ============================================================================= */
+
+body.foundation {
+  --foundation-header-blue: #0077d5;
+  --foundation-header-blue-hover: #0066bc;
+  --foundation-header-rule: #ccc;
+}
+
+body.foundation .nav-top-bar {
+  display: none !important;
+}
+
+body.foundation header .nav-wrapper {
+  overflow: visible;
+  background-color: #fff;
+  border-top: 4px solid var(--foundation-header-blue);
+  border-bottom: 1px solid var(--foundation-header-rule);
+}
+
+body.foundation header nav {
+  background-color: #fff;
+  border-bottom: none;
+}
+
+body.foundation header nav .nav-hamburger button {
+  background-color: #fff;
+  color: #000;
+}
+
+@media (width >= 900px) {
+  body.foundation {
+    /* One primary row only (utility bar hidden); height fits 124.8px-tall logo */
+    --nav-height: 145px;
+    --header-height: var(--nav-height);
+  }
+
+  body.foundation[data-breadcrumbs] {
+    --header-height: calc(var(--nav-height) + var(--breadcrumbs-height));
+  }
+
+  body.foundation header nav {
+    align-items: flex-start;
+    padding: 10px 40px;
+    max-width: 1440px;
+    overflow: visible;
+    box-sizing: border-box;
+    min-height: var(--nav-height);
+    height: auto;
+  }
+
+  /* Tall logo: pin brand to top of bar; keep links + CTA optically centered on cross-axis */
+  body.foundation header .nav-brand {
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-self: flex-start;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  body.foundation header .nav-brand .default-content-wrapper {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    line-height: 0;
+  }
+
+  body.foundation header nav .nav-sections {
+    align-self: center;
+    padding-top: 0;
+  }
+
+  body.foundation header nav .nav-tools {
+    align-self: center;
+  }
+
+  body.foundation .nav-brand-link:any-link {
+    color: var(--foundation-header-blue);
+  }
+
+  body.foundation .nav-logo,
+  body.foundation .nav-brand-link img,
+  body.foundation .nav-brand-link picture img,
+  body.foundation .nav-brand .default-content-wrapper img,
+  body.foundation .nav-brand-link svg,
+  body.foundation .nav-brand .default-content-wrapper svg {
+    box-sizing: border-box;
+    width: 294px;
+    height: 124.8px;
+    max-width: 294px;
+    max-height: 124.8px;
+    object-fit: contain;
+    flex-shrink: 0;
+    display: block;
+  }
+
+  body.foundation header nav .nav-sections .default-content-wrapper > ul,
+  body.foundation header nav .nav-sections > ul {
+    justify-content: center;
+    gap: clamp(20px, 3vw, 40px);
+    align-items: center;
+  }
+
+  /* Undo global styles.css pill buttons for fragment links authored as .button */
+  body.foundation header nav .nav-sections a.button:any-link {
+    display: inline;
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    background-color: transparent;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    font-style: normal;
+    line-height: inherit;
+    letter-spacing: inherit;
+    text-transform: inherit;
+    text-align: inherit;
+    max-width: none;
+    vertical-align: baseline;
+  }
+
+  body.foundation header nav .nav-sections a.button:any-link:hover,
+  body.foundation header nav .nav-sections a.button:any-link:focus {
+    background-color: transparent;
+    color: var(--foundation-header-blue);
+    text-decoration: underline;
+  }
+
+  body.foundation header nav .nav-sections .default-content-wrapper > ul > li,
+  body.foundation header nav .nav-sections > ul > li,
+  body.foundation header nav .nav-sections .default-content-wrapper > ul > li a:any-link,
+  body.foundation header nav .nav-sections > ul > li a:any-link {
+    color: #000;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 0.06em;
+  }
+
+  body.foundation header nav .nav-sections ul > li.nav-active a:any-link {
+    color: var(--foundation-header-blue);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 1px;
+  }
+
+  body.foundation header nav .nav-sections ul > li.nav-active {
+    color: var(--foundation-header-blue);
+  }
+
+  body.foundation header nav .nav-sections ul > li.nav-drop::after {
+    border-top-color: #999;
+  }
+
+  body.foundation header nav .nav-sections ul > li.nav-active.nav-drop::after {
+    border-top-color: var(--foundation-header-blue);
+  }
+
+  /* Primary CTA (Donate) — same blue as screenshot; overrides JOIN/SIGN IN classes */
+  body.foundation header nav .nav-tools a.nav-btn,
+  body.foundation header nav .nav-tools a:any-link {
+    min-height: 44px;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 2px;
+    background-color: var(--foundation-header-blue) !important;
+    color: #fff !important;
+    font-family: var(--body-font-family-semibold);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.1px;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  body.foundation header nav .nav-tools a.nav-btn:hover,
+  body.foundation header nav .nav-tools a.nav-btn:focus,
+  body.foundation header nav .nav-tools a:any-link:hover,
+  body.foundation header nav .nav-tools a:any-link:focus {
+    background-color: var(--foundation-header-blue-hover) !important;
+    color: #fff !important;
+    border-color: transparent;
+  }
+}
+
+@media (width < 900px) {
+  body.foundation {
+    --header-height: var(--nav-height);
+  }
+
+  body.foundation .nav-logo,
+  body.foundation .nav-brand-link img,
+  body.foundation .nav-brand-link picture img,
+  body.foundation .nav-brand .default-content-wrapper img,
+  body.foundation .nav-brand-link svg,
+  body.foundation .nav-brand .default-content-wrapper svg {
+    width: auto;
+    max-width: min(100%, 294px);
+    height: auto;
+    max-height: 44px;
+    aspect-ratio: 294 / 124.8;
+    object-fit: contain;
+  }
+
+  body.foundation header nav[aria-expanded='true'] {
+    background-color: #fff;
+  }
+
+  body.foundation header nav .nav-sections ul > li a:any-link {
+    color: #000;
+    font-weight: 700;
+  }
+
+  body.foundation header nav .nav-tools a.nav-btn,
+  body.foundation header nav .nav-tools a:any-link {
+    border: none;
+    border-radius: 2px;
+    background-color: var(--foundation-header-blue) !important;
+    color: #fff !important;
+  }
+
+  body.foundation header nav .nav-tools a.nav-btn:hover,
+  body.foundation header nav .nav-tools a:any-link:hover {
+    background-color: var(--foundation-header-blue-hover) !important;
+  }
+}
+
+/* Breadcrumb strip (metadata-driven; small gray type under nav) */
+body.foundation[data-breadcrumbs] .breadcrumb,
+body.foundation[data-breadcrumbs] nav.breadcrumb {
+  box-sizing: border-box;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 8px 40px 10px;
+  font-family: var(--body-font-family);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #999;
+  background-color: #fff;
+  border-bottom: 1px solid var(--foundation-header-rule);
+}
+
+body.foundation[data-breadcrumbs] .breadcrumb a:any-link,
+body.foundation[data-breadcrumbs] nav.breadcrumb a:any-link {
+  color: #999;
+  text-decoration: none;
+}
+
+body.foundation[data-breadcrumbs] .breadcrumb a:any-link:hover,
+body.foundation[data-breadcrumbs] nav.breadcrumb a:any-link:hover {
+  color: var(--foundation-header-blue);
+  text-decoration: underline;
 }
