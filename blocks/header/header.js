@@ -86,15 +86,24 @@ export default async function decorate(block) {
     }
   }
 
+  /** Submenu <ul> inside a top-level nav <li> (fragment may wrap it in div/p). */
+  const getSubmenuUl = (li) => (
+    li.querySelector(':scope > ul')
+    || li.querySelector(':scope > div > ul')
+    || li.querySelector(':scope > p + ul')
+    || li.querySelector(':scope > a + ul')
+    || li.querySelector(':scope > p ul')
+  );
+
   // Nav sections: style active link
   const navSections = nav.querySelector('.nav-sections');
   if (navSections) {
-    navSections.querySelectorAll(':scope .default-content-wrapper > ul > li').forEach((item) => {
+    navSections.querySelectorAll(':scope .default-content-wrapper > ul > li, :scope > ul > li').forEach((item) => {
       const linkStrong = item.querySelector('a strong');
       if (linkStrong) {
         item.classList.add('nav-active');
       }
-      const hasSubmenu = item.querySelector(':scope > ul');
+      const hasSubmenu = !!getSubmenuUl(item);
       if (hasSubmenu) {
         item.classList.add('nav-drop');
       } else if (!item.querySelector('a') && item.textContent.trim()) {
@@ -102,6 +111,41 @@ export default async function decorate(block) {
       } else if (linkStrong) {
         item.classList.add('nav-drop');
       }
+    });
+  }
+
+  if (document.body.classList.contains('foundation') && navSections) {
+    navSections.querySelectorAll('a.button').forEach((a) => a.classList.remove('button'));
+
+    const closeFoundationMenus = () => {
+      navSections.querySelectorAll('li.nav-drop.is-open').forEach((li) => li.classList.remove('is-open'));
+    };
+
+    document.addEventListener('click', (e) => {
+      if (!isDesktop.matches) return;
+      if (!navSections.contains(e.target)) closeFoundationMenus();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeFoundationMenus();
+    });
+
+    navSections.querySelectorAll('li.nav-drop').forEach((li) => {
+      const submenu = getSubmenuUl(li);
+      const trigger = li.querySelector(':scope > a') || li.querySelector(':scope > p > a') || li.querySelector('a');
+      if (!submenu || !trigger) return;
+
+      trigger.addEventListener('click', (e) => {
+        if (!isDesktop.matches) return;
+        const href = trigger.getAttribute('href')?.trim() || '';
+        const isPlaceholder = !href || href === '#' || href.startsWith('javascript:');
+        if (!isPlaceholder) return;
+
+        e.preventDefault();
+        const opening = !li.classList.contains('is-open');
+        closeFoundationMenus();
+        if (opening) li.classList.add('is-open');
+      });
     });
   }
 
