@@ -169,6 +169,44 @@
           }
         },
         {
+          "title": "Columns Stats",
+          "id": "columns-stats",
+          "model": "columns-stats",
+          "filter": "columns-stats",
+          "plugins": {
+            "da": {
+              "name": "columns-stats",
+              "rows": 1,
+              "columns": 3,
+              "behaviour": "columns"
+            }
+          }
+        },
+        {
+          "title": "Columns Stats Row",
+          "id": "columns-stats-row",
+          "model": "columns-stats-row",
+          "filter": "columns-stats-row",
+          "plugins": {
+            "da": {
+              "name": "columns-stats-row",
+              "behaviour": "columns-stats-row"
+            }
+          }
+        },
+        {
+          "title": "Columns Stats Cell",
+          "id": "columns-stats-cell",
+          "model": "columns-stats-cell",
+          "filter": "columns-stats-cell",
+          "plugins": {
+            "da": {
+              "unsafeHTML": "<div></div>",
+              "behaviour": "columns-stats-cell"
+            }
+          }
+        },
+        {
           "title": "Columns",
           "id": "columns",
           "model": "columns",
@@ -203,6 +241,28 @@
             "da": {
               "unsafeHTML": "<div></div>",
               "behaviour": "columns-cell"
+            }
+          }
+        },
+        {
+          "title": "Filter Bubble",
+          "id": "filter-bubble",
+          "model": "filter-bubble",
+          "plugins": {
+            "da": {
+              "name": "filter-bubble",
+              "rows": 2,
+              "columns": 1,
+              "fields": [
+                {
+                  "name": "filters",
+                  "selector": "div:nth-child(1)>div"
+                },
+                {
+                  "name": "category",
+                  "selector": "div:nth-child(2)>div"
+                }
+              ]
             }
           }
         },

@@ -12,7 +12,9 @@
       "cards",
       "carousel",
       "columns",
+      "columns-stats",
       "embed",
+      "filter-bubble",
       "fragment",
       "form",
       "hero",
@@ -43,6 +45,22 @@
     "id": "carousel",
     "components": [
       "carousel-item"
+    ]
+  },
+  {
+    "id": "columns-stats",
+    "components": [
+      "columns-stats-row"
+    ]
+  },
+  {
+    "id": "columns-stats-row",
+    "components": []
+  },
+  {
+    "id": "columns-stats-cell",
+    "components": [
+      "text"
     ]
   },
   {

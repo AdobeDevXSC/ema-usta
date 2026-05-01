@@ -1,0 +1,78 @@
+{
+  "definitions": [
+    {
+      "title": "Columns Stats",
+      "id": "columns-stats",
+      "model": "columns-stats",
+      "filter": "columns-stats",
+      "plugins": {
+        "da": {
+          "name": "columns-stats",
+          "rows": 1,
+          "columns": 3,
+          "behaviour": "columns"
+        }
+      }
+    },
+    {
+      "title": "Columns Stats Row",
+      "id": "columns-stats-row",
+      "model": "columns-stats-row",
+      "filter": "columns-stats-row",
+      "plugins": {
+        "da": {
+          "name": "columns-stats-row",
+          "behaviour": "columns-stats-row"
+        }
+      }
+    },
+    {
+      "title": "Columns Stats Cell",
+      "id": "columns-stats-cell",
+      "model": "columns-stats-cell",
+      "filter": "columns-stats-cell",
+      "plugins": {
+        "da": {
+          "unsafeHTML": "<div></div>",
+          "behaviour": "columns-stats-cell"
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "columns-stats",
+      "fields": [
+        {
+          "component": "number",
+          "valueType": "number",
+          "name": "columns",
+          "label": "Number of Columns",
+          "value": 3,
+          "validation": {
+            "numberMin": 1,
+            "numberMax": 6
+          }
+        }
+      ]
+    }
+  ],
+  "filters": [
+    {
+      "id": "columns-stats",
+      "components": [
+        "columns-stats-row"
+      ]
+    },
+    {
+      "id": "columns-stats-row",
+      "components": []
+    },
+    {
+      "id": "columns-stats-cell",
+      "components": [
+        "text"
+      ]
+    }
+  ]
+}
