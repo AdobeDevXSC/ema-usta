@@ -22,6 +22,17 @@
         "name": "robots",
         "label": "Robots",
         "description": "Index control via robots"
+      },
+      {
+        "component": "select",
+        "name": "theme",
+        "label": "Theme",
+        "options": [
+          {
+            "name": "Foundation",
+            "value": "foundation"
+          }
+        ]
       }
     ]
   },
@@ -50,8 +61,20 @@
         "label": "Style",
         "options": [
           {
-            "name": "Highlight",
-            "value": "highlight"
+            "name": "Border Bottom",
+            "value": "border-bottom"
+          },
+          {
+            "name": "Border Top",
+            "value": "border-top"
+          },
+          {
+            "name": "Blue",
+            "value": "blue"
+          },
+          {
+            "name": "Yellow",
+            "value": "yellow"
           }
         ]
       }
