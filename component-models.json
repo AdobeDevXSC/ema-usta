@@ -31,10 +31,6 @@
           {
             "name": "Foundation",
             "value": "foundation"
-          },
-          {
-            "name": "USTA Main",
-            "value": ""
           }
         ]
       }
@@ -152,6 +148,22 @@
         "name": "text",
         "label": "Text",
         "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "columns-stats",
+    "fields": [
+      {
+        "component": "number",
+        "valueType": "number",
+        "name": "columns",
+        "label": "Number of Columns",
+        "value": 3,
+        "validation": {
+          "numberMin": 1,
+          "numberMax": 6
+        }
       }
     ]
   },
