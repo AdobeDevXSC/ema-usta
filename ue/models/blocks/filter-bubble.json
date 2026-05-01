@@ -1,0 +1,53 @@
+{
+  "definitions": [
+    {
+      "title": "Filter Bubble",
+      "id": "filter-bubble",
+      "model": "filter-bubble",
+      "plugins": {
+        "da": {
+          "name": "filter-bubble",
+          "rows": 2,
+          "columns": 1,
+          "fields": [
+            { "name": "filters", "selector": "div:nth-child(1)>div" },
+            { "name": "category", "selector": "div:nth-child(2)>div" }
+          ]
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "filter-bubble",
+      "fields": [
+        {
+          "component": "multiselect",
+          "name": "filters",
+          "label": "Filters",
+          "options": [
+            {
+              "name": "Tournaments",
+              "value": "tournaments"
+            },
+            {
+              "name": "Programs",
+              "value": "programs"
+            },
+            {
+              "name": "Coaches",
+              "value": "coaches"
+            }
+          ]
+        },
+        {
+          "component": "text",
+          "name": "category",
+          "label": "Category heading",
+          "valueType": "string"
+        }
+      ]
+    }
+  ],
+  "filters": []
+}

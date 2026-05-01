@@ -1,0 +1,91 @@
+.filter-bubble {
+  --filter-bubble-chip-border: 2px solid #000;
+  --filter-bubble-chip-pad-y: 10px;
+  --filter-bubble-chip-pad-x: 25px;
+  --filter-bubble-list-gap-y: 0.75rem;
+  --filter-bubble-list-gap-x: 1rem;
+  --filter-bubble-aside-gap: 0.35rem;
+
+  font-family: var(--body-font-family);
+}
+
+.filter-bubble-inner {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  gap: clamp(1.25rem, 4vw, 3.5rem);
+}
+
+.filter-bubble-aside {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--filter-bubble-aside-gap);
+  flex: 0 0 auto;
+  max-width: 100%;
+}
+
+.filter-bubble-eyebrow {
+  display: block;
+  margin: 0;
+  padding: 0;
+  font-family: var(--body-font-family-semibold);
+  font-weight: 700;
+  font-size: var(--body-font-size-xs);
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.filter-bubble-title {
+  display: block;
+  margin: 0;
+  padding: 0;
+  font-family: var(--body-font-family-semibold);
+  font-weight: 700;
+  font-size: var(--heading-font-size-xs);
+  line-height: 1.25;
+  color: var(--text-color);
+}
+
+.filter-bubble-title:empty {
+  display: none;
+}
+
+.filter-bubble-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: flex-start;
+  gap: var(--filter-bubble-list-gap-y) var(--filter-bubble-list-gap-x);
+  margin: 0;
+  padding: 0;
+  flex: 1 1 0;
+  min-width: min(100%, 12rem);
+  list-style: none;
+}
+
+.filter-bubble-chip {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: var(--filter-bubble-chip-pad-y) var(--filter-bubble-chip-pad-x);
+  border: var(--filter-bubble-chip-border);
+  border-radius: 999px;
+  background-color: var(--background-color);
+  color: #000;
+  font-family: var(--body-font-family-semibold);
+  font-weight: 700;
+  font-size: var(--body-font-size-xs);
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.filter-bubble-empty .filter-bubble-list {
+  min-height: 0;
+}

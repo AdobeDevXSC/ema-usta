@@ -184,6 +184,36 @@
     ]
   },
   {
+    "id": "filter-bubble",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "filters",
+        "label": "Filters",
+        "options": [
+          {
+            "name": "Tournaments",
+            "value": "tournaments"
+          },
+          {
+            "name": "Programs",
+            "value": "programs"
+          },
+          {
+            "name": "Coaches",
+            "value": "coaches"
+          }
+        ]
+      },
+      {
+        "component": "text",
+        "name": "category",
+        "label": "Category heading",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
     "id": "fragment",
     "fields": [
       {
