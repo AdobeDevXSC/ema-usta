@@ -5,17 +5,17 @@
       "fields": [
         {
           "component": "text",
-          "name": "title",
+          "name": "Title",
           "label": "Title"
         },
         {
           "component": "text",
-          "name": "description",
+          "name": "Description",
           "label": "Description"
         },
         {
           "component": "reference",
-          "name": "image",
+          "name": "Image",
           "label": "Image"
         },
         {
@@ -23,6 +23,17 @@
           "name": "robots",
           "label": "Robots",
           "description": "Index control via robots"
+        },
+        {
+          "component": "select",
+          "name": "theme",
+          "label": "Theme",
+          "options": [
+            {
+              "name": "Foundation",
+              "value": "foundation"
+            }
+          ]
         }
       ]
     }

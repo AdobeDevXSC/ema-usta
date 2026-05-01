@@ -22,8 +22,20 @@
           "label": "Style",
           "options": [
             {
-              "name": "Highlight",
-              "value": "highlight"
+              "name": "Border Bottom",
+              "value": "border-bottom"
+            },
+            {
+              "name": "Border Top",
+              "value": "border-top"
+            },
+            {
+              "name": "Blue",
+              "value": "blue"
+            },
+            {
+              "name": "Yellow",
+              "value": "yellow"
             }
           ]
         }
