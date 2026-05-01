@@ -5,17 +5,17 @@
       "fields": [
         {
           "component": "text",
-          "name": "title",
+          "name": "Title",
           "label": "Title"
         },
         {
           "component": "text",
-          "name": "description",
+          "name": "Description",
           "label": "Description"
         },
         {
           "component": "reference",
-          "name": "image",
+          "name": "Image",
           "label": "Image"
         },
         {
