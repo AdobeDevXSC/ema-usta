@@ -255,11 +255,11 @@
               "columns": 1,
               "fields": [
                 {
-                  "name": "filters",
+                  "name": "label",
                   "selector": "div:nth-child(1)>div"
                 },
                 {
-                  "name": "category",
+                  "name": "filters",
                   "selector": "div:nth-child(2)>div"
                 }
               ]

@@ -219,8 +219,8 @@
       },
       {
         "component": "text",
-        "name": "category",
-        "label": "Category heading",
+        "name": "label",
+        "label": "Label",
         "valueType": "string"
       }
     ]

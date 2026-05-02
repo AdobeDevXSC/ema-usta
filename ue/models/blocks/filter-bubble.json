@@ -10,8 +10,8 @@
           "rows": 2,
           "columns": 1,
           "fields": [
-            { "name": "filters", "selector": "div:nth-child(1)>div" },
-            { "name": "category", "selector": "div:nth-child(2)>div" }
+            { "name": "label", "selector": "div:nth-child(1)>div" },
+            { "name": "filters", "selector": "div:nth-child(2)>div" }
           ]
         }
       }
@@ -54,8 +54,8 @@
         },
         {
           "component": "text",
-          "name": "category",
-          "label": "Category heading",
+          "name": "label",
+          "label": "Label",
           "valueType": "string"
         }
       ]
