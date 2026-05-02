@@ -2,8 +2,10 @@
   "status": "success",
   "url": "https://www.ustafoundation.com/en/home/who-we-are/leadership-and-staff.html",
   "path": "en/home/who-we-are/leadership-and-staff",
-  "timestamp": "2026-04-30T00:17:17.762Z",
+  "timestamp": "2026-04-30T23:37:53.239Z",
   "title": "Leadership & Staff",
   "template": "foundation-page",
-  "blocks": []
+  "blocks": [
+    "hero"
+  ]
 }

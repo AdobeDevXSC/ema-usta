@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.usta.com/en/home/improve/tips-and-instruction/national.html",
+  "path": "en/home/improve/tips-and-instruction/national",
+  "timestamp": "2026-05-02T15:12:49.041Z",
+  "title": "National",
+  "template": "article-page",
+  "blocks": [
+    "near-you",
+    "cards"
+  ]
+}

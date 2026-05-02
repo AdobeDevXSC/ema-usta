@@ -2,8 +2,10 @@
   "status": "success",
   "url": "https://www.ustafoundation.com/en/home/get-involved/special-funds.html",
   "path": "en/home/get-involved/special-funds",
-  "timestamp": "2026-04-30T00:18:07.465Z",
+  "timestamp": "2026-04-30T23:38:24.451Z",
   "title": "Special Funds",
   "template": "foundation-page",
-  "blocks": []
+  "blocks": [
+    "hero"
+  ]
 }
