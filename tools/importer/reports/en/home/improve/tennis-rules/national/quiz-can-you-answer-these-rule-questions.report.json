@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.usta.com/en/home/improve/tennis-rules/national/quiz--can-you-answer-these-rule-questions-.html",
+  "path": "en/home/improve/tennis-rules/national/quiz-can-you-answer-these-rule-questions",
+  "timestamp": "2026-05-02T15:37:51.671Z",
+  "title": "Quiz: Can you answer these rule questions?",
+  "template": "article-page",
+  "blocks": [
+    "near-you",
+    "cards"
+  ]
+}

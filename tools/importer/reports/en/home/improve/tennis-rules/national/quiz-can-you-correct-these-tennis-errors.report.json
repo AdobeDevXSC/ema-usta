@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.usta.com/en/home/improve/tennis-rules/national/quiz--can-you-correct-these-tennis-errors-.html",
+  "path": "en/home/improve/tennis-rules/national/quiz-can-you-correct-these-tennis-errors",
+  "timestamp": "2026-05-02T15:37:45.669Z",
+  "title": "Quiz: Can you correct these tennis errors?",
+  "template": "article-page",
+  "blocks": [
+    "near-you",
+    "cards"
+  ]
+}

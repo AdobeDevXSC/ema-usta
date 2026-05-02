@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "url": "https://www.ustafoundation.com/en/home/404.html",
+  "path": "en/home/404",
+  "timestamp": "2026-04-30T23:44:08.279Z",
+  "title": "404",
+  "template": "foundation-page",
+  "blocks": [
+    "hero"
+  ]
+}
