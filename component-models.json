@@ -192,16 +192,28 @@
         "label": "Filters",
         "options": [
           {
-            "name": "Tournaments",
-            "value": "tournaments"
+            "name": "Nutrition",
+            "value": "Nutrition"
           },
           {
-            "name": "Programs",
-            "value": "programs"
+            "name": "Exercise",
+            "value": "Exercise"
           },
           {
-            "name": "Coaches",
-            "value": "coaches"
+            "name": "Lifestyle",
+            "value": "Lifestyle"
+          },
+          {
+            "name": "Healthy",
+            "value": "Healthy"
+          },
+          {
+            "name": "Mental Health",
+            "value": "Mental Health"
+          },
+          {
+            "name": "Injury Prevention",
+            "value": "Injury Prevention"
           }
         ]
       },

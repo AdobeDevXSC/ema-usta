@@ -4,9 +4,12 @@ import { readBlockConfig, toClassName } from '../../scripts/aem.js';
  * Labels for known multiselect values (sync with component-models / ue filter-bubble options).
  */
 const FILTER_OPTION_LABELS = {
-  tournaments: 'Tournaments',
-  programs: 'Programs',
-  coaches: 'Coaches',
+  nutrition: 'Nutrition',
+  exercise: 'Exercise',
+  lifestyle: 'Lifestyle',
+  healthy: 'Healthy',
+  'mental-health': 'Mental Health',
+  'injury-prevention': 'Injury Prevention',
 };
 
 /**
@@ -71,6 +74,54 @@ function findRowValueColumn(block, keySlug) {
 }
 
 /**
+ * Plain .html payload: row1 one cell "Filter By …category…", row2 one cell comma-separated chips.
+ * @param {string} text
+ * @returns {{ category: string, isHeading: boolean }}
+ */
+function parseFilterByHeadingCell(text) {
+  const t = text.trim();
+  if (!t) return { category: '', isHeading: false };
+  const m = t.match(/^filter\s+by\s+(.+)$/i);
+  if (m) return { category: m[1].trim(), isHeading: true };
+  if (/^filter\s+by\s*$/i.test(t)) return { category: '', isHeading: true };
+  return { category: '', isHeading: false };
+}
+
+/**
+ * @param {Element} row
+ * @returns {string|null}
+ */
+function getSingleColumnCellText(row) {
+  const cols = [...row.children].filter((c) => c.tagName === 'DIV');
+  if (cols.length !== 1) return null;
+  return cols[0].textContent.trim();
+}
+
+/**
+ * Matches aem.page / plain.html filter-bubble (two single-column rows).
+ * @param {Element} block
+ * @returns {{ values: string[], category: string }|null}
+ */
+function extractFromPlainTwoRowPayload(block) {
+  const rows = [...block.querySelectorAll(':scope > div')];
+  if (rows.length < 2) return null;
+  const t0 = getSingleColumnCellText(rows[0]);
+  const t1 = getSingleColumnCellText(rows[1]);
+  if (!t0 || !t1) return null;
+  const heading = parseFilterByHeadingCell(t0);
+  const values = normalizeFilters(t1);
+  if (!values.length) return null;
+  if (heading.isHeading) {
+    return { values, category: heading.category };
+  }
+  const t0Parts = normalizeFilters(t0);
+  if (t0Parts.length === 1 && values.length >= 2) {
+    return { values, category: t0 };
+  }
+  return null;
+}
+
+/**
  * Fallback when rows are not key/value: one column of &lt;p&gt; chips, or &lt;ul&gt;&lt;li&gt;.
  * @param {Element} block
  * @returns {string[]}
@@ -80,6 +131,8 @@ function parseLooseBubbleSources(block) {
   const single = rows.find((row) => {
     const cols = [...row.children].filter((c) => c.tagName === 'DIV');
     if (cols.length !== 1) return false;
+    const cellText = cols[0].textContent.trim();
+    if (parseFilterByHeadingCell(cellText).isHeading) return false;
     return parseValueColumn(cols[0]).length > 0;
   });
   if (single) {
@@ -96,6 +149,11 @@ function parseLooseBubbleSources(block) {
  * @returns {{ values: string[], category: string }}
  */
 function extractFiltersAndCategory(block) {
+  const plainTwo = extractFromPlainTwoRowPayload(block);
+  if (plainTwo) {
+    return { values: plainTwo.values, category: plainTwo.category };
+  }
+
   const config = readBlockConfig(block);
   let values = normalizeFilters(config.filters);
   let categoryText = '';
@@ -134,6 +192,7 @@ export default function decorate(block) {
   block.innerHTML = '';
 
   if (values.length) {
+    block.classList.remove('filter-bubble-empty');
     block.dataset.filters = JSON.stringify(values);
   } else {
     delete block.dataset.filters;

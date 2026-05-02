@@ -6,6 +6,9 @@
   --filter-bubble-list-gap-x: 1rem;
   --filter-bubble-aside-gap: 0.35rem;
 
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
   font-family: var(--body-font-family);
 }
 
