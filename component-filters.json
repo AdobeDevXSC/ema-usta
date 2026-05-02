@@ -15,6 +15,7 @@
       "columns-stats",
       "embed",
       "filter-bubble",
+      "filter-cards",
       "fragment",
       "form",
       "hero",
@@ -78,6 +79,12 @@
     "components": [
       "text",
       "image"
+    ]
+  },
+  {
+    "id": "filter-cards",
+    "components": [
+      "filter-card"
     ]
   },
   {
