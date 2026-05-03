@@ -28,8 +28,17 @@ async function fetchPlayerProfile() {
 function populateProfile(block, profile) {
   if (!profile) return;
 
-  const { firstName, gender, residencyDeclaration, uaid } = profile;
-  const { section, district, countryIso } = residencyDeclaration ?? {};
+  const {
+    firstName,
+    gender,
+    residencyDeclaration,
+    uaid,
+  } = profile;
+  const {
+    section,
+    district,
+    countryIso,
+  } = residencyDeclaration ?? {};
 
   const greet = block.querySelector('.player-profile-greeting');
   if (greet && firstName) greet.textContent = `Welcome, ${firstName}!`;

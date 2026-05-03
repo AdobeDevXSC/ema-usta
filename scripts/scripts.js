@@ -17,6 +17,9 @@ import {
   toCamelCase,
 } from './aem.js';
 
+/** Base URL for NX experiment plugin (matches da.live paths used elsewhere in this file). */
+export const NX_ORIGIN = 'https://da.live/nx';
+
 /**
  * Builds hero block and prepends to main in a new section.
  * @param {Element} main The container element
@@ -77,6 +80,7 @@ function mergeAdjacentButtonContainers(parent) {
   let child = parent.firstElementChild;
   while (child) {
     const next = child.nextElementSibling;
+    let merged = false;
     if (
       next
       && child.classList.contains('button-container')
@@ -89,11 +93,14 @@ function mergeAdjacentButtonContainers(parent) {
       if (a1 && a2 && child.children.length === 1 && next.children.length === 1) {
         while (next.firstChild) child.append(next.firstChild);
         next.remove();
-        continue;
+        merged = true;
       }
     }
-    mergeAdjacentButtonContainers(child);
-    child = child.nextElementSibling;
+    if (!merged) {
+      mergeAdjacentButtonContainers(child);
+      child = child.nextElementSibling;
+    }
+    // After merge, keep same child so we can merge again with the new next sibling.
   }
 }
 

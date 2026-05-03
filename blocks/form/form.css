@@ -80,7 +80,7 @@
 .form .form-field input {
   width: 100%;
   box-sizing: border-box;
-  padding: 14px 14px;
+  padding: 14px;
   border: 1px solid #000;
   border-radius: 0;
   font-size: 16px;
@@ -151,6 +151,7 @@
   .form-container .form-wrapper {
     padding: 64px 40px 72px;
   }
+
   .form .form-heading h2 {
     font-size: 56px;
     margin-bottom: 12px;
@@ -162,8 +163,7 @@
   }
 
   .form .form-input-row {
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     gap: 20px;
     align-items: flex-end;
     margin-bottom: 32px;
