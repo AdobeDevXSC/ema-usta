@@ -85,7 +85,9 @@ main > .section.columns-stats-container:first-of-type {
 }
 
 /* -------------------------------------------------------------------------- */
+
 /* USTA Foundation — pill metrics strip (scoped)                              */
+
 /* -------------------------------------------------------------------------- */
 
 /* Horizontal inset comes from main > .section > div; avoid double padding here */
@@ -104,8 +106,7 @@ body.foundation .columns-stats {
 }
 
 body.foundation .columns-stats > div:first-child {
-  align-items: center;
-  justify-items: center;
+  place-items: center center;
   gap: clamp(24px, 4vw, 48px) clamp(16px, 3vw, 40px);
 }
 

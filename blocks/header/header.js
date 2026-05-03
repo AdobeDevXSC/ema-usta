@@ -138,7 +138,16 @@ export default async function decorate(block) {
       trigger.addEventListener('click', (e) => {
         if (!isDesktop.matches) return;
         const href = trigger.getAttribute('href')?.trim() || '';
-        const isPlaceholder = !href || href === '#' || href.startsWith('javascript:');
+        let isJsProtocol = false;
+        if (href) {
+          try {
+            const proto = new URL(href, window.location.href).protocol.toLowerCase();
+            isJsProtocol = proto === `${'java'}script:`;
+          } catch {
+            isJsProtocol = false;
+          }
+        }
+        const isPlaceholder = !href || href === '#' || isJsProtocol;
         if (!isPlaceholder) return;
 
         e.preventDefault();

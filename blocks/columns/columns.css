@@ -54,7 +54,7 @@ main > .section.columns-container:first-of-type {
 }
 
 /* Text column */
-.columns > div > div:not(.columns-img-col):not(.columns-gallery-col) {
+.columns > div > div:not(.columns-img-col, .columns-gallery-col) {
   padding: 32px 24px;
 }
 
@@ -85,7 +85,7 @@ main > .section.columns-container:first-of-type {
     order: unset;
   }
 
-  .columns > div > div:not(.columns-img-col):not(.columns-gallery-col) {
+  .columns > div > div:not(.columns-img-col, .columns-gallery-col) {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -93,7 +93,7 @@ main > .section.columns-container:first-of-type {
     box-sizing: border-box;
   }
 
-  .columns > div > div:not(.columns-img-col):not(.columns-gallery-col) h2 {
+  .columns > div > div:not(.columns-img-col, .columns-gallery-col) h2 {
     font-size: 72px;
   }
   
@@ -114,7 +114,9 @@ main > .section.columns-container:first-of-type {
 }
 
 /* -------------------------------------------------------------------------- */
+
 /* Columns gallery — outer 1:1; .2-left-1-right = two 1:1 crops + one 1:2 crop */
+
 /* -------------------------------------------------------------------------- */
 
 .columns.gallery > div > .columns-gallery--2-left-1-right {
@@ -193,25 +195,27 @@ main > .section.columns-container:first-of-type {
 }
 
 /* -------------------------------------------------------------------------- */
+
 /* Foundation site — two-column copy + video card (.foundation ancestor) */
+
 /* -------------------------------------------------------------------------- */
 
 .foundation .columns {
   overflow: visible;
 }
 
-.foundation .columns > div > div:not(.columns-img-col):not(.columns-gallery-col) {
+.foundation .columns > div > div:not(.columns-img-col, .columns-gallery-col) {
   text-align: left;
   align-items: flex-start;
 }
 
-.foundation .columns > div > div:not(.columns-img-col):not(.columns-gallery-col) h2 {
+.foundation .columns > div > div:not(.columns-img-col, .columns-gallery-col) h2 {
   font-size: clamp(26px, 3.2vw, 38px);
   line-height: 1.15;
   margin: 0 0 20px;
 }
 
-.foundation .columns > div > div:not(.columns-img-col):not(.columns-gallery-col) p {
+.foundation .columns > div > div:not(.columns-img-col, .columns-gallery-col) p {
   font-size: clamp(15px, 1.6vw, 18px);
   line-height: 1.65;
   color: var(--text-color);
@@ -271,7 +275,7 @@ main > .section.columns-container:first-of-type {
     min-width: 0;
   }
 
-  .foundation .columns > div > div:not(.columns-img-col):not(.columns-gallery-col) {
+  .foundation .columns > div > div:not(.columns-img-col, .columns-gallery-col) {
     justify-content: flex-start;
     padding: 24px 0;
   }

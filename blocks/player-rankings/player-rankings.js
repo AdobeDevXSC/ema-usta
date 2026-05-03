@@ -25,7 +25,8 @@
  *   2. On each filter change or page change → buildPayload() → fetchRankings()
  *   3. Response → renderTable() + renderPagination()
  *   4. Location hash is kept in sync (USTA-style), e.g.
- *      #tab=junior&junior-juniorListType=doubles&junior-rankListGender=M&junior-page=1&junior-sectionCode=S10
+ *      #tab=junior&junior-juniorListType=doubles&junior-rankListGender=M&
+ *      junior-page=1&junior-sectionCode=S10
  *      (see usta.com/play/rankings for the same param names)
  *
  * Document authoring table shape (AEM/EDS table-block convention):
@@ -125,8 +126,8 @@ const SECTIONS = [
 
 function createState(defaults) {
   return {
-    listType: defaults.listType || 'doubles',   // ← changed: was 'combined'
-    gender: defaults.gender || 'M',             // ← changed: was 'F'
+    listType: defaults.listType || 'doubles', // ← changed: was 'combined'
+    gender: defaults.gender || 'M', // ← changed: was 'F'
     ageGroup: defaults.ageGroup || 'Y12',
     section: '',
     searchName: '',
@@ -145,15 +146,12 @@ const SECTION_CODES = new Set(SECTIONS.map((s) => s.value).filter(Boolean));
 
 /** True when the hash has at least one `junior-…` param (not `tab=junior` alone). */
 function isJuniorUrlFragment(p) {
-  for (const k of p.keys()) {
-    if (k.startsWith('junior-')) return true;
-  }
-  return false;
+  return [...p.keys()].some((k) => k.startsWith('junior-'));
 }
 
 const DEFAULT_JUNIOR_STATE = {
-  listType: 'doubles',   // ← changed: was 'combined'
-  gender: 'M',           // ← changed: was 'F'
+  listType: 'doubles', // ← changed: was 'combined'
+  gender: 'M', // ← changed: was 'F'
   ageGroup: 'Y12',
   section: '',
   searchName: '',
@@ -168,10 +166,10 @@ const DEFAULT_JUNIOR_STATE = {
  * @returns {{ filterState: null | object, hadPublishInHash: boolean, ignore: boolean }}
  */
 function getPlayerRankingsStateFromHash() {
-  if (typeof location === 'undefined') {
+  if (typeof window.location === 'undefined') {
     return { filterState: null, hadPublishInHash: false, ignore: false };
   }
-  const raw = location.hash?.replace(/^#/, '') ?? '';
+  const raw = window.location.hash?.replace(/^#/, '') ?? '';
   if (!raw.trim()) {
     return { filterState: null, hadPublishInHash: false, ignore: false };
   }
@@ -226,7 +224,7 @@ function getPlayerRankingsStateFromHash() {
 
 /** Writes #tab=junior&junior-…; uses replaceState (no history spam). */
 function replaceHashFromPlayerRankingsState(state) {
-  if (typeof history === 'undefined' || typeof location === 'undefined') return;
+  if (typeof window.history === 'undefined' || typeof window.location === 'undefined') return;
   const next = new URLSearchParams();
   next.set('tab', 'junior');
   next.set('junior-juniorListType', state.listType);
@@ -244,20 +242,20 @@ function replaceHashFromPlayerRankingsState(state) {
     next.set('junior-playerName', s);
   }
   const hash = `#${next.toString()}`;
-  if (location.hash === hash) return;
-  const u = new URL(location.href);
+  if (window.location.hash === hash) return;
+  const u = new URL(window.location.href);
   u.hash = hash;
-  history.replaceState(null, '', u);
+  window.history.replaceState(null, '', u);
 }
 
 /** If there is no fragment, set #tab=junior so the bar matches USTA before/without filters. */
 function ensureTabJuniorInUrlWhenHashEmpty() {
-  if (typeof history === 'undefined' || typeof location === 'undefined') return;
-  const fr = (location.hash || '').replace(/^#/, '').trim();
+  if (typeof window.history === 'undefined' || typeof window.location === 'undefined') return;
+  const fr = (window.location.hash || '').replace(/^#/, '').trim();
   if (fr !== '') return;
-  const u = new URL(location.href);
+  const u = new URL(window.location.href);
   u.hash = 'tab=junior';
-  history.replaceState(null, '', u);
+  window.history.replaceState(null, '', u);
 }
 
 /* ─── Date helper ────────────────────────────────────────────────────────── */
@@ -555,7 +553,9 @@ function buildSidebar(state) {
 
   sidebar.append(searchSection, filterSection, resetBtn);
 
-  return { sidebar, searchInput, dateInput, resetBtn };
+  return {
+    sidebar, searchInput, dateInput, resetBtn,
+  };
 }
 
 function buildTableSkeleton() {
@@ -741,7 +741,9 @@ export default async function decorate(block) {
   block.setAttribute('aria-label', 'Junior Tournament Rankings');
 
   const header = buildHeader(state);
-  const { sidebar, searchInput, dateInput, resetBtn } = buildSidebar(state);
+  const {
+    sidebar, searchInput, dateInput, resetBtn,
+  } = buildSidebar(state);
   const statusEl = buildStatusBar();
   const tableWrap = buildTableSkeleton();
   const tbody = tableWrap.querySelector('.pr-tbody');
@@ -783,6 +785,8 @@ export default async function decorate(block) {
         }
       }
 
+      // Mock / API payload uses _dateMismatch for “no rows for selected publish date”.
+      // eslint-disable-next-line no-underscore-dangle -- external payload shape
       const dateMismatch = Boolean(response._dateMismatch);
       const players = response.data || [];
       const total = response.pagination?.totalResults ?? players.length;
@@ -862,7 +866,7 @@ export default async function decorate(block) {
     const inHash = getPlayerRankingsStateFromHash();
     if (inHash.ignore) return;
     if (!inHash.filterState) {
-      if (!location.hash || location.hash === '' || location.hash === '#') {
+      if (!window.location.hash || window.location.hash === '' || window.location.hash === '#') {
         lastListKey = null;
       }
       return;
@@ -879,8 +883,8 @@ export default async function decorate(block) {
 
   resetBtn.addEventListener('click', () => {
     Object.assign(state, {
-      listType: 'doubles',   // ← changed: was 'combined'
-      gender: 'M',           // ← changed: was 'F'
+      listType: 'doubles', // ← changed: was 'combined'
+      gender: 'M', // ← changed: was 'F'
       ageGroup: 'Y12',
       section: '',
       searchName: '',

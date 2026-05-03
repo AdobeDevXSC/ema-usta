@@ -113,7 +113,8 @@ export default async function decorate(block) {
 
   const data = await fetchIndex();
   allArticles = data
-    .filter((a) => a.path && a.title && a.path !== window.location.pathname)
+    .filter((a) => a.path && a.title && a.image && a.description
+      && a.path !== window.location.pathname)
     .sort((a, b) => (b.lastModified || 0) - (a.lastModified || 0));
 
   filteredArticles = [...allArticles];

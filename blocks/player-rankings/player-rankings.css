@@ -18,7 +18,7 @@
 .pr-cat-tabs {
   width: 100%;
   background-color: #09b5f7;
-  margin: 0 0 2rem 0;
+  margin: 0 0 2rem;
   padding-top: 0;
   box-sizing: border-box;
 }
@@ -127,7 +127,7 @@
   transition: background-color 0.15s;
   white-space: nowrap;
   text-align: center;
-  color: rgb(9, 181, 247) !important;
+  color: rgb(9 181 247) !important;
 }
 
 .pr-header-link:hover {
@@ -172,9 +172,7 @@
   font-size: 16px;
   color: #1a1a1a;
   background-color: #fff;
-  min-width: 190px;
   box-sizing: border-box;
-  -webkit-appearance: none;
   appearance: none;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
@@ -224,7 +222,7 @@
   letter-spacing: 0.55px;
   text-transform: uppercase;
   color: #1a1a1a;
-  margin: 0 0 1rem 0;
+  margin: 0 0 1rem;
 }
 
 .pr-sidebar-heading--filter {
@@ -274,7 +272,7 @@
 }
 
 .pr-filter-input--search[type='search']::-webkit-search-cancel-button {
-  -webkit-appearance: none;
+  appearance: none;
 }
 
 .pr-label-row {
@@ -363,7 +361,7 @@
   width: 100%;
   min-height: 52px;
   height: auto;
-  padding: 14px 14px;
+  padding: 14px;
   border-radius: 999px;
   background-color: #000;
   color: #fff;
@@ -586,7 +584,7 @@
   transition: background-color 0.12s, border-color 0.12s;
 }
 
-.pr-page-btn:hover:not(.pr-page-btn--active):not(.pr-page-btn--disabled) {
+.pr-page-btn:hover:not(.pr-page-btn--active, .pr-page-btn--disabled) {
   background-color: #f0f0f0;
   border-color: #aaa;
 }
@@ -675,8 +673,7 @@
     padding: 20px 16px 24px;
     border-right: none;
     border-bottom: 1px solid #e0e0e0;
-    flex-direction: column;
-    flex-wrap: nowrap;
+    flex-flow: column nowrap;
     gap: 20px;
     align-items: stretch;
   }
@@ -851,7 +848,7 @@
     min-width: 7rem;
     max-width: 9rem;
     background-color: #fff;
-    box-shadow: 4px 0 10px -4px rgba(0, 0, 0, 0.18);
+    box-shadow: 4px 0 10px -4px rgb(0 0 0 / 18%);
   }
 
   .pr-table .pr-row > .pr-td:nth-child(1) {
@@ -885,7 +882,7 @@
     min-width: 7rem;
     max-width: 9rem;
     background-color: #fff;
-    box-shadow: 4px 0 10px -4px rgba(0, 0, 0, 0.12);
+    box-shadow: 4px 0 10px -4px rgb(0 0 0 / 12%);
   }
 
   .pr-pagination {
