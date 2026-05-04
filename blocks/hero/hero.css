@@ -151,9 +151,8 @@ body.foundation .hero .hero-copy .button-container {
 /* -------------------------------------------------------------------------- */
 
 body.improve .hero-container .hero-wrapper {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 24px;
+  max-width: unset;
+  padding: 0;
 }
 
 body.improve .hero {
@@ -161,18 +160,28 @@ body.improve .hero {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 240px;
+  min-height: 280px;
   padding: 48px 24px;
   text-align: center;
   overflow: hidden;
 }
 
-body.improve .hero::after {
+body.improve .hero::before {
   content: '';
   position: absolute;
   inset: 0;
   z-index: 1;
   background: rgb(0 40 40 / 45%);
+  pointer-events: none;
+}
+
+body.improve .hero::after {
+  content: '';
+  position: absolute;
+  inset: 16px;
+  z-index: 2;
+  border-left: 2px solid rgb(255 255 255 / 70%);
+  border-right: 2px solid rgb(255 255 255 / 70%);
   pointer-events: none;
 }
 
@@ -191,7 +200,7 @@ body.improve .hero img {
 
 body.improve .hero h1 {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   max-width: none;
   margin: 0;
   color: #fff;
@@ -200,12 +209,12 @@ body.improve .hero h1 {
 }
 
 @media (width >= 900px) {
-  body.improve .hero-container .hero-wrapper {
-    padding: 0 32px;
+  body.improve .hero {
+    min-height: 340px;
+    padding: 64px 32px;
   }
 
-  body.improve .hero {
-    min-height: 320px;
-    padding: 64px 32px;
+  body.improve .hero::after {
+    inset: 24px;
   }
 }
