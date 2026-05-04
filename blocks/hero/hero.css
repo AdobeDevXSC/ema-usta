@@ -151,17 +151,28 @@ body.foundation .hero .hero-copy .button-container {
 /* -------------------------------------------------------------------------- */
 
 body.improve .hero {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 300px;
-  padding: 60px 24px;
+  min-height: 240px;
+  padding: 48px 24px;
   text-align: center;
+  overflow: hidden;
+}
+
+body.improve .hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: rgb(0 50 50 / 55%);
+  pointer-events: none;
 }
 
 body.improve .hero picture {
   position: absolute;
-  z-index: -1;
+  z-index: 0;
   inset: 0;
 }
 
@@ -169,12 +180,12 @@ body.improve .hero img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: right center;
+  object-position: center;
 }
 
 body.improve .hero h1 {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   max-width: none;
   margin: 0;
   color: #fff;
@@ -184,7 +195,7 @@ body.improve .hero h1 {
 
 @media (width >= 900px) {
   body.improve .hero {
-    min-height: 460px;
-    padding: 80px 32px;
+    min-height: 320px;
+    padding: 64px 32px;
   }
 }
