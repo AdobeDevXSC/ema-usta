@@ -37,7 +37,9 @@
 }
 
 /* -------------------------------------------------------------------------- */
+
 /* USTA Foundation home hero — scoped to body.foundation only               */
+
 /* -------------------------------------------------------------------------- */
 
 body.foundation .hero-container .hero-wrapper {
@@ -137,5 +139,52 @@ body.foundation .hero .hero-copy .button-container {
   body.foundation .hero .hero-copy {
     max-width: min(680px, 44vw);
     padding-left: clamp(48px, 6vw, 96px);
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+
+/* Improve pages hero — scoped to body.improve                                */
+
+/* stylelint-disable no-descending-specificity */
+
+/* -------------------------------------------------------------------------- */
+
+body.improve .hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  padding: 60px 24px;
+  text-align: center;
+}
+
+body.improve .hero picture {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+}
+
+body.improve .hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right center;
+}
+
+body.improve .hero h1 {
+  position: relative;
+  z-index: 1;
+  max-width: none;
+  margin: 0;
+  color: #fff;
+  text-align: center;
+  text-transform: none;
+}
+
+@media (width >= 900px) {
+  body.improve .hero {
+    min-height: 460px;
+    padding: 80px 32px;
   }
 }
