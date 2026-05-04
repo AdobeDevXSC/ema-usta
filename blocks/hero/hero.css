@@ -150,6 +150,12 @@ body.foundation .hero .hero-copy .button-container {
 
 /* -------------------------------------------------------------------------- */
 
+body.improve .hero-container .hero-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
 body.improve .hero {
   position: relative;
   display: flex;
@@ -166,7 +172,7 @@ body.improve .hero::after {
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: rgb(0 50 50 / 55%);
+  background: rgb(0 40 40 / 45%);
   pointer-events: none;
 }
 
@@ -194,6 +200,10 @@ body.improve .hero h1 {
 }
 
 @media (width >= 900px) {
+  body.improve .hero-container .hero-wrapper {
+    padding: 0 32px;
+  }
+
   body.improve .hero {
     min-height: 320px;
     padding: 64px 32px;
