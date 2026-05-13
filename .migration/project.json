@@ -1,5 +1,7 @@
 {
   "type": "da",
   "libraryUrl": "https://main--ema-usta--adobedevxsc.aem.live/blocks/library.json",
-  "contentHostUrl": "content.da.live"
+  "contentHostUrl": "https://content.da.live/adobedevxsc/usta-foundation/",
+  "previewOrg": "adobedevxsc",
+  "previewSite": "usta-foundation"
 }
