@@ -290,11 +290,11 @@ body.foundation main a.button:any-link,
 body.foundation main a.button.primary:any-link {
   margin: 0;
   border: none;
-  border-radius: 5px;
+  border-radius: 0;
   padding: 15px 32px;
   font-family: var(--body-font-family-semibold);
-  font-size: 12px;
-  font-weight: 600;
+  font-size: 14px;
+  font-weight: 700;
   letter-spacing: 1.5px;
   text-transform: uppercase;
   text-align: center;
@@ -306,11 +306,11 @@ body.foundation main a.button.primary:any-link {
 body.foundation main a.button.secondary:any-link {
   margin: 0;
   border: 2px solid #007bff;
-  border-radius: 5px;
+  border-radius: 0;
   padding: 13px 30px;
   font-family: var(--body-font-family-semibold);
-  font-size: 12px;
-  font-weight: 600;
+  font-size: 14px;
+  font-weight: 700;
   letter-spacing: 1.5px;
   text-transform: uppercase;
   text-align: center;
