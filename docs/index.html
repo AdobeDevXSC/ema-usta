@@ -53,13 +53,13 @@
     position: fixed;
     top: 0; left: 0; right: 0;
     height: var(--header-h);
-    background: #1473e6;
+    background: #fff;
     display: flex;
     align-items: center;
     padding: 0 24px;
     gap: 16px;
     z-index: 100;
-    box-shadow: 0 1px 0 rgba(0,0,0,0.15);
+    box-shadow: 0 1px 0 var(--spectrum-gray-200);
   }
   .topnav-logo {
     display: flex;
@@ -71,10 +71,10 @@
   .topnav-divider {
     width: 1px;
     height: 20px;
-    background: rgba(255,255,255,0.35);
+    background: var(--spectrum-gray-300);
   }
   .topnav-title {
-    color: #fff;
+    color: var(--spectrum-gray-800);
     font-size: 14px;
     font-weight: 400;
     letter-spacing: 0.01em;
@@ -82,8 +82,8 @@
   }
   .topnav-badge {
     margin-left: auto;
-    background: rgba(255,255,255,0.18);
-    color: #fff;
+    background: #e9f1fc;
+    color: #1473e6;
     font-size: 11px;
     padding: 3px 10px;
     border-radius: 12px;
@@ -522,9 +522,10 @@
 <!-- TOP NAV -->
 <nav class="topnav">
   <a class="topnav-logo" href="#">
-    <svg width="30" height="26" viewBox="0 0 30 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0 26L11.25 0H18.75L30 26H23.75L20.625 18.5H9.375L6.25 26H0Z" fill="white"/>
-      <path d="M11.875 13.5L15 6L18.125 13.5H11.875Z" fill="#FF0000"/>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 133.46 118.11" width="30" height="27">
+      <path d="M84.19 0h49.27v118.11L84.19 0z" fill="#eb1000"/>
+      <path d="M49.27 0H0v118.11L49.27 0z" fill="#eb1000"/>
+      <path d="M66.73 43.82l25.55 65.86H74.2l-7.66-20.12H50.01l16.72-45.74z" fill="#fff"/>
     </svg>
   </a>
   <div class="topnav-divider"></div>
@@ -785,8 +786,11 @@
             <div class="step-num">2</div>
             <div class="step-body">
               <div class="step-title">Install the AEM CLI</div>
-              <p>The AEM CLI provides a local development server that proxies content from DA and code from your local filesystem.</p>
+              <p>The AEM CLI provides a local development server that proxies content from DA and code from your local filesystem. Install it globally via npm:</p>
               <div class="code-block"><span class="kw">sudo npm install</span> -g @adobe/aem-cli</div>
+              <p>Verify the install:</p>
+              <div class="code-block"><span class="kw">aem</span> --version</div>
+              <p>If <code class="code-inline">aem</code> is not found after install, make sure your global npm bin is on your <code class="code-inline">PATH</code> — find it with <code class="code-inline">npm bin -g</code>.</p>
             </div>
           </li>
           <li class="step">
@@ -801,9 +805,13 @@
             <div class="step-num">4</div>
             <div class="step-body">
               <div class="step-title">Start the local dev server</div>
-              <p>Run <code class="code-inline">aem up</code> from the project root. The CLI will proxy live content from DA and serve your local code changes in real time.</p>
-              <div class="code-block"><span class="kw">aem</span> up</div>
-              <p>By default this opens <code class="code-inline">http://localhost:3000</code>. Content is pulled from the DA preview environment; your local <code class="code-inline">/blocks</code>, <code class="code-inline">/scripts</code>, and <code class="code-inline">/styles</code> are served from disk.</p>
+              <p>Run <code class="code-inline">aem up</code> with the <code class="code-inline">--url</code> flag pointing to the site you want to work against. Each site has its own DA content org and preview URL:</p>
+              <div class="code-block"><span class="cmt"># USTA — DA: da.live/#/adobedevxsc/ema-usta</span>
+<span class="kw">aem</span> up --url=https://main--ema-usta--adobedevxsc.aem.page/
+
+<span class="cmt"># USTA Foundation — DA: da.live/#/adobedevxsc/usta-foundation</span>
+<span class="kw">aem</span> up --url=https://main--ustafoundation--adobedevxsc.aem.page/</div>
+              <p>This opens <code class="code-inline">http://localhost:3000</code> and proxies content from the specified DA preview environment. Your local <code class="code-inline">/blocks</code>, <code class="code-inline">/scripts</code>, and <code class="code-inline">/styles</code> are served from disk against whichever site's content you've targeted.</p>
             </div>
           </li>
         </ol>
@@ -924,16 +932,6 @@ https://feature-new-hero--ema-usta--adobedevxsc.aem.page</div>
           </tbody>
         </table>
 
-        <h3>Fonts</h3>
-        <p>The project uses Graphik as its primary typeface. Roboto files are included as a fallback. Fonts are served from <code class="code-inline">/fonts/</code> and referenced in <code class="code-inline">styles/fonts.css</code>.</p>
-        <table class="spec-table">
-          <thead><tr><th>File</th><th>Weight</th><th>Usage</th></tr></thead>
-          <tbody>
-            <tr><td><code class="code-inline">Graphik-Regular-App.woff2</code></td><td>400</td><td>Body text, paragraphs</td></tr>
-            <tr><td><code class="code-inline">Graphik-Semibold-App.woff2</code></td><td>600</td><td>Buttons, labels, H4–H6</td></tr>
-            <tr><td><code class="code-inline">GraphikXXCondensed-Bold-App.woff2</code></td><td>700</td><td>H1–H3 headings</td></tr>
-          </tbody>
-        </table>
       </section>
 
       <!-- DEVELOPER SKILLS -->
