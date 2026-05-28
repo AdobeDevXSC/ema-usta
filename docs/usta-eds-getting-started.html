@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>USTA EDS — Getting Started</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Adobe+Clean:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --spectrum-blue-900: #0d66d0;
+    --spectrum-blue-1000: #095aba;
+    --spectrum-blue-1300: #003ea8;
+    --spectrum-gray-50: #ffffff;
+    --spectrum-gray-75: #fafafa;
+    --spectrum-gray-100: #f5f5f5;
+    --spectrum-gray-200: #eaeaea;
+    --spectrum-gray-300: #e1e1e1;
+    --spectrum-gray-400: #cacaca;
+    --spectrum-gray-500: #b3b3b3;
+    --spectrum-gray-600: #8e8e8e;
+    --spectrum-gray-700: #6e6e6e;
+    --spectrum-gray-800: #4b4b4b;
+    --spectrum-gray-900: #2c2c2c;
+    --spectrum-red-700: #d31510;
+    --spectrum-orange-700: #da7b11;
+    --spectrum-green-700: #268e6c;
+    --spectrum-purple-700: #7240ab;
+    --spectrum-seafoam-700: #16878c;
+    --spectrum-font: 'Adobe Clean', 'adobe-clean', ui-sans-serif, system-ui, -apple-system, sans-serif;
+    --spectrum-mono: 'Source Code Pro', 'Fira Mono', 'Courier New', monospace;
+    --sidebar-width: 240px;
+    --content-max: 860px;
+    --header-h: 56px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: var(--spectrum-font);
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--spectrum-gray-900);
+    background: var(--spectrum-gray-50);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  /* ── TOP NAV ── */
+  .topnav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    height: var(--header-h);
+    background: #1473e6;
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+    gap: 16px;
+    z-index: 100;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.15);
+  }
+  .topnav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+  }
+  .topnav-logo svg { flex-shrink: 0; }
+  .topnav-divider {
+    width: 1px;
+    height: 20px;
+    background: rgba(255,255,255,0.35);
+  }
+  .topnav-title {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    white-space: nowrap;
+  }
+  .topnav-badge {
+    margin-left: auto;
+    background: rgba(255,255,255,0.18);
+    color: #fff;
+    font-size: 11px;
+    padding: 3px 10px;
+    border-radius: 12px;
+    letter-spacing: 0.04em;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  /* ── LAYOUT ── */
+  .layout {
+    display: flex;
+    margin-top: var(--header-h);
+    min-height: calc(100vh - var(--header-h));
+  }
+
+  /* ── SIDEBAR ── */
+  .sidebar {
+    width: var(--sidebar-width);
+    flex-shrink: 0;
+    position: sticky;
+    top: var(--header-h);
+    height: calc(100vh - var(--header-h));
+    overflow-y: auto;
+    border-right: 1px solid var(--spectrum-gray-200);
+    background: var(--spectrum-gray-75);
+    padding: 24px 0 40px;
+  }
+  .sidebar-section {
+    margin-bottom: 8px;
+  }
+  .sidebar-label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--spectrum-gray-600);
+    padding: 8px 20px 4px;
+  }
+  .sidebar-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 20px;
+    font-size: 13px;
+    color: var(--spectrum-gray-800);
+    text-decoration: none;
+    border-left: 2px solid transparent;
+    transition: background 0.1s, color 0.1s, border-color 0.1s;
+  }
+  .sidebar-link:hover {
+    background: var(--spectrum-gray-200);
+    color: var(--spectrum-gray-900);
+  }
+  .sidebar-link.active {
+    background: #e9f1fc;
+    color: #1473e6;
+    border-left-color: #1473e6;
+    font-weight: 700;
+  }
+  .sidebar-link .icon {
+    width: 16px;
+    height: 16px;
+    opacity: 0.6;
+    flex-shrink: 0;
+  }
+  .sidebar-link.active .icon { opacity: 1; }
+
+  /* ── MAIN ── */
+  .main {
+    flex: 1;
+    min-width: 0;
+    padding: 48px 56px 80px;
+  }
+  .main-inner {
+    max-width: var(--content-max);
+  }
+
+  /* ── PAGE HEADER ── */
+  .page-hero {
+    padding-bottom: 32px;
+    border-bottom: 1px solid var(--spectrum-gray-200);
+    margin-bottom: 48px;
+  }
+  .page-hero-eyebrow {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #1473e6;
+    margin-bottom: 8px;
+  }
+  .page-hero h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--spectrum-gray-900);
+    line-height: 1.2;
+    margin-bottom: 12px;
+  }
+  .page-hero-sub {
+    font-size: 16px;
+    color: var(--spectrum-gray-700);
+    max-width: 620px;
+    line-height: 1.5;
+  }
+
+  /* ── SECTIONS ── */
+  .doc-section {
+    margin-bottom: 56px;
+    scroll-margin-top: calc(var(--header-h) + 24px);
+  }
+  .doc-section h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--spectrum-gray-900);
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .section-rule {
+    height: 1px;
+    background: var(--spectrum-gray-200);
+    margin: 12px 0 24px;
+  }
+  .doc-section h3 {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--spectrum-gray-900);
+    margin: 24px 0 8px;
+  }
+  .doc-section p {
+    font-size: 14px;
+    color: var(--spectrum-gray-800);
+    margin-bottom: 12px;
+    line-height: 1.65;
+  }
+
+  /* ── SECTION ICON BADGE ── */
+  .section-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .icon-blue   { background: #e9f1fc; color: #1473e6; }
+  .icon-red    { background: #fff0ee; color: #d31510; }
+  .icon-green  { background: #eaf6f1; color: #268e6c; }
+  .icon-purple { background: #f3edfb; color: #7240ab; }
+  .icon-seafoam{ background: #e6f4f4; color: #16878c; }
+  .icon-orange { background: #fff4e5; color: #da7b11; }
+
+  /* ── URL CARDS (site references) ── */
+  .url-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  .url-card {
+    background: var(--spectrum-gray-50);
+    border: 1px solid var(--spectrum-gray-200);
+    border-radius: 8px;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+  .url-card:hover {
+    border-color: #1473e6;
+    box-shadow: 0 0 0 1px #1473e6;
+  }
+  .url-card-label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: var(--spectrum-gray-600);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .url-card-label .dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .dot-blue    { background: #1473e6; }
+  .dot-red     { background: #d31510; }
+  .dot-green   { background: #268e6c; }
+  .dot-purple  { background: #7240ab; }
+  .dot-seafoam { background: #16878c; }
+  .url-card-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--spectrum-gray-900);
+  }
+  .url-card-url {
+    font-size: 12px;
+    font-family: var(--spectrum-mono);
+    color: #1473e6;
+    word-break: break-all;
+  }
+  .url-card-desc {
+    font-size: 12px;
+    color: var(--spectrum-gray-600);
+    margin-top: 2px;
+  }
+
+  /* ── STEPS ── */
+  .steps {
+    counter-reset: step;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    position: relative;
+  }
+  .steps::before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 30px;
+    bottom: 30px;
+    width: 1px;
+    background: var(--spectrum-gray-300);
+  }
+  .step {
+    display: flex;
+    gap: 16px;
+    padding-bottom: 24px;
+    position: relative;
+  }
+  .step:last-child { padding-bottom: 0; }
+  .step-num {
+    counter-increment: step;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #1473e6;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+  }
+  .step-body { padding-top: 5px; flex: 1; }
+  .step-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--spectrum-gray-900);
+    margin-bottom: 6px;
+  }
+  .step-body p {
+    font-size: 13px;
+    color: var(--spectrum-gray-700);
+    margin-bottom: 8px;
+  }
+
+  /* ── CODE BLOCKS ── */
+  .code-block {
+    background: var(--spectrum-gray-900);
+    color: #d4d4d4;
+    border-radius: 6px;
+    padding: 14px 16px;
+    font-family: var(--spectrum-mono);
+    font-size: 12.5px;
+    line-height: 1.6;
+    overflow-x: auto;
+    margin: 8px 0 4px;
+    position: relative;
+  }
+  .code-block .cmt  { color: #6a9955; }
+  .code-block .str  { color: #ce9178; }
+  .code-block .kw   { color: #569cd6; }
+  .code-block .var  { color: #9cdcfe; }
+  .code-inline {
+    font-family: var(--spectrum-mono);
+    font-size: 12px;
+    background: var(--spectrum-gray-100);
+    border: 1px solid var(--spectrum-gray-300);
+    color: var(--spectrum-gray-900);
+    padding: 1px 5px;
+    border-radius: 4px;
+  }
+
+  /* ── INFO / NOTE BLOCKS ── */
+  .notice {
+    border-radius: 6px;
+    padding: 12px 16px;
+    margin: 16px 0;
+    font-size: 13px;
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    line-height: 1.5;
+  }
+  .notice-icon { flex-shrink: 0; margin-top: 1px; }
+  .notice.info    { background: #e9f1fc; color: #0d51b5; border-left: 3px solid #1473e6; }
+  .notice.tip     { background: #eaf6f1; color: #1a6b50; border-left: 3px solid #268e6c; }
+  .notice.warning { background: #fff4e5; color: #8a4b08; border-left: 3px solid #da7b11; }
+
+  /* ── SKILLS TABLE ── */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+  }
+  .skill-card {
+    background: var(--spectrum-gray-50);
+    border: 1px solid var(--spectrum-gray-200);
+    border-radius: 8px;
+    padding: 14px 16px;
+  }
+  .skill-card-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+  }
+  .skill-tag {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 2px 7px;
+    border-radius: 10px;
+  }
+  .tag-js  { background: #fff8d6; color: #8a5e00; }
+  .tag-css { background: #e9f1fc; color: #0d51b5; }
+  .tag-da  { background: #f3edfb; color: #5b2d99; }
+  .skill-card-name {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--spectrum-gray-900);
+  }
+  .skill-card-desc {
+    font-size: 12px;
+    color: var(--spectrum-gray-600);
+    line-height: 1.5;
+  }
+
+  /* ── ARCHITECTURE DIAGRAM ── */
+  .arch-diagram {
+    border: 1px solid var(--spectrum-gray-200);
+    border-radius: 8px;
+    padding: 24px;
+    background: var(--spectrum-gray-75);
+    margin: 16px 0;
+  }
+  .arch-row {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 8px;
+  }
+  .arch-node {
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
+    min-width: 100px;
+  }
+  .arch-arrow {
+    font-size: 18px;
+    color: var(--spectrum-gray-400);
+  }
+  .arch-label {
+    font-size: 11px;
+    color: var(--spectrum-gray-500);
+    text-align: center;
+    margin-top: 4px;
+  }
+
+  /* ── TABLE ── */
+  .spec-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    margin: 12px 0;
+  }
+  .spec-table th {
+    text-align: left;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: var(--spectrum-gray-600);
+    padding: 8px 12px;
+    border-bottom: 2px solid var(--spectrum-gray-200);
+    background: var(--spectrum-gray-75);
+  }
+  .spec-table td {
+    padding: 9px 12px;
+    border-bottom: 1px solid var(--spectrum-gray-200);
+    color: var(--spectrum-gray-800);
+    vertical-align: top;
+  }
+  .spec-table tr:last-child td { border-bottom: none; }
+  .spec-table td:first-child { font-weight: 700; color: var(--spectrum-gray-900); }
+
+  /* ── FOOTER ── */
+  .doc-footer {
+    border-top: 1px solid var(--spectrum-gray-200);
+    margin-top: 40px;
+    padding-top: 20px;
+    font-size: 12px;
+    color: var(--spectrum-gray-500);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  @media (max-width: 768px) {
+    .sidebar { display: none; }
+    .main { padding: 24px 20px 60px; }
+    .page-hero h1 { font-size: 24px; }
+    .url-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- TOP NAV -->
+<nav class="topnav">
+  <a class="topnav-logo" href="#">
+    <svg width="30" height="26" viewBox="0 0 30 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 26L11.25 0H18.75L30 26H23.75L20.625 18.5H9.375L6.25 26H0Z" fill="white"/>
+      <path d="M11.875 13.5L15 6L18.125 13.5H11.875Z" fill="#FF0000"/>
+    </svg>
+  </a>
+  <div class="topnav-divider"></div>
+  <span class="topnav-title">AEM Edge Delivery Services — USTA Getting Started</span>
+  <span class="topnav-badge">Dev Guide</span>
+</nav>
+
+<!-- LAYOUT -->
+<div class="layout">
+
+  <!-- SIDEBAR -->
+  <nav class="sidebar" aria-label="Page navigation">
+    <div class="sidebar-section">
+      <div class="sidebar-label">Overview</div>
+      <a class="sidebar-link active" href="#overview">
+        <svg class="icon" viewBox="0 0 16 16" fill="currentColor"><path d="M2 2h5v5H2zm7 0h5v5H9zM2 9h5v5H2zm7 0h5v5H9z"/></svg>
+        Project overview
+      </a>
+      <a class="sidebar-link" href="#urls">
+        <svg class="icon" viewBox="0 0 16 16" fill="currentColor"><path d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"/></svg>
+        Key URLs
+      </a>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-label">Setup</div>
+      <a class="sidebar-link" href="#architecture">
+        <svg class="icon" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M1 2.5A1.5 1.5 0 012.5 1h3A1.5 1.5 0 017 2.5v3A1.5 1.5 0 015.5 7h-3A1.5 1.5 0 011 5.5v-3zm8 0A1.5 1.5 0 0110.5 1h3A1.5 1.5 0 0115 2.5v3A1.5 1.5 0 0113.5 7h-3A1.5 1.5 0 019 5.5v-3zm-8 8A1.5 1.5 0 012.5 9h3A1.5 1.5 0 017 10.5v3A1.5 1.5 0 015.5 15h-3A1.5 1.5 0 011 13.5v-3zm8 0A1.5 1.5 0 0110.5 9h3a1.5 1.5 0 011.5 1.5v3a1.5 1.5 0 01-1.5 1.5h-3A1.5 1.5 0 019 13.5v-3z"/></svg>
+        Architecture
+      </a>
+      <a class="sidebar-link" href="#local-dev">
+        <svg class="icon" viewBox="0 0 16 16" fill="currentColor"><path d="M0 3.75C0 2.784.784 2 1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0114.25 14H1.75A1.75 1.75 0 010 12.25v-8.5zm1.75-.25a.25.25 0 00-.25.25v.5h13v-.5a.25.25 0 00-.25-.25H1.75zM1.5 5.5v6.75c0 .138.112.25.25.25h12.5a.25.25 0 00.25-.25V5.5h-13z"/></svg>
+        Local development
+      </a>
+      <a class="sidebar-link" href="#github">
+        <svg class="icon" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+        GitHub workflow
+      </a>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-label">Authoring</div>
+      <a class="sidebar-link" href="#da">
+        <svg class="icon" viewBox="0 0 16 16" fill="currentColor"><path d="M11.013 1.427a1.75 1.75 0 012.474 0l1.086 1.086a1.75 1.75 0 010 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 01-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 00-.064.108l-.558 1.953 1.953-.558a.253.253 0 00.108-.064l6.286-6.286zm1.238-3.763a.25.25 0 00-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 000-.354l-1.086-1.086z"/></svg>
+        Document Authoring
+      </a>
+      <a class="sidebar-link" href="#blocks">
+        <svg class="icon" viewBox="0 0 16 16" fill="currentColor"><path d="M1 3.5A1.5 1.5 0 012.5 2h2A1.5 1.5 0 016 3.5v2A1.5 1.5 0 014.5 7h-2A1.5 1.5 0 011 5.5v-2zm5.5 0A1.5 1.5 0 018 2h2a1.5 1.5 0 011.5 1.5v2A1.5 1.5 0 0110 7H8A1.5 1.5 0 016.5 5.5v-2zm-5.5 5A1.5 1.5 0 012.5 7h2A1.5 1.5 0 016 8.5v2A1.5 1.5 0 014.5 12h-2A1.5 1.5 0 011 10.5v-2zm5.5 0A1.5 1.5 0 018 7h2a1.5 1.5 0 011.5 1.5v2A1.5 1.5 0 0110 12H8A1.5 1.5 0 016.5 10.5v-2z"/></svg>
+        Blocks reference
+      </a>
+      <a class="sidebar-link" href="#skills">
+        <svg class="icon" viewBox="0 0 16 16" fill="currentColor"><path d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25z"/></svg>
+        Developer skills
+      </a>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main class="main">
+    <div class="main-inner">
+
+      <!-- PAGE HERO -->
+      <div class="page-hero" id="overview">
+        <div class="page-hero-eyebrow">AEM Edge Delivery Services</div>
+        <h1>Getting Started — USTA &amp; USTA Foundation</h1>
+        <p class="page-hero-sub">A developer guide for setting up your local environment, understanding the project architecture, and working with content across both EDS sites built on the AEM Block Collection.</p>
+      </div>
+
+      <!-- PROJECT OVERVIEW -->
+      <section class="doc-section">
+        <h2>
+          <span class="section-icon icon-blue">
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M1 3.5A1.5 1.5 0 012.5 2h2A1.5 1.5 0 016 3.5v2A1.5 1.5 0 014.5 7h-2A1.5 1.5 0 011 5.5v-2zm5.5 0A1.5 1.5 0 018 2h2a1.5 1.5 0 011.5 1.5v2A1.5 1.5 0 0110 7H8A1.5 1.5 0 016.5 5.5v-2zm-5.5 5A1.5 1.5 0 012.5 7h2A1.5 1.5 0 016 8.5v2A1.5 1.5 0 014.5 12h-2A1.5 1.5 0 011 10.5v-2zm5.5 0A1.5 1.5 0 018 7h2a1.5 1.5 0 011.5 1.5v2A1.5 1.5 0 0110 12H8A1.5 1.5 0 016.5 10.5v-2z"/></svg>
+          </span>
+          Project overview
+        </h2>
+        <div class="section-rule"></div>
+        <p>This project supports <strong>two production sites</strong> from a single GitHub repository using a <em>repoless architecture</em> — there is no <code class="code-inline">fstab.yaml</code>; content routing is handled entirely through Document Authoring (DA) org configuration.</p>
+
+        <div class="url-grid" style="margin-top:20px;">
+          <div class="url-card">
+            <div class="url-card-label"><span class="dot dot-blue"></span>Site 1</div>
+            <div class="url-card-title">USTA</div>
+            <div class="url-card-url">usta.com</div>
+            <div class="url-card-desc">Improve section — tips, health &amp; fitness, gear, rules. 200+ article pages.</div>
+          </div>
+          <div class="url-card">
+            <div class="url-card-label"><span class="dot dot-purple"></span>Site 2</div>
+            <div class="url-card-title">USTA Foundation</div>
+            <div class="url-card-url">ustafoundation.com</div>
+            <div class="url-card-desc">Foundation pages — who we are, what we do, impact, news.</div>
+          </div>
+        </div>
+
+        <table class="spec-table" style="margin-top:16px;">
+          <thead>
+            <tr><th>Attribute</th><th>Value</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>GitHub org</td><td><code class="code-inline">AdobeDevXSC</code></td></tr>
+            <tr><td>Repository</td><td><code class="code-inline">ema-usta</code></td></tr>
+            <tr><td>Primary branch</td><td><code class="code-inline">main</code></td></tr>
+            <tr><td>Architecture</td><td>Repoless EDS (no fstab.yaml)</td></tr>
+            <tr><td>Content system</td><td>DA (Document Authoring via da.live)</td></tr>
+            <tr><td>Base boilerplate</td><td>aemsites/da-block-collection</td></tr>
+            <tr><td>Code: JS / CSS / HTML</td><td>73% / 26% / 1%</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- KEY URLS -->
+      <section class="doc-section" id="urls">
+        <h2>
+          <span class="section-icon icon-seafoam">
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"/></svg>
+          </span>
+          Key URLs
+        </h2>
+        <div class="section-rule"></div>
+
+        <h3>GitHub</h3>
+        <div class="url-grid">
+          <a class="url-card" href="https://github.com/AdobeDevXSC/ema-usta" target="_blank" rel="noopener">
+            <div class="url-card-label"><span class="dot dot-blue"></span>GitHub</div>
+            <div class="url-card-title">ema-usta repository</div>
+            <div class="url-card-url">github.com/AdobeDevXSC/ema-usta</div>
+            <div class="url-card-desc">Code, branches, PR queue, Actions CI</div>
+          </a>
+        </div>
+
+        <h3>Document Authoring (DA)</h3>
+        <div class="url-grid">
+          <a class="url-card" href="https://da.live/#/adobedevxsc/ema-usta" target="_blank" rel="noopener">
+            <div class="url-card-label"><span class="dot dot-blue"></span>DA</div>
+            <div class="url-card-title">USTA content</div>
+            <div class="url-card-url">da.live/#/adobedevxsc/ema-usta</div>
+            <div class="url-card-desc">Improve section articles, nav, footer, metadata sheets</div>
+          </a>
+          <a class="url-card" href="https://da.live/#/adobedevxsc/usta-foundation" target="_blank" rel="noopener">
+            <div class="url-card-label"><span class="dot dot-purple"></span>DA</div>
+            <div class="url-card-title">USTA Foundation content</div>
+            <div class="url-card-url">da.live/#/adobedevxsc/usta-foundation</div>
+            <div class="url-card-desc">Foundation pages, hero sections, impact stories, news</div>
+          </a>
+        </div>
+
+        <h3>Preview &amp; live environments</h3>
+        <div class="url-grid">
+          <a class="url-card" href="https://main--ema-usta--adobedevxsc.aem.page" target="_blank" rel="noopener">
+            <div class="url-card-label"><span class="dot dot-blue"></span>Preview — USTA</div>
+            <div class="url-card-title">main--ema-usta--adobedevxsc.aem.page</div>
+            <div class="url-card-url">main--ema-usta--adobedevxsc.aem.page</div>
+            <div class="url-card-desc">Renders DA content against the main branch code</div>
+          </a>
+          <a class="url-card" href="https://main--ustafoundation--adobedevxsc.aem.page" target="_blank" rel="noopener">
+            <div class="url-card-label"><span class="dot dot-purple"></span>Preview — Foundation</div>
+            <div class="url-card-title">main--ustafoundation--adobedevxsc.aem.page</div>
+            <div class="url-card-url">main--ustafoundation--adobedevxsc.aem.page</div>
+            <div class="url-card-desc">Renders DA content against the main branch code</div>
+          </a>
+          <a class="url-card" href="https://main--ema-usta--adobedevxsc.aem.live" target="_blank" rel="noopener">
+            <div class="url-card-label"><span class="dot dot-green"></span>Live — USTA</div>
+            <div class="url-card-title">main--ema-usta--adobedevxsc.aem.live</div>
+            <div class="url-card-url">main--ema-usta--adobedevxsc.aem.live</div>
+            <div class="url-card-desc">Production CDN — published content only</div>
+          </a>
+          <a class="url-card" href="https://main--ustafoundation--adobedevxsc.aem.live" target="_blank" rel="noopener">
+            <div class="url-card-label"><span class="dot dot-green"></span>Live — Foundation</div>
+            <div class="url-card-title">main--ustafoundation--adobedevxsc.aem.live</div>
+            <div class="url-card-url">main--ustafoundation--adobedevxsc.aem.live</div>
+            <div class="url-card-desc">Production CDN — published content only</div>
+          </a>
+        </div>
+        <div class="notice info">
+          <svg class="notice-icon" width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"/></svg>
+          <span>The URL pattern for any environment or branch is <code class="code-inline">{branch}--{repo}--{org}.aem.page</code> (preview) or <code class="code-inline">.aem.live</code> (published). Swap <code class="code-inline">main</code> for any branch name to preview your feature branch.</span>
+        </div>
+      </section>
+
+      <!-- ARCHITECTURE -->
+      <section class="doc-section" id="architecture">
+        <h2>
+          <span class="section-icon icon-orange">
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M1 2.5A1.5 1.5 0 012.5 1h3A1.5 1.5 0 017 2.5v3A1.5 1.5 0 015.5 7h-3A1.5 1.5 0 011 5.5v-2zm8 0A1.5 1.5 0 0110.5 1h3A1.5 1.5 0 0115 2.5v3A1.5 1.5 0 0113.5 7h-3A1.5 1.5 0 019 5.5v-2zm-8 8A1.5 1.5 0 012.5 9h3A1.5 1.5 0 017 10.5v3A1.5 1.5 0 015.5 15h-3A1.5 1.5 0 011 13.5v-3zm8 0A1.5 1.5 0 0110.5 9h3a1.5 1.5 0 011.5 1.5v3a1.5 1.5 0 01-1.5 1.5h-3A1.5 1.5 0 019 13.5v-3z"/></svg>
+          </span>
+          Architecture
+        </h2>
+        <div class="section-rule"></div>
+        <p>Both sites share a single codebase. EDS resolves which DA content org to serve based on the hostname — the repoless pattern maps each domain to its DA org without a checked-in fstab.yaml.</p>
+
+        <div class="arch-diagram">
+          <div class="arch-row">
+            <div class="arch-node" style="background:#e9f1fc;color:#0d51b5;">DA: adobedevxsc/ema-usta</div>
+            <div class="arch-arrow">+</div>
+            <div class="arch-node" style="background:#f3edfb;color:#5b2d99;">DA: adobedevxsc/usta-foundation</div>
+          </div>
+          <div class="arch-row" style="margin:4px 0;">
+            <div class="arch-arrow" style="font-size:22px;">↓</div>
+          </div>
+          <div class="arch-row">
+            <div class="arch-node" style="background:#fff8d6;color:#5a3e00;min-width:200px;">GitHub: AdobeDevXSC/ema-usta<br><span style="font-weight:400;font-size:11px;">Single shared codebase</span></div>
+          </div>
+          <div class="arch-row" style="margin:4px 0;">
+            <div class="arch-arrow" style="font-size:22px;">↓</div>
+          </div>
+          <div class="arch-row">
+            <div class="arch-node" style="background:#eaf6f1;color:#1a6b50;">*.aem.page (preview)</div>
+            <div class="arch-arrow">|</div>
+            <div class="arch-node" style="background:#eaf6f1;color:#1a6b50;">*.aem.live (published)</div>
+          </div>
+        </div>
+
+        <h3>Repository structure</h3>
+        <div class="code-block"><span class="cmt"># Key directories</span>
+/blocks          <span class="cmt"># 25 EDS blocks (16 standard + 9 USTA-custom)</span>
+/scripts         <span class="cmt"># aem.js · scripts.js · context.js · delayed.js</span>
+/styles          <span class="cmt"># styles.css · fonts.css · context.css · lazy-styles.css</span>
+/fonts           <span class="cmt"># Graphik woff2 files (Regular, Semibold, XXCond Bold)</span>
+/icons           <span class="cmt"># SVG icons (heart, player-avatar, search, foundation logo)</span>
+/tools           <span class="cmt"># Importer scripts, sidekick config, demo apps</span>
+/plugins         <span class="cmt"># Experimentation plugin (A/B testing, audiences, campaigns)</span>
+/ue              <span class="cmt"># Universal Editor block models (15 blocks)</span>
+/.github         <span class="cmt"># CI workflow: lint on push (ESLint + Stylelint, Node 20)</span>
+/.migration      <span class="cmt"># Migration project config (.migration/project.json)</span></div>
+      </section>
+
+      <!-- LOCAL DEV -->
+      <section class="doc-section" id="local-dev">
+        <h2>
+          <span class="section-icon icon-green">
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M0 3.75C0 2.784.784 2 1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0114.25 14H1.75A1.75 1.75 0 010 12.25v-8.5zm1.75-.25a.25.25 0 00-.25.25v.5h13v-.5a.25.25 0 00-.25-.25H1.75zM1.5 5.5v6.75c0 .138.112.25.25.25h12.5a.25.25 0 00.25-.25V5.5h-13z"/></svg>
+          </span>
+          Local development
+        </h2>
+        <div class="section-rule"></div>
+
+        <h3>Prerequisites</h3>
+        <table class="spec-table">
+          <thead><tr><th>Tool</th><th>Install</th><th>Notes</th></tr></thead>
+          <tbody>
+            <tr><td>Node.js 20+</td><td><a href="https://nodejs.org" target="_blank" rel="noopener" style="color:#1473e6;">nodejs.org</a></td><td>Required for AEM CLI and linting</td></tr>
+            <tr><td>AEM CLI</td><td><code class="code-inline">sudo npm install -g @adobe/aem-cli</code></td><td>Provides <code class="code-inline">aem up</code> local server</td></tr>
+            <tr><td>npm packages</td><td><code class="code-inline">npm i</code></td><td>ESLint, Stylelint, Husky pre-commit hook</td></tr>
+            <tr><td>AEM Code Sync</td><td><a href="https://github.com/apps/aem-code-sync" target="_blank" rel="noopener" style="color:#1473e6;">GitHub App</a></td><td>Syncs code changes to AEM on push</td></tr>
+          </tbody>
+        </table>
+
+        <h3>Step-by-step setup</h3>
+        <ol class="steps">
+          <li class="step">
+            <div class="step-num">1</div>
+            <div class="step-body">
+              <div class="step-title">Clone the repository</div>
+              <p>Clone to your local machine and open in your editor of choice.</p>
+              <div class="code-block"><span class="kw">git</span> clone https://github.com/AdobeDevXSC/ema-usta.git
+<span class="kw">cd</span> ema-usta</div>
+            </div>
+          </li>
+          <li class="step">
+            <div class="step-num">2</div>
+            <div class="step-body">
+              <div class="step-title">Install the AEM CLI</div>
+              <p>The AEM CLI provides a local development server that proxies content from DA and code from your local filesystem.</p>
+              <div class="code-block"><span class="kw">sudo npm install</span> -g @adobe/aem-cli</div>
+            </div>
+          </li>
+          <li class="step">
+            <div class="step-num">3</div>
+            <div class="step-body">
+              <div class="step-title">Install npm packages</div>
+              <p>This sets up linting (ESLint + Stylelint) and the Husky pre-commit hook that auto-regenerates Universal Editor component JSON.</p>
+              <div class="code-block"><span class="kw">npm</span> i</div>
+            </div>
+          </li>
+          <li class="step">
+            <div class="step-num">4</div>
+            <div class="step-body">
+              <div class="step-title">Start the local dev server</div>
+              <p>Run <code class="code-inline">aem up</code> from the project root. The CLI will proxy live content from DA and serve your local code changes in real time.</p>
+              <div class="code-block"><span class="kw">aem</span> up</div>
+              <p>By default this opens <code class="code-inline">http://localhost:3000</code>. Content is pulled from the DA preview environment; your local <code class="code-inline">/blocks</code>, <code class="code-inline">/scripts</code>, and <code class="code-inline">/styles</code> are served from disk.</p>
+            </div>
+          </li>
+        </ol>
+
+        <div class="notice tip">
+          <svg class="notice-icon" width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"/></svg>
+          <span>After each code change, the browser hot-reloads automatically — no manual refresh needed for JS/CSS changes to blocks.</span>
+        </div>
+      </section>
+
+      <!-- GITHUB WORKFLOW -->
+      <section class="doc-section" id="github">
+        <h2>
+          <span class="section-icon icon-blue">
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+          </span>
+          GitHub workflow
+        </h2>
+        <div class="section-rule"></div>
+
+        <h3>CI pipeline</h3>
+        <p>Every push to any branch triggers the GitHub Actions lint workflow (<code class="code-inline">.github/workflows/main.yaml</code>). It runs on Node.js 20 and executes <code class="code-inline">npm run lint</code> — which covers both ESLint (JS) and Stylelint (CSS). PRs should be green before merging to <code class="code-inline">main</code>.</p>
+
+        <h3>Pre-commit hook</h3>
+        <p>Husky runs <code class="code-inline">npm run build:json</code> on every commit. This regenerates the merged Universal Editor component JSON files (<code class="code-inline">component-definition.json</code>, <code class="code-inline">component-filters.json</code>, <code class="code-inline">component-models.json</code>) from the per-block model sources in <code class="code-inline">/ue/models/blocks/</code>. Never edit the root JSON files directly — they are auto-generated.</p>
+
+        <h3>Previewing a PR branch</h3>
+        <p>Every branch has its own preview URL automatically. Substitute the branch name into the EDS URL pattern:</p>
+        <div class="code-block"><span class="cmt"># Pattern</span>
+https://<span class="var">{branch}</span>--ema-usta--adobedevxsc.aem.page
+
+<span class="cmt"># Example: PR branch named "feature/new-hero"</span>
+https://feature-new-hero--ema-usta--adobedevxsc.aem.page</div>
+        <div class="notice warning">
+          <svg class="notice-icon" width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8.22 1.754a.25.25 0 00-.44 0L1.698 13.132a.25.25 0 00.22.368h12.164a.25.25 0 00.22-.368L8.22 1.754zm-1.763-.707c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0114.082 15H1.918a1.75 1.75 0 01-1.543-2.575L6.457 1.047zM9 11a1 1 0 11-2 0 1 1 0 012 0zm-.25-5.25a.75.75 0 00-1.5 0v2.5a.75.75 0 001.5 0v-2.5z"/></svg>
+          <span>Slashes in branch names become hyphens in the preview URL. A branch named <code class="code-inline">feature/nav-update</code> becomes <code class="code-inline">feature-nav-update--ema-usta--adobedevxsc.aem.page</code>.</span>
+        </div>
+
+        <h3>AEM Code Sync</h3>
+        <p>The <a href="https://github.com/apps/aem-code-sync" target="_blank" rel="noopener" style="color:#1473e6;">AEM Code Sync GitHub App</a> must be installed on the <code class="code-inline">AdobeDevXSC</code> org and granted access to this repository. It watches for pushes and syncs code to the AEM CDN, making your branch immediately available at the preview URL above.</p>
+      </section>
+
+      <!-- DOCUMENT AUTHORING -->
+      <section class="doc-section" id="da">
+        <h2>
+          <span class="section-icon icon-purple">
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M11.013 1.427a1.75 1.75 0 012.474 0l1.086 1.086a1.75 1.75 0 010 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 01-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 00-.064.108l-.558 1.953 1.953-.558a.253.253 0 00.108-.064l6.286-6.286zm1.238-3.763a.25.25 0 00-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 000-.354l-1.086-1.086z"/></svg>
+          </span>
+          Document Authoring (DA)
+        </h2>
+        <div class="section-rule"></div>
+        <p>All page content is managed through DA at <a href="https://da.live" target="_blank" rel="noopener" style="color:#1473e6;">da.live</a>. There are two separate DA content orgs — one per site — both mapped to the same GitHub repository.</p>
+
+        <h3>Org structure</h3>
+        <table class="spec-table">
+          <thead><tr><th>Site</th><th>DA org</th><th>Content scope</th></tr></thead>
+          <tbody>
+            <tr>
+              <td>USTA</td>
+              <td><code class="code-inline">adobedevxsc/ema-usta</code></td>
+              <td>Improve section (tips, fitness, gear, rules) · nav · footer · metadata</td>
+            </tr>
+            <tr>
+              <td>USTA Foundation</td>
+              <td><code class="code-inline">adobedevxsc/usta-foundation</code></td>
+              <td>Foundation pages · hero sections · impact · news</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>Content authoring workflow</h3>
+        <p>Content is created and edited as documents in DA. Authors write blocks using a table syntax — each table row defines a block and its content. When content is previewed or published from the DA sidekick, the EDS pipeline renders the tables into the corresponding block JS/CSS.</p>
+
+        <div class="notice info">
+          <svg class="notice-icon" width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"/></svg>
+          <span>As a developer, you'll primarily use DA to browse real content for local testing and to troubleshoot block rendering issues. The sidekick's "Preview" action syncs DA content to <code class="code-inline">.aem.page</code>; "Publish" promotes it to <code class="code-inline">.aem.live</code>.</span>
+        </div>
+
+        <h3>Query index</h3>
+        <p>The USTA Improve section generates a query index at <code class="code-inline">/en/home/improve/query-index.json</code> (configured in <code class="code-inline">helix-query.yaml</code>). The <code class="code-inline">filter-cards</code> block consumes this index to dynamically render and filter article cards by category. Fields: <code class="code-inline">path</code>, <code class="code-inline">title</code>, <code class="code-inline">description</code>, <code class="code-inline">date</code>, <code class="code-inline">lastModified</code>, <code class="code-inline">featured</code>, <code class="code-inline">author</code>, <code class="code-inline">image</code>, <code class="code-inline">tags</code>.</p>
+      </section>
+
+      <!-- BLOCKS -->
+      <section class="doc-section" id="blocks">
+        <h2>
+          <span class="section-icon icon-red">
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M1 3.5A1.5 1.5 0 012.5 2h2A1.5 1.5 0 016 3.5v2A1.5 1.5 0 014.5 7h-2A1.5 1.5 0 011 5.5v-2zm5.5 0A1.5 1.5 0 018 2h2a1.5 1.5 0 011.5 1.5v2A1.5 1.5 0 0110 7H8A1.5 1.5 0 016.5 5.5v-2zm-5.5 5A1.5 1.5 0 012.5 7h2A1.5 1.5 0 016 8.5v2A1.5 1.5 0 014.5 12h-2A1.5 1.5 0 011 10.5v-2zm5.5 0A1.5 1.5 0 018 7h2a1.5 1.5 0 011.5 1.5v2A1.5 1.5 0 0110 12H8A1.5 1.5 0 016.5 10.5v-2z"/></svg>
+          </span>
+          Blocks reference
+        </h2>
+        <div class="section-rule"></div>
+        <p>The project has 25 total blocks — 16 inherited from the AEM Block Collection and 9 custom blocks built specifically for USTA. Each block lives in its own directory under <code class="code-inline">/blocks/{block-name}/</code> containing a JS file and a CSS file.</p>
+
+        <h3>Custom USTA blocks</h3>
+        <table class="spec-table">
+          <thead><tr><th>Block</th><th>Description</th></tr></thead>
+          <tbody>
+            <tr><td><code class="code-inline">cards-icon</code></td><td>Cards layout with icon images — USTA-specific styling</td></tr>
+            <tr><td><code class="code-inline">columns-feature</code></td><td>Feature columns with background colour/image styling</td></tr>
+            <tr><td><code class="code-inline">columns-stats</code></td><td>Statistics in a column layout with large numerals</td></tr>
+            <tr><td><code class="code-inline">filter-bubble</code></td><td>Filter chip/tag UI — dispatches <code class="code-inline">filter-change</code> events</td></tr>
+            <tr><td><code class="code-inline">filter-cards</code></td><td>Dynamic cards from query-index.json · 6-per-page · listens for <code class="code-inline">filter-change</code></td></tr>
+            <tr><td><code class="code-inline">hero-landing</code></td><td>Landing page hero variant</td></tr>
+            <tr><td><code class="code-inline">near-you</code></td><td>Placeholder for location-based dynamic content</td></tr>
+            <tr><td><code class="code-inline">player-profile</code></td><td>Tennis player profile display</td></tr>
+            <tr><td><code class="code-inline">player-rankings</code></td><td>Player rankings table (currently mock data)</td></tr>
+          </tbody>
+        </table>
+
+        <h3>Hero variants</h3>
+        <p>The <code class="code-inline">hero</code> block has three body-class-scoped variants that render completely different layouts depending on which site/section the page belongs to:</p>
+        <table class="spec-table">
+          <thead><tr><th>Variant</th><th>Trigger</th><th>Layout</th></tr></thead>
+          <tbody>
+            <tr><td>Default</td><td><code class="code-inline">body .hero</code></td><td>Relative-position background image, white H1, max-width 1200px</td></tr>
+            <tr><td>Foundation</td><td><code class="code-inline">body.foundation .hero</code></td><td>Full-height, dark gradient overlay, left-aligned white text + CTA buttons</td></tr>
+            <tr><td>Improve</td><td><code class="code-inline">body.improve .hero</code></td><td>Banner-style (280px mobile / 340px desktop), teal overlay, centered white H1</td></tr>
+          </tbody>
+        </table>
+
+        <h3>Fonts</h3>
+        <p>The project uses Graphik as its primary typeface. Roboto files are included as a fallback. Fonts are served from <code class="code-inline">/fonts/</code> and referenced in <code class="code-inline">styles/fonts.css</code>.</p>
+        <table class="spec-table">
+          <thead><tr><th>File</th><th>Weight</th><th>Usage</th></tr></thead>
+          <tbody>
+            <tr><td><code class="code-inline">Graphik-Regular-App.woff2</code></td><td>400</td><td>Body text, paragraphs</td></tr>
+            <tr><td><code class="code-inline">Graphik-Semibold-App.woff2</code></td><td>600</td><td>Buttons, labels, H4–H6</td></tr>
+            <tr><td><code class="code-inline">GraphikXXCondensed-Bold-App.woff2</code></td><td>700</td><td>H1–H3 headings</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- DEVELOPER SKILLS -->
+      <section class="doc-section" id="skills">
+        <h2>
+          <span class="section-icon icon-orange">
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25z"/></svg>
+          </span>
+          Developer skills
+        </h2>
+        <div class="section-rule"></div>
+        <p>Highlighted skills and patterns to be productive on this project from day one.</p>
+
+        <div class="skills-grid">
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <span class="skill-tag tag-js">JS</span>
+              <span class="skill-card-name">Block authoring</span>
+            </div>
+            <p class="skill-card-desc">Each block exports a <code class="code-inline">default(block)</code> function. The <code class="code-inline">block</code> element is the decorated DOM node — manipulate its children, query it, decorate it. No framework, no bundler.</p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <span class="skill-tag tag-js">JS</span>
+              <span class="skill-card-name">filter-change events</span>
+            </div>
+            <p class="skill-card-desc"><code class="code-inline">filter-bubble</code> dispatches a custom <code class="code-inline">filter-change</code> event on <code class="code-inline">document</code>. <code class="code-inline">filter-cards</code> listens and re-renders. Add new listener blocks using <code class="code-inline">document.addEventListener('filter-change', ...)</code>.</p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <span class="skill-tag tag-js">JS</span>
+              <span class="skill-card-name">Experimentation plugin</span>
+            </div>
+            <p class="skill-card-desc">A/B testing, audience targeting, and campaigns are handled by the plugin in <code class="code-inline">/plugins/experimentation/</code>. Experiments are configured via metadata in DA documents.</p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <span class="skill-tag tag-css">CSS</span>
+              <span class="skill-card-name">Body-class theming</span>
+            </div>
+            <p class="skill-card-desc">Site theme is set by a body class (<code class="code-inline">body.foundation</code>, <code class="code-inline">body.improve</code>). Block CSS selectors scope to these classes to achieve per-site visual variation from one codebase.</p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <span class="skill-tag tag-css">CSS</span>
+              <span class="skill-card-name">Section styles</span>
+            </div>
+            <p class="skill-card-desc">Authors apply section backgrounds via metadata: <code class="code-inline">.light</code> / <code class="code-inline">.highlight</code> (gray), <code class="code-inline">.related-articles</code> (olive/sage), <code class="code-inline">.gold</code> (yellow). These map to CSS classes in <code class="code-inline">styles.css</code>.</p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <span class="skill-tag tag-da">DA</span>
+              <span class="skill-card-name">Repoless routing</span>
+            </div>
+            <p class="skill-card-desc">No <code class="code-inline">fstab.yaml</code> — DA org configuration handles hostname-to-content-path mapping. Understanding which DA org a URL resolves to is essential for debugging content issues.</p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <span class="skill-tag tag-js">JS</span>
+              <span class="skill-card-name">UE models</span>
+            </div>
+            <p class="skill-card-desc">Block models for Universal Editor live in <code class="code-inline">/ue/models/blocks/</code>. Run <code class="code-inline">npm run build:json</code> to regenerate root component JSON files after editing any model. The Husky hook does this automatically on commit.</p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <span class="skill-tag tag-js">JS</span>
+              <span class="skill-card-name">Import infrastructure</span>
+            </div>
+            <p class="skill-card-desc">Bulk content migration is handled by Playwright-driven import scripts in <code class="code-inline">/tools/importer/</code>. Four scripts target different source site sections; parsers and transformers handle DOM cleanup.</p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <span class="skill-tag tag-css">CSS</span>
+              <span class="skill-card-name">Responsive grid (filter-cards)</span>
+            </div>
+            <p class="skill-card-desc"><code class="code-inline">filter-cards</code> uses a 3-column grid on desktop, 2-column on tablet, 1-column on mobile. Cards paginate in groups of 6 via a "More" button — no infinite scroll.</p>
+          </div>
+        </div>
+
+        <div class="notice tip" style="margin-top:20px;">
+          <svg class="notice-icon" width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"/></svg>
+          <span>The full block inventory, hero variant details, import script docs, and UE model specs are documented in <a href="https://github.com/AdobeDevXSC/ema-usta/blob/main/USTA-FOUNDATION.md" target="_blank" rel="noopener" style="color:#1a6b50;"><strong>USTA-FOUNDATION.md</strong></a> in the repository root.</span>
+        </div>
+      </section>
+
+      <div class="doc-footer">
+        <svg width="12" height="12" viewBox="0 0 16 16" fill="#b3b3b3"><path d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25z"/></svg>
+        AdobeDevXSC / ema-usta &nbsp;·&nbsp; AEM Edge Delivery Services &nbsp;·&nbsp; Generated May 2026
+      </div>
+
+    </div>
+  </main>
+</div>
+
+<script>
+  const links = document.querySelectorAll('.sidebar-link');
+  const sections = document.querySelectorAll('.doc-section[id], .page-hero[id]');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.id;
+        links.forEach(l => {
+          l.classList.toggle('active', l.getAttribute('href') === '#' + id);
+        });
+      }
+    });
+  }, { rootMargin: '-20% 0px -70% 0px' });
+
+  sections.forEach(s => observer.observe(s));
+</script>
+</body>
+</html>
